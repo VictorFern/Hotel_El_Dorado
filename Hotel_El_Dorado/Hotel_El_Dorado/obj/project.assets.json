@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\victo\\.nuget\\packages\\": {}
+    "C:\\Users\\Eeam5\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\victo\\OneDrive\\Escritorio\\U\\Ingenieria\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado.csproj",
+      "projectUniqueName": "C:\\Users\\Eeam5\\Documents\\UCR\\Ingeniería\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado.csproj",
       "projectName": "Hotel_El_Dorado",
-      "projectPath": "C:\\Users\\victo\\OneDrive\\Escritorio\\U\\Ingenieria\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado.csproj",
-      "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\victo\\OneDrive\\Escritorio\\U\\Ingenieria\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\obj\\",
+      "projectPath": "C:\\Users\\Eeam5\\Documents\\UCR\\Ingeniería\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado.csproj",
+      "packagesPath": "C:\\Users\\Eeam5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eeam5\\Documents\\UCR\\Ingeniería\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eeam5\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

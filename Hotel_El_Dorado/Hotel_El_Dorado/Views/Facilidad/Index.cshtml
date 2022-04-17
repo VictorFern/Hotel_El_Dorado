@@ -1,11 +1,17 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-
+﻿
 <body>
     <div class="text-center">
-        <h1>Aquí va el contenido próximamente</h1>
+        <h1>Texto de prueba en facilidades</h1>
+        @{
+        string[,] data = (string[,]) ViewData["data"];
+        }
+        @for(int i = 0; i < data.Rank; i++)
+        {
+            <div id="bFacilidad">
+                <h1>@data[i, 0]</h1>
+                <h1>@data[i, 1]</h1>
+            </div>
+        }
     </div>
 </body>
 

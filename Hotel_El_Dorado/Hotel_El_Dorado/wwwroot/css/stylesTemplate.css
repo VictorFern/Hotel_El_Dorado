@@ -1,0 +1,50 @@
+.list-group {
+    display: inline-block;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .containerBody {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .containerBody {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .containerBody {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .containerBody {
+        max-width: 1140px;
+    }
+}
+
+.sidebar {
+    max-width: fit-content;
+    float: left;
+}
+
+.containerBody {
+    float: none;
+}
