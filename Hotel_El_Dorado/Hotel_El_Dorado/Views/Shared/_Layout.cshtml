@@ -12,6 +12,12 @@
 <body>
     
     <header>
+        <div class="row logoContent">
+            <div class="col-4 logo">
+                <img class="logoImagen" src="~/img/logos.png">
+                <h2 id="h2">Hotel El Dorado </h2>
+            </div>
+       </div>
     </header>
     @RenderSection("LeftSidebar", required : false)
 
@@ -22,8 +28,8 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Hotel_El_Dorado - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="containerFooter">
+            Copyright&copy;Hotel El Dorado 2022
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
