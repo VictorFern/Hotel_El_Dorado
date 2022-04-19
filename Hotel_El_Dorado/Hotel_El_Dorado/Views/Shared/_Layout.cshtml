@@ -19,7 +19,16 @@
             </div>
        </div>
     </header>
-    @RenderSection("LeftSidebar", required : false)
+   
+   <div class="list-group col-6 col-md-4 sidebar">
+        <a asp-controller="Home" asp-action="Index" class="list-group-item list-group-item-action">Home</a>
+        <a href="#" class="list-group-item list-group-item-action">Sobre nosotros</a>
+        <a asp-controller="Facilidad" asp-action="Index" class="list-group-item list-group-item-action">Facilidades</a>
+        <a href="#" class="list-group-item list-group-item-action">¿Cómo llegar?</a>
+        <a href="#" class="list-group-item list-group-item-action">Tarifas</a>
+        <a href="#" class="list-group-item list-group-item-action">Reservar en línea</a>
+        <a href="#" class="list-group-item list-group-item-action">Contáctenos</a>
+    </div>
 
     <div class="containerBody">
         <main role="main" class="mainContainer">
