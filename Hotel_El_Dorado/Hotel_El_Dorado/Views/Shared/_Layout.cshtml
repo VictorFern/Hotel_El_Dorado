@@ -22,19 +22,22 @@
        </div>
     </header>
    
-    <div>
+    <div class="row">
+        <div class="col-md-2">
+              <div class="list-group col-6 col-md-4 sidebar">
+                    <a asp-controller="Home" asp-action="Index" class="list-group-item list-group-item-action">Home</a>
+                    <a href="#" class="list-group-item list-group-item-action">Sobre nosotros</a>
+                    <a asp-controller="Facilidad" asp-action="Index" class="list-group-item list-group-item-action">Facilidades</a>
+                    <a href="#" class="list-group-item list-group-item-action">¿Cómo llegar?</a>
+                    <a href="#" class="list-group-item list-group-item-action">Tarifas</a>
+                    <a href="#" class="list-group-item list-group-item-action">Reservar en línea</a>
+                    <a href="#" class="list-group-item list-group-item-action">Contáctenos</a>
+              </div>
+              <div class="publicidadLateral">
 
-        <div class="list-group col-6 col-md-4 sidebar">
-            <a asp-controller="Home" asp-action="Index" class="list-group-item list-group-item-action">Home</a>
-            <a href="#" class="list-group-item list-group-item-action">Sobre nosotros</a>
-            <a asp-controller="Facilidad" asp-action="Index" class="list-group-item list-group-item-action">Facilidades</a>
-            <a href="#" class="list-group-item list-group-item-action">¿Cómo llegar?</a>
-            <a href="#" class="list-group-item list-group-item-action">Tarifas</a>
-            <a href="#" class="list-group-item list-group-item-action">Reservar en línea</a>
-            <a href="#" class="list-group-item list-group-item-action">Contáctenos</a>
-
-            <div id="carouselExampleSlidesOnly" class="carousel slide mt-5" data-ride="carousel">
-                <div class="carousel-inner">
+              
+          <div id="carouselExampleSlidesOnly" class="publicidad carousel slide " data-ride="carousel">
+                <div class="carousel-inner imgItem">
                     @if (ViewBag.ListaPublicidad != null)
                     {
                         int contador = 0;
@@ -44,17 +47,17 @@
 
                             @if (contador == 0)
                             {
-                                <div class="carousel-item active">
+                                <div class="carousel-item active imgItem">
                                     <a href="https://@temp.Link" target="_blank">
-                                        <img src="../Imagenes/@temp.Imagen" class="img-fluid" alt="@temp.Link" width="150" height="150">
+                                        <img src="../Imagenes/@temp.Imagen" class="img-fluid imgCarusel" alt="@temp.Link" width="150" height="150">
                                     </a>
                                 </div>
                             }
                             else
                             {
-                                <div class="carousel-item">
+                                <div class="carousel-item imgItem">
                                     <a href="https://@temp.Link" target="_blank">
-                                        <img src="../Imagenes/@temp.Imagen" class="img-fluid" alt="@temp.Link" width="150" height="150">
+                                        <img src="../Imagenes/@temp.Imagen" class="img-fluid imgCarusel" alt="@temp.Link" width="150" height="150">
                                     </a>
                                 </div>
                             }
@@ -68,30 +71,25 @@
                         @foreach (OfertaModel temp in ViewBag.ListaOferta)
                         {
 
-                            <div class="carousel-item">
+                            <div class="carousel-item imgItem">
                                 <a href="">
-                                    <img src="../Imagenes/@temp.Imagen" class="img-fluid" alt="@temp.Oferta" width="150" height="150">
+                                    <img src="../Imagenes/@temp.Imagen" class="img-fluid imgCarusel" alt="@temp.Oferta" width="150" height="150">
                                 </a>
                             </div>
                         }
                     }
                 </div>
             </div>
-
+            </div>
+    </div>
+    <div class="col-md-6">
+        <div class="containerBody">
+            <main role="main" class="mainContainer">
+                @RenderBody()
+            </main>
         </div>
-
-        
-
     </div>
-
-   
-
-    <div class="containerBody">
-        <main role="main" class="mainContainer">
-            @RenderBody()
-        </main>
-    </div>
-
+  </div>
     <footer class="border-top footer text-muted">
         <div class="containerFooter">
             Copyright&copy;Hotel El Dorado 2022
