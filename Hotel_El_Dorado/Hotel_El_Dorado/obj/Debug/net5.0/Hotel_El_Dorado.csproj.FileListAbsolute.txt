@@ -172,3 +172,4 @@ C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_E
 C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.pdb
 C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.genruntimeconfig.cache
 C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\ref\Hotel_El_Dorado.dll
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\SobreNosotros\Index.cshtml.g.cs

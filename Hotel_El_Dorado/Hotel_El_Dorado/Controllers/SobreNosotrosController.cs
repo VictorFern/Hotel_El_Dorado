@@ -30,7 +30,19 @@ namespace Hotel_El_Dorado.Controllers
         {
             SobreNosotrosBusiness sobreNosotrosBusiness = new SobreNosotrosBusiness(Configuration);
             SobreNosotrosModel sobreNosotros = sobreNosotrosBusiness.ObtenerSobreNosotros();
+            Console.WriteLine(sobreNosotros.SobreNosotros);
             ViewBag.SobreNosotros = sobreNosotros;
+
+            PublicidadBusiness publicidadBusiness = new PublicidadBusiness(Configuration);
+            List<PublicidadModel> listaPublicidad = new List<PublicidadModel>();
+            listaPublicidad = publicidadBusiness.ObtenerPublicidad();
+            ViewBag.ListaPublicidad = listaPublicidad;
+
+            OfertaBusiness ofertaBusiness = new OfertaBusiness(Configuration);
+            List<OfertaModel> listaOferta = new List<OfertaModel>();
+            listaOferta = ofertaBusiness.ObtenerOferta();
+            ViewBag.ListaOferta = listaOferta;
+
             return View();
         }
 
