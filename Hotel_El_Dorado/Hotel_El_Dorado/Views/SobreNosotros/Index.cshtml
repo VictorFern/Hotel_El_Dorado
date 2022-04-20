@@ -1,1 +1,15 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Sobre Nosotros";
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-8">
+        <div class="sobreNosotrosTexto">
+            <h2 class="sobreNosotrosTitulo">Sobre Nosotros</h2>
+            <p>
+                @ViewBag.SobreNosotros.SobreNosotros
+            </p>
+        </div>
+    </div>
+</div>
