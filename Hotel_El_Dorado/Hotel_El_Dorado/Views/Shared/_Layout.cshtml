@@ -5,25 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Hotel_El_Dorado</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    
+    <script type="text/javascript" src="~/js/functions.js"></script>
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/stylesTemplate.css" />
+    <link rel="stylesheet" href="~/css/Estilo.css" />
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
     
     <header>
+        <div class="row logoContent">
+            <div class="col-4 logo">
+                <a asp-controller="SobreNosotros" asp-action="Index" class="list-group-item list-group-item-action">
+                    <img class="logoImagen" src="~/img/logos.png"></a>
+                    <h2 id="h2">Hotel El Dorado </h2>
+</div>
+       </div>
     </header>
-    @RenderSection("LeftSidebar", required : false)
+   
+    <div class="row">
+        <div class="col-md-2">
+              <div class="list-group col-6 col-md-4 sidebar">
+                    <a asp-controller="Home" asp-action="Index" class="list-group-item list-group-item-action">Home</a>
+                    <a asp-controller="SobreNosotros" asp-action="Index" class="list-group-item list-group-item-action">Sobre Nosotros</a>
+                    <a asp-controller="Facilidad" asp-action="Index" class="list-group-item list-group-item-action">Facilidades</a>
+                    <a href="#" class="list-group-item list-group-item-action">¿Cómo llegar?</a>
+                    <a href="#" class="list-group-item list-group-item-action">Tarifas</a>
+                    <a href="#" class="list-group-item list-group-item-action">Reservar en línea</a>
+                    <a href="#" class="list-group-item list-group-item-action">Contáctenos</a>
+              </div>
+              <div class="publicidadLateral">
 
-    <div class="containerBody">
-        <main role="main" class="mainContainer">
-            @RenderBody()
-        </main>
+              
+          <div id="carouselExampleSlidesOnly" class="publicidad carousel slide " data-ride="carousel">
+                <div class="carousel-inner imgItem">
+                    @if (ViewBag.ListaPublicidad != null)
+                    {
+                        int contador = 0;
+
+                        @foreach (PublicidadModel temp in ViewBag.ListaPublicidad)
+                        {
+
+                            @if (contador == 0)
+                            {
+                                <div class="carousel-item active imgItem">
+                                    <a href="https://@temp.Link" target="_blank">
+                                        <img src="../Imagenes/@temp.Imagen" class="img-fluid imgCarusel" alt="@temp.Link" width="150" height="150">
+                                    </a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="carousel-item imgItem">
+                                    <a href="https://@temp.Link" target="_blank">
+                                        <img src="../Imagenes/@temp.Imagen" class="img-fluid imgCarusel" alt="@temp.Link" width="150" height="150">
+                                    </a>
+                                </div>
+                            }
+                            contador++;
+                        }
+                    }
+
+                    @if (ViewBag.ListaOferta != null)
+                    {
+
+                        @foreach (OfertaModel temp in ViewBag.ListaOferta)
+                        {
+
+                            <div class="carousel-item imgItem">
+                                <a href="">
+                                    <img src="../Imagenes/@temp.Imagen" class="img-fluid imgCarusel" alt="@temp.Oferta" width="150" height="150">
+                                </a>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            </div>
     </div>
-
+    <div class="col-md-6">
+        <div class="containerBody">
+            <main role="main" class="mainContainer">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+  </div>
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Hotel_El_Dorado - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="containerFooter">
+            Copyright&copy;Hotel El Dorado 2022
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
