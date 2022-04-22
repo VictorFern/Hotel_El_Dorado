@@ -25,6 +25,11 @@ namespace Hotel_El_Dorado.Controllers
 
         public IActionResult Index()
         {
+            HomeBusiness homeBusiness = new HomeBusiness(Configuration);
+            HomeModel home = homeBusiness.ObtenerHome();
+            Console.WriteLine(home.home);
+            ViewBag.Home = home;
+
             PublicidadBusiness publicidadBusiness = new PublicidadBusiness(Configuration);
             List<PublicidadModel> listaPublicidad = new List<PublicidadModel>();
             listaPublicidad = publicidadBusiness.ObtenerPublicidad();

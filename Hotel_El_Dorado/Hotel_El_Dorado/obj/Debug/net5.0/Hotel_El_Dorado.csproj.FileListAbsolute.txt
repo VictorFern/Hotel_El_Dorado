@@ -181,3 +181,4 @@ C:\Users\Eeam5\Documents\UCR\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorad
 C:\Users\Eeam5\Documents\UCR\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Eeam5\Documents\UCR\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Eeam5\Documents\UCR\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\SobreNosotros\Index.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\SobreNosotros\Index.cshtml.g.cs
