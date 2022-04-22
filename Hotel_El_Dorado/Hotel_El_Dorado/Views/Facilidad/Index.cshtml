@@ -1,15 +1,26 @@
 ﻿
 
     <div class="text-center">
-        <h1>Texto de prueba en facilidades</h1>
+        <h2>Facilidades a dispocisión de nuestros clientes</h2>
         @{
         string[,] data = (string[,]) ViewData["data"];
         }
-        @for(int i = 0; i < data.Rank; i++)
-        {
-            <div id="bFacilidad">
-                <h1>@data[i, 0]</h1>
-                <h1>@data[i, 1]</h1>
-            </div>
-        }
+        @*
+            GetLength(0) Devuelve la cantidad de filas de una matriz
+            y, GetLength(1) las columnas
+        *@
+        <div class="contenedorFacilidades">
+            @for(int i = 0; i < data.GetLength(0); i++)
+            {
+                <div class="bFacilidad">
+                    <div class="imagenFacilidad">
+                        <img class="img-responsive" src="@data[i, 0]" alt="" width="64" height="64">
+                    </div>
+                    <div class="textoFacilidad">
+                        <p align="justify">@data[i, 1]</p>
+                    </div>
+                </div>
+                <br />
+            }
+        </div>
     </div>
