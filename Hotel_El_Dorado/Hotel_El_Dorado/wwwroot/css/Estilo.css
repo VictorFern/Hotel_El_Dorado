@@ -192,3 +192,33 @@ header {
     min-width: 202px;
     max-height: 200px;
 }
+
+/*
+    Reglas para facilidad. Imagenes y texto
+*/
+
+.contenedorFacilidades {
+    min-width: 1000px;
+}
+
+.bFacilidad {
+    min-width: 90%;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.imagenFacilidad {
+    position: relative;
+    display: inline-flex;
+    float: left;
+    width: 20%;
+}
+
+.textoFacilidad {
+    position: relative;
+    display: block;
+    float: left;
+    width: 60%;
+}
+
+/*****************************************/
