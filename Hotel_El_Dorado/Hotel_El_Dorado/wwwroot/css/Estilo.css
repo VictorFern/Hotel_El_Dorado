@@ -221,4 +221,35 @@ header {
     width: 60%;
 }
 
+
+
 /*****************************************/
+
+.containerMin {
+    max-width: 500px;
+    position: relative;
+    display: inline-block;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.imgMin {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.GaleryContainer {
+    min-width: 1000px;
+}
+
+.container-img-big {
+    max-width: 205px;
+    position: relative;
+    display: inline-block;
+}
+
+.img-big {
+    max-width: 200px;
+    max-height: 200px;
+}
+
