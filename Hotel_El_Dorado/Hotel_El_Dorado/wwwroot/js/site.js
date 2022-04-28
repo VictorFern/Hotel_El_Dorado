@@ -43,5 +43,6 @@
 }
 
 function cancelarReservacion() {
-    document.location.href = '/Reservacion/Reservar/';
+    console.log("entra");
+    document.location.href = '/Reservacion/Reservar';
 }

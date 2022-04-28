@@ -83,6 +83,16 @@ namespace Hotel_El_Dorado.Controllers
         public IActionResult Index2(ReservacionModel reservacionModel)
         {
 
+            PublicidadBusiness publicidadBusiness = new PublicidadBusiness(Configuration);
+            List<PublicidadModel> listaPublicidad = new List<PublicidadModel>();
+            listaPublicidad = publicidadBusiness.ObtenerPublicidad();
+            ViewBag.ListaPublicidad = listaPublicidad;
+
+            OfertaBusiness ofertaBusiness = new OfertaBusiness(Configuration);
+            List<OfertaModel> listaOferta = new List<OfertaModel>();
+            listaOferta = ofertaBusiness.ObtenerOferta();
+            ViewBag.ListaOferta = listaOferta;
+
             string entrada = "";
             string salida = "";
             List<string> fechaSalida = new List<string>();
@@ -141,6 +151,17 @@ namespace Hotel_El_Dorado.Controllers
         [HttpPost]
         public IActionResult Index3(ReservacionModel reservacionModel)
         {
+
+            PublicidadBusiness publicidadBusiness = new PublicidadBusiness(Configuration);
+            List<PublicidadModel> listaPublicidad = new List<PublicidadModel>();
+            listaPublicidad = publicidadBusiness.ObtenerPublicidad();
+            ViewBag.ListaPublicidad = listaPublicidad;
+
+            OfertaBusiness ofertaBusiness = new OfertaBusiness(Configuration);
+            List<OfertaModel> listaOferta = new List<OfertaModel>();
+            listaOferta = ofertaBusiness.ObtenerOferta();
+            ViewBag.ListaOferta = listaOferta;
+
             ReservacionBusiness reservacionBusiness = new ReservacionBusiness(Configuration);
             int reservacion = reservacionBusiness.RealizarReservacion(reservacionModel);
 
