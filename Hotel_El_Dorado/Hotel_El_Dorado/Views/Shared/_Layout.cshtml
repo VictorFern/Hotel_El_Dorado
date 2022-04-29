@@ -16,24 +16,32 @@
     <header>
         <div class="row logoContent">
             <div class="col-4 logo">
-                <a asp-controller="SobreNosotros" asp-action="Index" class="list-group-item list-group-item-action">
-                    <img class="logoImagen" src="~/img/logos.png"></a>
-                    <h2 id="h2">Hotel El Dorado </h2>
-</div>
+                <a asp-controller="Home" asp-action="Index" class="logoImagen"><img class="logoImagen" src="~/img/logos.png"></a>
+                <h2 id="h2">Hotel El Dorado </h2>
+            </div>
        </div>
     </header>
    
     <div class="row">
         <div class="col-md-2">
-            <div class="list-group col-6 col-md-4 sidebar">
-                <a asp-controller="Home" asp-action="Index" class="list-group-item list-group-item-action">Home</a>
-                <a asp-controller="SobreNosotros" asp-action="Index" class="list-group-item list-group-item-action">Sobre Nosotros</a>
-                <a asp-controller="Facilidad" asp-action="Index" class="list-group-item list-group-item-action">Facilidades</a>
-                <a href="#" class="list-group-item list-group-item-action">¿Cómo llegar?</a>
-                <a href="#" class="list-group-item list-group-item-action">Tarifas</a>
-                <a href="#" class="list-group-item list-group-item-action">Reservar en línea</a>
-                <a asp-controller="Contactenos" asp-action="Index" class="list-group-item list-group-item-action">Contactenos</a>
-            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="collapsibleNavbar">
+                      <div class="list-group  sidebar">
+                            <a asp-controller="Home" asp-action="Index" class="list-group-item list-group-item-action">Home</a>
+                            <a asp-controller="SobreNosotros" asp-action="Index" class="list-group-item list-group-item-action">Sobre Nosotros</a>
+                            <a asp-controller="Facilidad" asp-action="Index" class="list-group-item list-group-item-action">Facilidades</a>
+                            <a asp-controller="ComoLlegar" asp-action="Index" class="list-group-item list-group-item-action">¿Cómo llegar?</a>
+                            <a href="#" class="list-group-item list-group-item-action">Tarifas</a>
+                            <a asp-controller="Reservacion" asp-action="Index" class="list-group-item list-group-item-action">Reservar en línea</a>
+                            <a asp-controller="Contactenos" asp-action="Index" class="list-group-item list-group-item-action">Contactenos</a>
+                      </div>
+                    </div>
+                    </div>
+                </nav>
               <div class="publicidadLateral">
 
               

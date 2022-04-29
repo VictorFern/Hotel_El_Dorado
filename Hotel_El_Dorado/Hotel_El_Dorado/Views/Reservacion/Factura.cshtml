@@ -1,0 +1,26 @@
+﻿@model Hotel_El_Dorado.Models.ReservacionModel
+
+@{
+    ViewData["Title"] = "Factura";
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-10 justify-content-center">
+
+        <div class="sobreNosotrosTexto mb-3">
+            <h2 class="sobreNosotrosTitulo">Reservar en Linea</h2>
+        </div>
+
+        <h4>¡Reservación realizada!</h4>
+
+        <p>¡Gracias <b>@ViewBag.Nombre @ViewBag.Apellidos</b>! Su reservación fue realizada exitosamente.</p>
+        <br>
+        <p>Número de reservación: <b>@ViewBag.Reservacion</b></p>
+        <br>
+        <p>Acabamos de enviar esta información a la dirección <b>@ViewBag.Email</b> para mayor facilidad.</p>
+        <br>
+        <p>¡Gracias por preferirnos!</p>
+
+    </div>
+</div>

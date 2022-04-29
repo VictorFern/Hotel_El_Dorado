@@ -17,28 +17,41 @@ main {
     margin: 0px;
 }
 
-.homeTexto p, .homeTexto h2 {
-    margin-left: 120px;
-    white-space: pre-line;
+.homeFacilidad {
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+    .homeTexto p, .homeTexto h2, .homeFacilidad p, .homeFacilidad h2 {
+        margin-left: 120px;
+        white-space: pre-line;
+    }
+
+.sobreNosotrosTexto p, .sobreNosotrosTexto h2 {
+    margin-left: 10px;
 }
 
 .homeTexto h2 {
     padding-top: 15px;
 }
 
-.homeTexto p {
-    padding-top: 1px;
-}
-
-.homeTexto p {
-    font-size: 16px;
-    line-height: 1.4;
+.facilidadTexto h2 {
+    padding-top: 30px;
+    margin-left: 10px;
 }
 
 .sobreNosotrosTexto h2 {
     padding-top: 30px;
 }
 
+.homeTexto p, .facilidadTexto p {
+    padding-top: 1px;
+}
+
+.homeTexto p, .facilidadTexto p {
+    font-size: 16px;
+    line-height: 1.4;
+}
 
 .logo img {
     width: 100px;
@@ -102,128 +115,21 @@ header {
     border-top-width: medium;
 }
 
-@media (min-width: 768px) {
-    #containerBody {
-        max-width: 70px;
-    }
-}
-
-@media (max-width: 768px) {
-    #containerBody {
-        max-width: 70px;
-    }
-
-    .containerFooter {
-        text-align: center;
-    }
-
-    header {
-        width: 80%;
-        margin: 0px auto;
-    }
-
-    .footer {
-        width: 85%;
-    }
-
-    .logoContent {
-        text-align: center;
-        margin: 0px auto;
-    }
-
-    .logo {
-        margin: 0px auto;
-    }
-
-    .homeBody {
-        display: inline-block;
-        align-self: flex-end;
-        margin-left: 0;
-    }
-
-    p {
-        font-size: 1.2rem;
-    }
-}
-
-@media (min-width: 321px) and (max-width: 480px) {
-    header {
-        width: 85%;
-        text-align: center;
-    }
-
-    .footer {
-        width: 85%;
-        text-align: center;
-    }
-
-    .logoContent {
-        text-align: center;
-        margin: 0px auto;
-    }
-
-    .logo {
-        margin: 0px auto;
-    }
-}
 
 .sidebar {
     max-width: fit-content;
     margin-top: 30px;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-bottom: 30px;
+}
+
+nav.navbar {
+    background-color: white !important;
 }
 
 .publicidadLateral {
     margin-left: 50px;
 }
-
-@media (min-width: 1200px) {
-    .containerBody {
-        max-width: 1140px;
-    }
-
-    .homeBody {
-        width: 1225px;
-    }
-}
-
-.imgCarusel {
-    min-width: 202px;
-    max-height: 200px;
-}
-
-/*
-    Reglas para facilidad. Imagenes y texto
-*/
-
-.contenedorFacilidades {
-    min-width: 1000px;
-}
-
-.bFacilidad {
-    min-width: 90%;
-    display: inline-block;
-    margin-bottom: 2rem;
-}
-
-.imagenFacilidad {
-    position: relative;
-    display: inline-flex;
-    float: left;
-    width: 20%;
-}
-
-.textoFacilidad {
-    position: relative;
-    display: block;
-    float: left;
-    width: 60%;
-}
-
-
-
-/*****************************************/
 
 .containerMin {
     max-width: 500px;
@@ -238,14 +144,12 @@ header {
     margin-right: 1rem;
 }
 
-.GaleryContainer {
-    min-width: 1000px;
-}
-
 .container-img-big {
+    margin-left: 10px;
     max-width: 205px;
     position: relative;
     display: inline-block;
+    margin-bottom: 30px;
 }
 
 .img-big {
@@ -253,3 +157,490 @@ header {
     max-height: 200px;
 }
 
+@media (min-width: 1200px) {
+    .containerBody {
+        max-width: 1140px;
+    }
+
+    .homeBody {
+        margin-left: 40px;
+    }
+
+    .homeFacilidad {
+        padding-top: 10px;
+        margin-left: 40px;
+    }
+
+        .homeTexto p, .homeTexto h2, .homeFacilidad p, .homeFacilidad h2 {
+            margin-left: 130px;
+            white-space: pre-line;
+        }
+
+    .sobreNosotrosTexto p, .sobreNosotrosTexto h2 {
+        margin-left: 40px;
+    }
+
+    .homeTexto h2 {
+        padding-top: 15px;
+    }
+
+    .facilidadTexto h2 {
+        padding-top: 30px;
+        margin-left: 40px;
+    }
+
+    .sobreNosotrosTexto h2 {
+        padding-top: 30px;
+    }
+
+    .imgItem img {
+        width: 100px;
+        margin-top: 5px;
+        margin-bottom: 35px;
+    }
+
+    .container-img-big {
+        margin-left: 40px;
+    }
+
+    .publicidadLateral {
+        min-width: 189px;
+        margin-left: 50px;
+    }
+}
+
+.imgCarusel {
+    min-width: 202px;
+    max-height: 200px;
+}
+
+
+/* Para 960px */
+@media only screen and (max-width: 980px) and (min-width: 821px) {
+    main {
+        min-width: 650px;
+    }
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .logo h2 {
+        margin: 5px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .logo {
+        margin: 0px auto;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .facilidadTexto h2 {
+        margin-left: 90px;
+    }
+
+    .homeBody {
+        margin-left: 80px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto {
+        min-width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p {
+            margin-top: 0;
+            margin-left: 90px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgFacilidad {
+        margin-left: 80px;
+    }
+
+    .publicidadLateral {
+        min-width: 180px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+}
+
+/* Para 800px */
+@media only screen and (max-width: 820px) and (min-width: 621px) {
+    main {
+        min-width: 650px;
+    }
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .logo h2 {
+        margin: 5px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .logo {
+        margin: 0px auto;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .facilidadTexto h2 {
+        margin-left: 90px;
+    }
+
+    .homeBody {
+        margin-left: 80px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto {
+        min-width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p {
+            margin-top: 0;
+            margin-left: 90px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgFacilidad {
+        margin-left: 80px;
+    }
+
+    .publicidadLateral {
+        min-width: 180px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+}
+
+/* Para 600px */
+@media only screen and (max-width: 620px) and (min-width: 501px) {
+    main {
+        min-width: fit-content;
+    }
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .logo h2 {
+        margin: 5px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .logo {
+        margin: 0px auto;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .facilidadTexto h2 {
+        margin-left: 12px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto {
+        width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p {
+            margin-top: 0;
+            margin-left: 10px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgHome {
+        max-inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 2/1;
+        object-fit: contain;
+    }
+
+    .imgFacilidad {
+        margin-left: 10px;
+    }
+
+    .container-img-big {
+        max-width: 205px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .img-big {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+}
+
+/* Para 480px */
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+    main {
+        min-width: fit-content;
+    }
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .logo h2 {
+        margin: 5px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .logo {
+        margin: 0px auto;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .facilidadTexto h2 {
+        margin-left: 12px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto {
+        width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p {
+            margin-top: 0;
+            margin-left: 10px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgHome {
+        max-inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 2/1;
+        object-fit: contain;
+    }
+
+    .imgFacilidad {
+        margin-left: 10px;
+    }
+
+    .container-img-big {
+        max-width: 205px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .img-big {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+}
+
+/* Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {
+    main {
+        min-width: fit-content;
+    }
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .logo h2 {
+        margin: 2px;
+    }
+
+    .logo img {
+        margin-left: 5px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .logo {
+        margin: 0px auto;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .facilidadTexto h2 {
+        margin-left: 12px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto {
+        width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p {
+            margin-top: 0;
+            margin-left: 10px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgHome {
+        max-inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 2/1;
+        object-fit: contain;
+    }
+
+    .imgFacilidad {
+        margin-left: 10px;
+    }
+
+    .container-img-big {
+        max-width: 205px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .img-big {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+}

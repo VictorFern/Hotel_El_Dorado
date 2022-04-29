@@ -1,0 +1,61 @@
+﻿@model Hotel_El_Dorado.Models.ReservacionModel
+
+@{
+    ViewData["Title"] = "Ingresar datos";
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-10 justify-content-center">
+
+        <div class="sobreNosotrosTexto mb-3">
+            <h2 class="sobreNosotrosTitulo">Reservar en Linea</h2>
+        </div>
+
+        <form asp-action="Index3" asp-controller="Reservacion" method="post">
+            <div class="form-row justify-content-between">
+
+                <input type="text" class="form-control" asp-for="Fecha_Entrada" value="@ViewBag.FechaEntrada" readonly hidden>
+                <br />
+                <input type="text" class="form-control" asp-for="Fecha_Salida" value="@ViewBag.FechaSalida" readonly hidden>
+                <br />
+                <input type="number" class="form-control" asp-for="Habitacion.ID_Habitacion" value="@ViewBag.ID_Habitacion" readonly hidden>
+                <br />
+                <img src="../img/@ViewBag.Imagen" class="img-fluid imgCarusel" width="150" height="150">
+                <br />
+                <label class="col-form-label col-1">@ViewBag.Descripcion</label>
+                <br />
+                <label class="col-form-label col-4">Monto de su reservación: $</label>
+                <input type="number" class="form-control col-1" asp-for="Costo_Total" value="@ViewBag.Costo" required readonly>
+                <br />
+
+
+
+                <input type="number" class="form-control" asp-for="Habitacion.ID_Habitacion" id="idHabitacion" value="" readonly hidden>
+                <input type="number" class="form-control" asp-for="Cliente.Cedula" id="cedula" placeholder="Cédula" required>
+                <br />
+
+                <input type="text" class="form-control" asp-for="Cliente.Nombre" id="nombre" placeholder="Nombre" required>
+                <br />
+
+                <input type="text" class="form-control" asp-for="Cliente.Apellidos" id="apellidos" placeholder="Apellidos" required>
+                <br />
+
+                <input type="text" class="form-control" asp-for="Cliente.Email" id="email" placeholder="Email" required>
+                <br />
+
+                <input type="number" class="form-control" asp-for="Cliente.Tarjeta" id="tarjeta" placeholder="Tarjeta" required>
+                <br />
+
+                <div class="text-center mb-3" id="boton">
+                    <button type="submit" class="btn btn-primary mt-2">Siguiente</button>
+                </div>
+                <br />
+                <button type="button" class="btn btn-primary mt-2" href="javascript:;" onclick="cancelarReservacion(); return false;">Cancelar</button>
+
+            </div>
+        </form>
+
+    </div> 
+        
+</div>

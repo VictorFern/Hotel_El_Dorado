@@ -181,52 +181,7 @@ C:\Users\Eeam5\Documents\UCR\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorad
 C:\Users\Eeam5\Documents\UCR\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Eeam5\Documents\UCR\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Eeam5\Documents\UCR\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\SobreNosotros\Index.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\appsettings.json
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\Hotel_El_Dorado.exe
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\Hotel_El_Dorado.deps.json
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\Hotel_El_Dorado.runtimeconfig.json
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\Hotel_El_Dorado.runtimeconfig.dev.json
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\Hotel_El_Dorado.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\ref\Hotel_El_Dorado.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\Hotel_El_Dorado.pdb
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\Hotel_El_Dorado.Views.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\Hotel_El_Dorado.Views.pdb
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\System.Data.SqlClient.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.csproj.AssemblyReference.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.AssemblyInfoInputs.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.AssemblyInfo.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.csproj.CoreCompileInputs.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.RazorAssemblyInfo.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.RazorAssemblyInfo.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\staticwebassets\Hotel_El_Dorado.StaticWebAssets.Manifest.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\staticwebassets\Hotel_El_Dorado.StaticWebAssets.xml
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\scopedcss\bundle\Hotel_El_Dorado.styles.css
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.TagHelpers.input.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.TagHelpers.output.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.RazorCoreGenerate.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Contactenos\Index.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Facilidad\Index.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\SobreNosotros\Index.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.RazorTargetAssemblyInfo.cache
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.RazorTargetAssemblyInfo.cs
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.Views.pdb
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.csproj.CopyComplete
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\ref\Hotel_El_Dorado.dll
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.pdb
-C:\Users\Yato\Desktop\New folder\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Hotel_El_Dorado.genruntimeconfig.cache
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\SobreNosotros\Index.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Reservacion\Index.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Reservacion\IngresarDatos.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Reservacion\Factura.cshtml.g.cs

@@ -22,7 +22,7 @@ namespace Hotel_El_Dorado.Controllers
         {
 
             string[,] data = {
-                { "Hotel el Dorado" },
+                { "Hotel el Dorado:" },
                 { "Tel: 2222-2222 / 2222-2323" },
                 {  "Apdo Postal: 21004" },
                 {  "info@hoteleldorado.com" },

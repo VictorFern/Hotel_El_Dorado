@@ -4,30 +4,30 @@
 }
 
 <div class="row">
-    <div class="col-8">
+    <div class="col-md-8 justify-content-center">
         <div class="sobreNosotrosTexto">
             <h2 class="sobreNosotrosTitulo">Sobre Nosotros</h2>
             <p>
                 @ViewBag.SobreNosotros.SobreNosotros
             </p>
-        </div>
-        <div class="GaleryContainer">
+            </div>
+        </div> 
+        <div class="col-md-8">
+         <div class="GaleryContainer">
              <div class="container-img-big">
-                 <img id="imgBig" class="img-responsive img-big" src="~/img/hotel.jpeg" alt="Chania" width="356" height="270">
+                 <img id="imgBig" class="img-responsive img-big" src="~/img/galeria1.jpg"  alt="Chania" width="356" height="270">
              </div>
-            @*
-                Aqui va el codigo con las miniaturas
-            *@ 
+            
             <div class="containerMin" id="containerMin">
-                <a onclick="cambiarImg('img1')"><img id="img1" class="imgMin" class="img-responsive" src="~/img/elephant.png" alt="" width="32" height="32"></a>
-                <a onclick="cambiarImg('img2')"><img id="img2" class="imgMin" class="img-responsive" src="~/img/firefly.png" alt="" width="32" height="32"></a>
-                <a onclick="cambiarImg('img3')"><img id="img3" class="imgMin" class="img-responsive" src="~/img/ladybug.png" alt="" width="32" height="32"></a>
+                <a onclick="cambiarImg('img1')"><img id="img1" class="imgMin" class="img-responsive" src="~/img/galeria1.jpg" alt="" width="32" height="32"></a>
+                <a onclick="cambiarImg('img2')"><img id="img2" class="imgMin" class="img-responsive" src="~/img/galeria2.jpg"  alt="" width="32" height="32"></a>
+                <a onclick="cambiarImg('img3')"><img id="img3" class="imgMin" class="img-responsive" src="~/img/galeria3.jpg"  alt="" width="32" height="32"></a>
                 <br/>
-                <a onclick="cambiarImg('img4')"><img id="img4" class="imgMin" class="img-responsive" src="~/img/lion.png" alt="" width="32" height="32"></a>
-                <a onclick="cambiarImg('img5')"><img id="img5" class="imgMin" class="img-responsive" src="~/img/sea-turtle.png" alt="" width="32" height="32"></a>
-                <a onclick="cambiarImg('img6')"><img id="img6" class="imgMin" class="img-responsive" src="~/img/teddy-bear.png" alt="" width="32" height="32"></a>
+                <a onclick="cambiarImg('img4')"><img id="img4" class="imgMin" class="img-responsive" src="~/img/galeria4.jpg"  alt="" width="32" height="32"></a>
+                <a onclick="cambiarImg('img5')"><img id="img5" class="imgMin" class="img-responsive" src="~/img/galeria5.jpg"  alt="" width="32" height="32"></a>
+                <a onclick="cambiarImg('img6')"><img id="img6" class="imgMin" class="img-responsive" src="~/img/galeria6.jpg"  alt="" width="32" height="32"></a>
                 <br/>
-                <a onclick="cambiarImg('img7')"><img id="img7" class="imgMin" class="img-responsive" src="~/img/whale.png" alt="" width="32" height="32"></a>
+                <a onclick="cambiarImg('img7')"><img id="img7" class="imgMin" class="img-responsive" src="~/img/galeria7.jpg"  alt="" width="32" height="32"></a>
             </div>
         </div>
     </div>
