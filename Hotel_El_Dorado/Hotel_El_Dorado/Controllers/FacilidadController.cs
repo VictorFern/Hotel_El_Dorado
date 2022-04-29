@@ -21,16 +21,16 @@ namespace Hotel_El_Dorado.Controllers
         public IActionResult Index()
         {
 
-            string[,] data = { 
-                { "/img/spa.png", "Abierto de 9:00 a.m. a 5:00 p.m. Disponible" +
-                " para todos nuestros clientes"},
-                { "/img/restaurante.png", "Abierto de 7:00 a.m. a 9:00 p.m." +
-                "El menú disponible puede cambiar dependiendo del día o festividad"},
-                { "/img/estacionamiento.png", "Bajo techo para los clientes que reserven" +
-                "más de una noche y, al aire libre para todos los demás"},
-                { "/img/piscina.png", "Disponible para todos nuestros clientes." +
-                "Deben acatarse las reglas de decoro especificadas en el lugar."},
-            };
+            FacilidadBusiness facilidadBusiness = new FacilidadBusiness(Configuration);
+            List<FacilidadModel> lista = facilidadBusiness.ObtenerFacilidades();
+
+            string[,] data = new string[lista.Count, 2];
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                data[i, 0] = lista[i].Src.ToString();
+                data[i, 1] = lista[i].Descripcion.ToString();
+            }
 
             ViewData["data"]  = data;
 
