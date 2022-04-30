@@ -185,3 +185,9 @@ C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_E
 D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Reservacion\Index.cshtml.g.cs
 D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Reservacion\IngresarDatos.cshtml.g.cs
 D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Reservacion\Factura.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\ComoLlegar\Index.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Contactenos\Index.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Reservacion\Factura.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Reservacion\Index.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\Reservacion\IngresarDatos.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado\Hotel_El_Dorado\obj\Debug\net5.0\Razor\Views\TipoHabitacion\Index.cshtml.g.cs

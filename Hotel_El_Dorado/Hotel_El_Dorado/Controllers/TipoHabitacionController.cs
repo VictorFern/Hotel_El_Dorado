@@ -3,18 +3,21 @@ using Hotel_El_Dorado.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Hotel_El_Dorado.Controllers
 {
-    public class ComoLlegarController : Controller
+    public class TipoHabitacionController : Controller
     {
-
-        private readonly ILogger<ComoLlegarController> _logger;
+        private readonly ILogger<TipoHabitacionController> _logger;
 
         public IConfiguration Configuration { get; }
 
-        public ComoLlegarController(ILogger<ComoLlegarController> logger, IConfiguration configuration)
+        public TipoHabitacionController(ILogger<TipoHabitacionController> logger, IConfiguration configuration)
         {
             _logger = logger;
             Configuration = configuration;
@@ -22,12 +25,8 @@ namespace Hotel_El_Dorado.Controllers
 
         public IActionResult Index()
         {
-            ComoLlegarBusiness business = new ComoLlegarBusiness(Configuration);
-            ComoLlegarModel model = new ComoLlegarModel();
-            model = business.ObtenerHome();
-
-            ViewData["Título"] = model.Titulo;
-            ViewData["Descripcion"] = model.Descripcion;
+            TipoHabitacionBusiness tipoHabitacionBusiness = new TipoHabitacionBusiness(Configuration);
+            ViewBag.tipoHabitacion = tipoHabitacionBusiness.ObtenerTipohabitacion();
 
             PublicidadBusiness publicidadBusiness = new PublicidadBusiness(Configuration);
             List<PublicidadModel> listaPublicidad = new List<PublicidadModel>();
@@ -38,7 +37,6 @@ namespace Hotel_El_Dorado.Controllers
             List<OfertaModel> listaOferta = new List<OfertaModel>();
             listaOferta = ofertaBusiness.ObtenerOferta();
             ViewBag.ListaOferta = listaOferta;
-
             return View();
         }
     }

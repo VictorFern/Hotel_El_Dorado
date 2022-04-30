@@ -10,18 +10,12 @@
 <div class="row">
     @for (int i = 0; i < data.GetLength(0); i++)
     {
-
-<div class="col-md-3">
-    <div class="homeContactenos">
-       @* <img class="img-responsive imgContactenos" src="@data[i, 0]" alt="" width="40" height="40">*@
-    </div>
-    <br />
-</div>
-                <div class="col-md-8 justify-content-center">
-                    <div class="contactenosTexto">
-                        <p>@data[i,0]</p>
-                    </div>
-                    <br />
-                </div>
-                                <br />            }
+  <div class="col-md-8 justify-content-center">
+      <div class="contactenosTexto">
+          <p>@data[i,0]</p>
+      </div>
+      <br />
+  </div>
+    <br />           
+    }
 </div>

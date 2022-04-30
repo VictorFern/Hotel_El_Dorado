@@ -15,40 +15,40 @@
         <div class="text-center mb-3" id="alertas">
 
         </div>
+            <form asp-action="Index2" asp-controller="Reservacion" method="post">
 
-        <form asp-action="Index2" asp-controller="Reservacion" method="post">
+                <div class="form-row justify-content-between fechas">
 
-            <div class="form-row justify-content-between">
+                
+                    <div class="form-group">
+                        <label class="col-form-label">Fecha de llegada:</label>
+                        <input type="date" class="form-control form-control-sm" asp-for="Fecha_Entrada" id="fechaEntrada" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.ToString("yyyy-MM-dd")">
+                    </div>
 
-                <label class="col-form-label col-2">Fecha de llegada:</label>
-                <div class="form-group col-2">
-                    <input type="date" class="form-control" asp-for="Fecha_Entrada" id="fechaEntrada" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.ToString("yyyy-MM-dd")">
+                
+                    <div class="form-group">
+                        <label class="col-form-label">Fecha de Salida:</label>
+                        <input type="date" class="form-control form-control-sm" asp-for="Fecha_Salida" id="fechaSalida" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")">
+                    </div>
+                    <br />
+                     <div class="form-group">
+                        <input type="number" class="form-control form-control-sm" asp-for="Habitacion.ID_Habitacion" id="idHabitacion" value="" readonly hidden>
+                     </div>
                 </div>
 
-                <label class="col-form-label col-2">Fecha de Salida:</label>
-                <div class="form-group col-2">
-                    <input type="date" class="form-control" asp-for="Fecha_Salida" id="fechaSalida" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")">
+                <div class="justify-content-between fechas">
+                    <select name="tipoHabitacion" asp-for="tipoHabitacion" id="tipoHabitacion" class="col-3 form-control form-control-sm" href="javascript:;" onchange="verificarFecha(); return false;">
+                        <option value="0">Tipo de Habitación</option>
+                        <option value="1">Standard</option>
+                        <option value="2">Junior</option>
+                        <option value="3">Suit</option>
+                    </select>
+
+                    <div class="text-center mb-3" id="boton">
+                        <button type="submit" class="btn btn-primary mt-2" disabled>Siguiente</button>
+                    </div>
                 </div>
-                <br />
-
-                <input type="number" class="form-control" asp-for="Habitacion.ID_Habitacion" id="idHabitacion" value="" readonly hidden>
-
-            </div>
-
-
-            <select name="tipoHabitacion" asp-for="tipoHabitacion" id="tipoHabitacion" class="col-3 form-control" href="javascript:;" onchange="verificarFecha(); return false;">
-                <option value="0">Tipo de Habitación</option>
-                <option value="1">Standard</option>
-                <option value="2">Junior</option>
-                <option value="3">Suit</option>
-            </select>
-
-            <div class="text-center mb-3" id="boton">
-                <button type="submit" class="btn btn-primary mt-2" disabled>Siguiente</button>
-            </div>
-
-        </form>
-
+            </form>
     </div>
 
 </div>
