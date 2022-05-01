@@ -57,13 +57,14 @@ namespace Hotel_El_Dorado.Data
         public int VerificarFechas(string fechaEntrada, string fechaSalida, int tipoHabitacion)
         {
 
-            int id_Habitacion = 0;
+            List<ReservacionModel> listaReservaciones = new List<ReservacionModel>();
+            bool ocupado = false;
             //se crea la conexion
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 //se escribe la consulta
-                string sqlQuery = $"exec VerificarFechas @param_fechaEntrada='{fechaEntrada}', @param_fechaSalida='{fechaSalida}', @param_tipoHabitacion={tipoHabitacion}";
+                string sqlQuery = $"exec ObtenerReservacionesID @param_tipoHabitacion={tipoHabitacion}";
                 using (SqlCommand command = new SqlCommand(sqlQuery, connection))
                 {
                     // Se abre y se ejecuta la consulta
@@ -73,7 +74,12 @@ namespace Hotel_El_Dorado.Data
                     //Se hace lectura de lo que nos retorno la consulta
                     while (productoReader.Read())
                     {
-                        id_Habitacion = Int32.Parse(productoReader["ID_HABITACION"].ToString());
+                        ReservacionModel reservacion = new ReservacionModel();
+                        reservacion.Fecha_Entrada = productoReader["FECHA_ENTRADA"].ToString();
+                        reservacion.Fecha_Salida = productoReader["FECHA_SALIDA"].ToString();
+                        reservacion.Habitacion.ID_Habitacion = Int32.Parse(productoReader["ID_HABITACION"].ToString());
+
+                        listaReservaciones.Add(reservacion);
 
                     } // while
                       //Se cierra la conexion a la base de datos
@@ -81,7 +87,85 @@ namespace Hotel_El_Dorado.Data
                 }
             }
 
-            return id_Habitacion;
+            int habitacionActual = listaReservaciones[0].Habitacion.ID_Habitacion;
+            List<int> habitacionesDisponibles = new List<int>();
+
+            foreach(ReservacionModel reservacionModel in listaReservaciones)
+            {
+
+                if(reservacionModel.Fecha_Entrada != "")
+                {
+
+                    if (habitacionActual != reservacionModel.Habitacion.ID_Habitacion)
+                    {
+                        int iteraciones = habitacionesDisponibles.Count();
+
+                        for (int i = 0; i < iteraciones; i++)
+                        {
+
+                            if (habitacionesDisponibles[i] == reservacionModel.Habitacion.ID_Habitacion)
+                            {
+                                habitacionesDisponibles.Remove(reservacionModel.Habitacion.ID_Habitacion);
+                            }
+
+                        }
+
+                        ocupado = false;
+                    }
+
+
+                    if (!(((DateTime.Parse(fechaEntrada) <= DateTime.Parse(reservacionModel.Fecha_Entrada)) && (DateTime.Parse(fechaSalida) <= DateTime.Parse(reservacionModel.Fecha_Entrada))) || ((DateTime.Parse(fechaEntrada) >= DateTime.Parse(reservacionModel.Fecha_Salida)) && (DateTime.Parse(fechaSalida) >= DateTime.Parse(reservacionModel.Fecha_Salida)))))
+                    {
+                        ocupado = true;
+
+                    }
+                    
+                    if (!ocupado)
+                    {
+                        if (!habitacionesDisponibles.Contains(reservacionModel.Habitacion.ID_Habitacion))
+                        {
+                            habitacionesDisponibles.Add(reservacionModel.Habitacion.ID_Habitacion);
+                        }
+                    }
+                        
+
+                }
+                else
+                {
+                    return reservacionModel.Habitacion.ID_Habitacion;
+                }
+                
+
+
+            }
+
+            if (ocupado)
+            {
+                int iteraciones = habitacionesDisponibles.Count();
+
+                for (int i = 0; i < iteraciones; i++)
+                {
+
+                    if (habitacionesDisponibles[i] == listaReservaciones[listaReservaciones.Count()-1].Habitacion.ID_Habitacion)
+                    {
+                        habitacionesDisponibles.Remove(listaReservaciones[listaReservaciones.Count() - 1].Habitacion.ID_Habitacion);
+                    }
+
+                }
+
+                ocupado = false;
+            }
+
+            if (habitacionesDisponibles.Count() > 0)
+            {
+                return habitacionesDisponibles.Min();
+            }
+            else
+            {
+                return 0;
+            }
+
+            
             
         }
 
