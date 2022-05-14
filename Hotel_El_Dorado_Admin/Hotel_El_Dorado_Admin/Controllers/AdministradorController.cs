@@ -30,20 +30,36 @@ namespace Hotel_El_Dorado_Admin.Controllers
         [HttpPost]
         public IActionResult Login(AdministradorModel model)
         {
-            AdministradorBusiness administradorBusiness = new AdministradorBusiness(Configuration);
-            List<AdministradorModel> lista = administradorBusiness.login(model);
-          
-            int valor = lista[0].id;
-            HttpContext.Session.SetInt32("variableInt", valor);
-            return RedirectToAction("Index");
- 
+            /*
+            * Comprueba si ya ha iniciado sesión
+            */
+            if(!Cache.Instance.isLogged)
+            {
+                Cache.Instance.isLogged = true;
+
+                AdministradorBusiness administradorBusiness = new AdministradorBusiness(Configuration);
+                List<AdministradorModel> lista = administradorBusiness.login(model);
+                if (lista.Count > 0) 
+                { 
+                    int valor = lista[0].id;
+
+                    HttpContext.Session.SetInt32("variableInt", valor);
+                    return RedirectToAction("Index");
+                }
+            }
+            return View();
+
         }
 
         public IActionResult Index()
         {
-            int valor = (int)HttpContext.Session.GetInt32("variableInt");
-            ViewBag.Session = valor;
-            return View();
+            if (Cache.Instance.isLogged)
+            {
+                int valor = (int)HttpContext.Session.GetInt32("variableInt");
+                ViewBag.Session = valor;
+                return View();
+            }
+            return RedirectToAction("Login");
         }
     }
 }
