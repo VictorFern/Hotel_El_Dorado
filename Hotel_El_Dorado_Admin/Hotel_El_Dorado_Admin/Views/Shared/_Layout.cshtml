@@ -23,7 +23,24 @@
     </header>
     <div class="row">
         <div class="col-md-2">
-            @*Menu*@
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="collapsibleNavbar">
+                        <div class="list-group  sidebar">
+                            <a asp-controller="Administrador" asp-action="Index" class="list-group-item list-group-item-action">Home</a>
+                            <a class="list-group-item list-group-item-action">Modificar Páginas</a>
+                            <a class="list-group-item list-group-item-action">Listado de reservaciones</a>
+                            <a class="list-group-item list-group-item-action">Administrar habitaciones</a>
+                            <a class="list-group-item list-group-item-action">Ver estado del hotel hoy</a>
+                            <a class="list-group-item list-group-item-action">Consultar disponibilidad de habitaciones</a>
+                            <a class="list-group-item list-group-item-action">Publicidad</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
         <div class="col-md-6">
             <div class="container">
