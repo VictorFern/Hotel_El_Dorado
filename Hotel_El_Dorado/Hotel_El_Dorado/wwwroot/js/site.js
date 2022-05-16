@@ -46,3 +46,26 @@ function cancelarReservacion() {
     console.log("entra");
     document.location.href = '/Reservacion/Reservar';
 }
+
+function BuscarClienteCedula() {
+    console.log('entra');
+        var parametros = {
+            "cedula": parseInt(document.getElementById('cedula').value, 10)
+        };
+
+        $.ajax(
+            {
+
+                data: parametros,
+                url: '/Cliente/BuscarCedula',
+                type: "post",
+                success: function (response) {
+                    $('input#nombre').val(parseInt(response.Nombre));
+                    $('input#apellidos').val(parseInt(response.Apellidos));
+                    $('input#email').val(parseInt(response.Email));
+                    console.log('retorna');
+                }
+            }
+        );
+
+}
