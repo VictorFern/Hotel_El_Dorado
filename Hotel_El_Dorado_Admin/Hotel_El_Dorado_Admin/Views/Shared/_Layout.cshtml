@@ -12,14 +12,24 @@
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-   <header>
-       <div class="row logoContent">
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="col-4 logo">
                 <a asp-controller="Administrador" asp-action="Index" class="logoImagen"><img class="logoImagen" src="~/img/logos.png"></a>
                 <h2 id="h2">Hotel El Dorado</h2>
                 <span id="h2">Modulo Administrativo</span>
             </div>
-       </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <h4 id="h2"> Bienvenido @ViewBag.nombre</h4> 
+                <a asp-controller="Administrador" asp-action="logOut" class="btn btn-dark btnCerrarSeesion">Cerrar sesión</a>
+            </div>
+        </nav>
+
+
     </header>
     <div class="row">
         <div class="col-md-2">

@@ -40,7 +40,8 @@ namespace Hotel_El_Dorado_Admin.Controllers
                 AdministradorBusiness administradorBusiness = new AdministradorBusiness(Configuration);
                 List<AdministradorModel> lista = administradorBusiness.login(model);
                 if (lista.Count > 0) 
-                { 
+                {
+                    HttpContext.Session.SetString("nombreAdmin", lista[0].nombre);
                     int valor = lista[0].id;
 
                     HttpContext.Session.SetInt32("variableInt", valor);
@@ -56,10 +57,20 @@ namespace Hotel_El_Dorado_Admin.Controllers
             if (Cache.Instance.isLogged)
             {
                 int valor = (int)HttpContext.Session.GetInt32("variableInt");
+                string nombre = HttpContext.Session.GetString("nombreAdmin");
+                ViewBag.nombre = nombre;
                 ViewBag.Session = valor;
                 return View();
             }
             return RedirectToAction("Login");
         }
+
+        public IActionResult logOut()
+        {
+            Cache.Instance.isLogged = false;
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login");
+        }
+
     }
 }
