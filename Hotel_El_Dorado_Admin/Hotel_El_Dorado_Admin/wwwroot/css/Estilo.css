@@ -12,6 +12,10 @@ main {
     min-width: 1000px;
 }
 
+
+.btnCerrarSeesion {
+    margin-left: 2rem;
+}
 .homeBody {
     padding-top: 10px;
     margin: 0px;
