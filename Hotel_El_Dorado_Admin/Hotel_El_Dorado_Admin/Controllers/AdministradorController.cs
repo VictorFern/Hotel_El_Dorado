@@ -72,5 +72,15 @@ namespace Hotel_El_Dorado_Admin.Controllers
             return RedirectToAction("Login");
         }
 
+	public IActionResult habitacionStandard()
+        {
+            return View();
+        }
+
+        public IActionResult verHabitacionStandard()
+        {
+            return View();
+        }
+
     }
 }

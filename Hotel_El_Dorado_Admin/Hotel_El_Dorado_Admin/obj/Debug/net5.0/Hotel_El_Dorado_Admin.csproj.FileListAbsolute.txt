@@ -95,3 +95,6 @@ D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Cliente\Hotel_El
 D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Cliente\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\ref\Hotel_El_Dorado_Admin.dll
 D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Cliente\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Hotel_El_Dorado_Admin.pdb
 D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Cliente\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Hotel_El_Dorado_Admin.genruntimeconfig.cache
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\bin\Debug\net5.0\Hotel_El_Dorado_Admin.StaticWebAssets.xml
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\habitacionStandard.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\verHabitacionStandard.cshtml.g.cs
