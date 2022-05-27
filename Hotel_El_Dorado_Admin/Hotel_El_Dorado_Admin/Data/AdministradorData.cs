@@ -75,6 +75,7 @@ namespace Hotel_El_Dorado_Admin.Data
                         habitacion.Costo = int.Parse(productoReader["COSTO"].ToString());
                         habitacion.Tipo_Habitacion = int.Parse(productoReader["ID_TIPO"].ToString());
                         habitacion.Descripcion = productoReader["DESCRIPCION"].ToString();
+                        habitacion.Nombre_Tipo_Habitacion = productoReader["TIPO"].ToString();
                         listaHabitaciones.Add(habitacion);
                     } // while
                       //Se cierra la conexion a la base de datos
