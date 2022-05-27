@@ -7,7 +7,7 @@ namespace Hotel_El_Dorado_Admin.Models
 {
     public class EstadoDiarioModel
     {
-        public int ID_Reservacion { get; set; }
+        public string ID_Reservacion { get; set; }
         public string Fecha_Reservacion { get; set; }
         public string Fecha_Entrada { get; set; }
         public string Fecha_Salida { get; set; }

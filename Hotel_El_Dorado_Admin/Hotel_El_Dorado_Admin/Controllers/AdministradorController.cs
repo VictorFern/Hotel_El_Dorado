@@ -119,8 +119,9 @@ namespace Hotel_El_Dorado_Admin.Controllers
                             estadoDiario.Fecha_Entrada = listaReservaciones[j].Fecha_Entrada;
                             estadoDiario.Fecha_Reservacion = listaReservaciones[j].Fecha_Reservacion;
                             estadoDiario.Fecha_Salida = listaReservaciones[j].Fecha_Salida;
-                            estadoDiario.ID_Reservacion = listaReservaciones[j].ID_Reservacion;
+                            estadoDiario.ID_Reservacion = listaReservaciones[j].ID_Reservacion.ToString();
                             estadoDiario.Habitacion.Numero_Habitacion = listaHabitaciones[i].Numero_Habitacion;
+                            estadoDiario.Habitacion.Nombre_Tipo_Habitacion = listaHabitaciones[i].Nombre_Tipo_Habitacion;
                             listaEstadoDiario.Add(estadoDiario);
                             break;
                         }
@@ -133,8 +134,9 @@ namespace Hotel_El_Dorado_Admin.Controllers
                     estadoDiario.Fecha_Entrada = "-";
                     estadoDiario.Fecha_Reservacion = "-";
                     estadoDiario.Fecha_Salida = "-";
-                    estadoDiario.ID_Reservacion = 0;
+                    estadoDiario.ID_Reservacion = "-";
                     estadoDiario.Habitacion.Numero_Habitacion = listaHabitaciones[i].Numero_Habitacion;
+                    estadoDiario.Habitacion.Nombre_Tipo_Habitacion = listaHabitaciones[i].Nombre_Tipo_Habitacion;
                     listaEstadoDiario.Add(estadoDiario);
                 }
 
