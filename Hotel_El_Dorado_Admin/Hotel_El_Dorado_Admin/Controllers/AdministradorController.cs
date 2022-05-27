@@ -78,5 +78,82 @@ namespace Hotel_El_Dorado_Admin.Controllers
             return RedirectToAction("Login");
         }
 
+	    public IActionResult habitacionStandard()
+        {
+            return View();
+        }
+
+        public IActionResult verHabitacionStandard()
+        {
+            return View();
+        }
+
+        public IActionResult EstadoActualHabitacion()
+        {
+            AdministradorBusiness administradorBusiness = new AdministradorBusiness(Configuration);
+
+            List<HabitacionModel> listaHabitaciones = new List<HabitacionModel>();
+            listaHabitaciones = administradorBusiness.ObtenerHabitaciones();
+
+            List<ReservacionModel> listaReservaciones = new List<ReservacionModel>();
+            listaReservaciones = administradorBusiness.ObtenerReservaciones();
+
+            List<EstadoDiarioModel> listaEstadoDiario = new List<EstadoDiarioModel>();
+
+            bool ocupado = false;
+
+            for (int i = 0; i < listaHabitaciones.Count(); i++)
+            {
+
+                for (int j = 0; j < listaReservaciones.Count(); j++)
+                {
+                    if (listaHabitaciones[i].ID_Habitacion == listaReservaciones[j].Habitacion.ID_Habitacion)
+                    {
+                        ocupado = true;
+                        break;
+                    }
+                }
+
+                if (ocupado)
+                {
+                    for (int j = 0; j < listaReservaciones.Count(); j++)
+                    {
+                        if (listaHabitaciones[i].ID_Habitacion == listaReservaciones[j].Habitacion.ID_Habitacion)
+                        {
+                            EstadoDiarioModel estadoDiario = new EstadoDiarioModel();
+                            estadoDiario.Estado = "Ocupado";
+                            estadoDiario.Fecha_Entrada = listaReservaciones[j].Fecha_Entrada;
+                            estadoDiario.Fecha_Reservacion = listaReservaciones[j].Fecha_Reservacion;
+                            estadoDiario.Fecha_Salida = listaReservaciones[j].Fecha_Salida;
+                            estadoDiario.ID_Reservacion = listaReservaciones[j].ID_Reservacion.ToString();
+                            estadoDiario.Habitacion.Numero_Habitacion = listaHabitaciones[i].Numero_Habitacion;
+                            estadoDiario.Habitacion.Nombre_Tipo_Habitacion = listaHabitaciones[i].Nombre_Tipo_Habitacion;
+                            listaEstadoDiario.Add(estadoDiario);
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    EstadoDiarioModel estadoDiario = new EstadoDiarioModel();
+                    estadoDiario.Estado = "Disponible";
+                    estadoDiario.Fecha_Entrada = "-";
+                    estadoDiario.Fecha_Reservacion = "-";
+                    estadoDiario.Fecha_Salida = "-";
+                    estadoDiario.ID_Reservacion = "-";
+                    estadoDiario.Habitacion.Numero_Habitacion = listaHabitaciones[i].Numero_Habitacion;
+                    estadoDiario.Habitacion.Nombre_Tipo_Habitacion = listaHabitaciones[i].Nombre_Tipo_Habitacion;
+                    listaEstadoDiario.Add(estadoDiario);
+                }
+
+                ocupado = false;
+
+            }
+
+            ViewBag.ListaEstadoDiario = listaEstadoDiario;
+
+            return View();
+        }
+
     }
 }

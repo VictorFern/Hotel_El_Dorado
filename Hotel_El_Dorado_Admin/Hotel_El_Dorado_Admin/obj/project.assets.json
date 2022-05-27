@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Usuarios\\Faigda\\Documentos\\Informática\\Ingeniería\\Proyecto\\Cliente\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj",
+      "projectUniqueName": "D:\\Usuarios\\Faigda\\Documentos\\Informática\\Ingeniería\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj",
       "projectName": "Hotel_El_Dorado_Admin",
-      "projectPath": "D:\\Usuarios\\Faigda\\Documentos\\Informática\\Ingeniería\\Proyecto\\Cliente\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj",
+      "projectPath": "D:\\Usuarios\\Faigda\\Documentos\\Informática\\Ingeniería\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj",
       "packagesPath": "C:\\Users\\jasso\\.nuget\\packages\\",
-      "outputPath": "D:\\Usuarios\\Faigda\\Documentos\\Informática\\Ingeniería\\Proyecto\\Cliente\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\obj\\",
+      "outputPath": "D:\\Usuarios\\Faigda\\Documentos\\Informática\\Ingeniería\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jasso\\AppData\\Roaming\\NuGet\\NuGet.Config",

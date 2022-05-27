@@ -1,4 +1,4 @@
-﻿namespace Hotel_El_Dorado_Admin.Models
+namespace Hotel_El_Dorado_Admin.Models
 {
     public class ReservacionModel
     {
