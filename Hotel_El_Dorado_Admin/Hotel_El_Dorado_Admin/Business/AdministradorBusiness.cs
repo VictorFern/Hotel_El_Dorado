@@ -23,5 +23,17 @@ namespace Hotel_El_Dorado_Admin.Business
             return administradorData.login(model);
         }
 
+        public List<HabitacionModel> ObtenerHabitaciones()
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.ObtenerHabitaciones();
+        }
+
+        public List<ReservacionModel> ObtenerReservaciones()
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.ObtenerReservaciones();
+        }
+
     }
 }
