@@ -11,6 +11,7 @@ using Hotel_El_Dorado_Admin.Business;
 
 namespace Hotel_El_Dorado_Admin.Controllers
 {
+
     public class AdministradorController : Controller
     {
         public IConfiguration Configuration { get;}
@@ -18,6 +19,11 @@ namespace Hotel_El_Dorado_Admin.Controllers
         public AdministradorController(IConfiguration configuration)
         {
             Configuration = configuration;
+        }
+
+        public IActionResult ConsultarDisponibilidad() 
+        {
+            return View();
         }
 
         public IActionResult Login()
