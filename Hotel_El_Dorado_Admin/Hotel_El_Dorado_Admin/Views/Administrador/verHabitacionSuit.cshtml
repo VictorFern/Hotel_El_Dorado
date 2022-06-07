@@ -1,0 +1,45 @@
+﻿@model Hotel_El_Dorado_Admin.Models.HabitacionModel
+@{
+    ViewData["Title"] = "Habitación Suit";
+    Layout = "_Layout";
+}
+<div class="AdministrarHabitaciónTexto">
+    <h2 id="h2">Modificar Habitación</h2>
+</div>
+<div class="row">
+    <div class="container"><br />
+        <form class="form-horizontal" enctype="multipart/form-data">
+            <div class="form-group col-sm-4 col-md-4">
+                <label class="control-label lbcostos">Suit</label>
+                <label class="col-md-4 control-label lbcosto" id="lbCostos">Tarifa Diaria $</label>
+                 <div class="col-sm-2 costoInput">
+                      <input type="number" class="form-control form-control-sm costoInput" asp-for="Costo" value="@ViewBag.ListaHabitacion[0].Costo" style="border: solid;"/>
+                 </div>
+             </div>
+             <div class="form-group">
+                    <textarea class="form-control textArea"  rows="5" id="comment" style="resize:none;">@ViewBag.ListaHabitacion[0].Descripcion</textarea>
+              </div>
+              <div class="col-sm-4">
+                  <div class="GaleryContainer">
+                     <div class="container-img-big">
+                         <label class="control-label lbcostos">Imagen Actual</label>
+                         <img id="imgBig" class="img-responsive img-big" src="~/img/@ViewBag.ListaHabitacion[0].Imagen"  alt="Chania">
+                         
+                     </div>
+                   </div>
+              </div>
+              <div class="form-group col-sm-4">
+                  <div class="form-group costoInputs">
+                      <label class="control-label lbcostos">Subir nueva imagen</label>
+                        <input type="file" name="files" class="form-control" asp-for="Imagen" accept="image/png, .jpeg, .jpg, image/gif" id="imagen" name="imagen" value="@ViewBag.ListaHabitacion[0].Imagen">
+                  </div>
+             </div>
+             <div class="form-group col-sm-4 botonesInput">
+                 <div class="form-group">
+                        <input type="submit" value="Aceptar" class="btn btn-primary" />
+                        <a asp-controller="Administrador" asp-action="habitacionSuit" class="btn btn-danger">Cancelar</a>
+                    </div>
+             </div>
+           </form>
+    </div>
+</div>

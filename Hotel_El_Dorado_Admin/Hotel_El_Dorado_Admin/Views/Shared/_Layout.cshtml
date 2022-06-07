@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Hotel_El_Dorado_Admin</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <script type="text/javascript" src="~/js/functions.js"></script>
+    <script type="text/javascript" src="~/js/site.js"></script>
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/Estilo.css" />
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
@@ -15,24 +15,24 @@
     <header>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="col-4 logo">
+            <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-xl-8 logo">
                 <a asp-controller="Administrador" asp-action="Index" class="logoImagen"><img class="logoImagen" src="~/img/logos.png"></a>
                 <h2 id="h2">Hotel El Dorado</h2>
                 <span id="h2">Modulo Administrativo</span>
             </div>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-collapse cerrar" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 </ul>
-                <h4 id="h2"> Bienvenido @ViewBag.nombre</h4> 
+                <h4 id="h2" class="welcome"> Bienvenido @ViewBag.nombre</h4> 
                 <a asp-controller="Administrador" asp-action="logOut" class="btn btn-dark btnCerrarSeesion">Cerrar sesión</a>
             </div>
         </nav>
 
 
     </header>
-    <div class="row">
-        <div class="col-md-2">
+     <div class="row contenido">
+        <div class="col-md-2 menuContenido">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -40,23 +40,34 @@
                     </button>
                     <div class="navbar-collapse collapse" id="collapsibleNavbar">
                         <div class="list-group  sidebar">
-                            <a asp-controller="Administrador" asp-action="Index" class="list-group-item list-group-item-action">Home</a>
-                            <a class="list-group-item list-group-item-action">Modificar Páginas</a>
-                            <a class="list-group-item list-group-item-action">Listado de reservaciones</a>
-                            <a class="list-group-item list-group-item-action">Administrar habitaciones</a>
-                            <a class="list-group-item list-group-item-action">Ver estado del hotel hoy</a>
-                            <a class="list-group-item list-group-item-action">Consultar disponibilidad de habitaciones</a>
+                            <a asp-controller="Administrador" asp-action="Index" class="text-dark list-group-item list-group-item-action">Home</a>
+                            <a asp-controller="Administrador" class="text-dark list-group-item list-group-item-action" data-toggle="collapse" data-target="#modificarPage">Modificar Páginas</a>
+                           <div class="collapse" id="modificarPage">
+                                <a class="text-dark list-group-item list-group-item-action">Home</a>
+                                <a class="text-dark list-group-item list-group-item-action">Sobre Nosotros</a>
+                                <a class="text-dark list-group-item list-group-item-action">Facilidaddes</a>
+                                <a class="text-dark list-group-item list-group-item-action">Como Llegar</a>
+                           </div>                          
+                            <a class="text-dark list-group-item list-group-item-action">Listado de reservaciones</a>
+                            <a asp-controller="Administrador" class="text-dark list-group-item list-group-item-action" data-toggle="collapse" data-target="#habitaciones">Administrar habitaciones</a>    
+                            <div class="collapse" id="habitaciones">
+                                <a asp-controller="Administrador" asp-action="habitacionStandard" class="text-dark list-group-item list-group-item-action">Standard</a>
+                                <a asp-controller="Administrador" asp-action="habitacionJunior" class="text-dark list-group-item list-group-item-action">Junior</a>
+                                <a asp-controller="Administrador" asp-action="habitacionSuit" class="text-dark list-group-item list-group-item-action">Suit</a>
+                           </div>
+                            <a asp-controller="Administrador" asp-action="EstadoActualHabitacion" class="text-dark list-group-item list-group-item-action">Ver estado del hotel hoy</a>
+                            <a asp-controller="Administrador" asp-action="ConsultarDisponibilidad" class="text-dark list-group-item list-group-item-action">Consultar disponibilidad de habitaciones</a>
                             <a asp-controller="Temporada" asp-action="InsertarTemporada" class="list-group-item list-group-item-action">Insertar temporada</a>
                             <a asp-controller="Temporada" asp-action="VisualizarTemporada" class="list-group-item list-group-item-action">Administrar temporada</a>
                             <a asp-controller="Oferta" asp-action="InsertarOferta" class="list-group-item list-group-item-action">Insertar Oferta</a>
                             <a asp-controller="Oferta" asp-action="VisualizarOferta" class="list-group-item list-group-item-action">Administrar Oferta</a>
-                            <a class="list-group-item list-group-item-action">Publicidad</a>
+                            <a class="text-dark list-group-item list-group-item-action">Publicidad</a>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="container">
                 <main role="main" class="pb-3">
                     @RenderBody()

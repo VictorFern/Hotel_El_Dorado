@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Hotel_El_Dorado_Admin.Data;
 using System;
@@ -82,8 +82,17 @@ namespace Hotel_El_Dorado_Admin.Business
             return adminData.editarOferta(temp);
         }
 
+        public List<HabitacionModel> ObtenerHabitaciones()
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.ObtenerHabitaciones();
+        }
 
-
+        public List<ReservacionModel> ObtenerReservaciones()
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.ObtenerReservaciones();
+        }
 
     }
 }
