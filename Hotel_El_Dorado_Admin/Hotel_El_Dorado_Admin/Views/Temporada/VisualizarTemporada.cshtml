@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Hotel_El_Dorado_Admin.Models.TemporadaModel>
+
+@{
+    ViewData["Title"] = "VisualizarTemporada";
+}
+
+<h1>Visualizar Temporada</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechaInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechaFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descuento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descuento)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarTemporada", new { item.id, item.fechaInicio, item.fechaFin, item.descuento}) |
+                @Html.ActionLink("Eliminar", "EliminarTemporada", new { item.id, item.fechaInicio, item.fechaFin, item.descuento })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

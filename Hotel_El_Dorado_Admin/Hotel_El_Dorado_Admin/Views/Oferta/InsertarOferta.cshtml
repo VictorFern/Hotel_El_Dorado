@@ -1,0 +1,40 @@
+﻿@model Hotel_El_Dorado_Admin.Models.OfertaModel
+
+@{
+    ViewData["Title"] = "Insertar Oferta";
+}
+
+<h1>Insertar Oferta</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InsertarOferta">
+            <div asp-validation-summary="ModelOnly" class="text-danger">Oferta</div>
+             <div class="form-group">
+                <label asp-for="Oferta" class="control-label"></label>
+                <input asp-for="Oferta" class="form-control" />
+                <span asp-validation-for="Oferta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+            <select asp-for="Imagen" name="Imagen">
+                <option value=""></option>
+                <option value="5.jpg">5%</option>
+                <option value="10.jpg">10%</option>
+                <option value="15.jpg">15%</option>
+            </select>
+            </div>
+             <div class="form-group">
+                <label class="col-form-label">Fecha de llegada:</label>
+                <input type="date" class="form-control form-control-sm" asp-for="Fecha_Inicio" id="fechaInicio" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.ToString("yyyy-MM-dd")">
+            </div>
+            <div class="form-group">
+                <label class="col-form-label">Fecha de Salida:</label>
+                <input type="date" class="form-control form-control-sm" asp-for="Fecha_Fin" id="fechaFin" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")">
+            </div>
+            <div class="form-group">
+                <input asp-controller="Oferta" asp-action="guardarOferta" type="submit" value="Insertar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
