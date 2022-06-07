@@ -8,10 +8,6 @@
     box-sizing: inherit;
 }
 
-main {
-    min-width: 1000px;
-}
-
 
 .btnCerrarSeesion {
     margin-left: 2rem;
@@ -60,14 +56,54 @@ main {
     padding-top: 5px;
 }
 
+.form-check-input {
+    margin: auto;
+    margin-top: 5px;
+}
+
+.lbActiva {
+    margin-left: 20px;
+}
+
 .reservarTexto p {
     padding-top: 30px;
+}
+
+.textArea {
+    resize: none;
+    margin-left: 10px;
+    border: solid;
+}
+
+#lbCostos {
+    position: relative;
+    left: 75px;
+}
+
+.costoInput {
+    margin-left: 120px;
+    position: relative;
+    bottom: 20px;
+}
+
+.costoInputs {
+    position: relative;
+    bottom: 140px;
+    left: 250px;
+    min-height: 15px;
+}
+
+.botonesInput {
+    position: relative;
+    float: right;
+    top: 25px;
 }
 
 .lcosto {
     padding-top: 10px;
     padding-bottom: 0px;
     margin-left: 5px;
+    display: inline;
 }
 
 .botones {
@@ -192,14 +228,11 @@ nav.navbar {
 }
 
 .container-img-big {
-    margin-left: 10px;
     max-width: 205px;
-    position: relative;
-    display: inline-block;
-    margin-bottom: 30px;
 }
 
 .img-big {
+    float: left;
     max-width: 200px;
     max-height: 200px;
 }
@@ -228,10 +261,17 @@ nav.navbar {
     .menuContenido {
         min-width: 20%;
     }
-    /*.sidebar {
-        min-width: 90%;
-        margin-left: 0px;
-    }*/
+
+    .costoInputs {
+        height: 55px;
+    }
+
+    .botonesInput {
+        position: relative;
+        float: right;
+        top: 25px;
+    }
+
     .homeFacilidad {
         padding-top: 10px;
         margin-left: 40px;
@@ -280,12 +320,92 @@ nav.navbar {
     max-height: 200px;
 }
 
-
+.consultar {
+    margin-top: 36px;
+}
 /* Para 960px */
 @media only screen and (max-width: 980px) and (min-width: 821px) {
     main {
-        min-width: 650px;
+        min-width: 640px;
     }
+
+    .contenido {
+        min-width: 640px;
+    }
+
+    .tabla {
+        margin-left: 25px;
+    }
+
+    .inpuConsultar {
+        padding-left: 20px;
+    }
+
+    .costoInput {
+        margin-left: 120px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    .textArea {
+        margin-left: 50px;
+        width: 590px;
+    }
+
+    .lbcostos {
+        margin-left: 40px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: 75px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 90px;
+        left: 250px;
+        width: 380px;
+    }
+
+    .GaleryContainer {
+        position: relative;
+        bottom: 0px;
+        left: 40px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 55px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 20px;
+    }
+
+    .divConsultarDisponibilidad {
+        margin-left: 45px;
+    }
+
+    .divWrapper {
+        margin-left: 45px;
+    }
+
+    .container {
+        min-width: 570px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+
 
     .containerFooter {
         text-align: center;
@@ -406,7 +526,79 @@ nav.navbar {
 
 @media only screen and (max-width: 820px) and (min-width: 769px) {
     main {
-        min-width: 650px;
+        min-width: 605px;
+    }
+
+    .tabla {
+        margin-left: 25px;
+    }
+
+    .inpuConsultar {
+        padding-left: 20px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 10px;
+    }
+
+    .divConsultarDisponibilidad {
+        margin-left: 45px;
+    }
+
+    .divWrapper {
+        margin-left: 45px;
+    }
+
+    .costoInput {
+        margin-left: 120px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    .textArea {
+        margin-left: 50px;
+        width: 560px;
+    }
+
+    .lbcostos {
+        margin-left: 40px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: 75px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 90px;
+        left: 250px;
+        width: 350px;
+    }
+
+    .GaleryContainer {
+        position: relative;
+        bottom: 0px;
+        left: 40px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 55px;
+    }
+
+    .container {
+        min-width: 605px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
     }
 
     .containerFooter {
@@ -528,7 +720,77 @@ nav.navbar {
 /* Para 800px */
 @media only screen and (max-width: 768px) and (min-width: 621px) {
     main {
-        min-width: 650px;
+        min-width: 570px;
+    }
+
+    .tabla {
+        margin-left: 30px;
+    }
+
+    .inpuConsultar {
+        padding-left: 20px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 10px;
+    }
+
+    .divConsultarDisponibilidad {
+        margin-left: 50px;
+    }
+
+    .divWrapper {
+        margin-left: 50px;
+    }
+
+    .costoInput {
+        margin-left: 120px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    .textArea {
+        margin-left: 60px;
+        width: 490px;
+    }
+
+    .lbcosto {
+        margin-left: 50px;
+    }
+
+    .lbcostos {
+        margin-left: 50px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: 5px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 90px;
+        left: 260px;
+        width: 290px;
+    }
+
+    .GaleryContainer {
+        position: relative;
+        bottom: 0px;
+        left: 50px;
+    }
+
+    .container {
+        min-width: 570px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
     }
 
     .containerFooter {
@@ -650,16 +912,57 @@ nav.navbar {
 
 /* Para 600px */
 @media only screen and (max-width: 620px) and (min-width: 501px) {
-    main {
-        min-width: fit-content;
+    .container, .tabla {
+        width: 90%;
     }
 
     .containerFooter {
         text-align: center;
     }
 
+    .inpuConsultar {
+        padding-left: 20px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 19px;
+    }
+
+    .divConsultarDisponibilidad {
+        margin-left: 50px;
+    }
+
+    .divWrapper {
+        margin-left: 50px;
+    }
+
     .logo h2 {
         margin: 5px;
+    }
+
+    .costoInput {
+        margin-left: 40px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: -15px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 80px;
+        left: 210px;
+        width: 280px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 85px;
     }
 
     .logo img {
@@ -784,12 +1087,48 @@ nav.navbar {
 
 /* Para 480px */
 @media only screen and (max-width: 500px) and (min-width: 341px) {
-    main {
-        min-width: fit-content;
+
+    .container, .tabla {
+        width: 90%;
+    }
+
+    .tabla {
+    }
+
+    .inpuConsultar {
+        padding-left: 5px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 5px;
     }
 
     .containerFooter {
         text-align: center;
+    }
+
+    .costoInput {
+        margin-left: 40px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: -15px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 0px;
+        left: -4px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 85px;
     }
 
     .logo h2 {
@@ -918,8 +1257,8 @@ nav.navbar {
 
 /* Para 320px */
 @media only screen and (max-width: 340px) and (min-width: 5px) {
-    main {
-        min-width: fit-content;
+    .container, .tabla {
+        width: 90%;
     }
 
     .containerFooter {
@@ -928,6 +1267,30 @@ nav.navbar {
 
     .logo h2 {
         margin: 2px;
+    }
+
+    .costoInput {
+        margin-left: 40px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: -15px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 0px;
+        left: -4px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 85px;
     }
 
     .logo img {

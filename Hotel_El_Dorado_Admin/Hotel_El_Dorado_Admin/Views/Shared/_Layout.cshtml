@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Hotel_El_Dorado_Admin</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <script type="text/javascript" src="~/js/functions.js"></script>
+    <script type="text/javascript" src="~/js/site.js"></script>
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/Estilo.css" />
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
@@ -49,21 +49,21 @@
                                 <a class="text-dark list-group-item list-group-item-action">Como Llegar</a>
                            </div>                          
                             <a class="text-dark list-group-item list-group-item-action">Listado de reservaciones</a>
-                            <a asp-controller="Administrador" asp-action="ConsultarDisponibilidad" class="list-group-item list-group-item-action">Consultar disponibilidad de habitaciones</a>
                             <a asp-controller="Administrador" class="text-dark list-group-item list-group-item-action" data-toggle="collapse" data-target="#habitaciones">Administrar habitaciones</a>    
                             <div class="collapse" id="habitaciones">
                                 <a asp-controller="Administrador" asp-action="habitacionStandard" class="text-dark list-group-item list-group-item-action">Standard</a>
-                                <a class="text-dark list-group-item list-group-item-action">Junior</a>
-                                <a class="text-dark list-group-item list-group-item-action">Suit</a>
+                                <a asp-controller="Administrador" asp-action="habitacionJunior" class="text-dark list-group-item list-group-item-action">Junior</a>
+                                <a asp-controller="Administrador" asp-action="habitacionSuit" class="text-dark list-group-item list-group-item-action">Suit</a>
                            </div>
                             <a asp-controller="Administrador" asp-action="EstadoActualHabitacion" class="text-dark list-group-item list-group-item-action">Ver estado del hotel hoy</a>
+                            <a asp-controller="Administrador" asp-action="ConsultarDisponibilidad" class="text-dark list-group-item list-group-item-action">Consultar disponibilidad de habitaciones</a>
                             <a class="text-dark list-group-item list-group-item-action">Publicidad</a>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="container">
                 <main role="main" class="pb-3">
                     @RenderBody()

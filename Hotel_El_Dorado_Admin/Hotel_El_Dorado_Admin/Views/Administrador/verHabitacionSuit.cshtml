@@ -1,6 +1,6 @@
 ﻿@model Hotel_El_Dorado_Admin.Models.HabitacionModel
 @{
-    ViewData["Title"] = "Habitación Standard";
+    ViewData["Title"] = "Habitación Suit";
     Layout = "_Layout";
 }
 <div class="AdministrarHabitaciónTexto">
@@ -10,7 +10,7 @@
     <div class="container"><br />
         <form class="form-horizontal" enctype="multipart/form-data">
             <div class="form-group col-sm-4 col-md-4">
-                <label class="control-label lbcostos">Standard</label>
+                <label class="control-label lbcostos">Suit</label>
                 <label class="col-md-4 control-label lbcosto" id="lbCostos">Tarifa Diaria $</label>
                  <div class="col-sm-2 costoInput">
                       <input type="number" class="form-control form-control-sm costoInput" asp-for="Costo" value="@ViewBag.ListaHabitacion[0].Costo" style="border: solid;"/>
@@ -37,7 +37,7 @@
              <div class="form-group col-sm-4 botonesInput">
                  <div class="form-group">
                         <input type="submit" value="Aceptar" class="btn btn-primary" />
-                        <a asp-controller="Administrador" asp-action="habitacionStandard" class="btn btn-danger">Cancelar</a>
+                        <a asp-controller="Administrador" asp-action="habitacionSuit" class="btn btn-danger">Cancelar</a>
                     </div>
              </div>
            </form>

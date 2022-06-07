@@ -48,3 +48,19 @@ function consultarDisponibilidad() {
         }
     });
 }
+function activa() {
+    let checkBox = $('input#flexCheckDefault').val();
+    // Get the output text
+    let param = {
+        'tipo': checkBox
+    };
+    $.ajax({
+        data: param,
+        url: '/Habitacion/Activa/',
+        type: "post",
+        success: function (response) {
+
+        }
+    });
+
+}
