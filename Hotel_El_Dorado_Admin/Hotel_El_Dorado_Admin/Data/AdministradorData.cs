@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc;
@@ -118,6 +118,219 @@ namespace Hotel_El_Dorado_Admin.Data
                 }
             }
             return listaReservaciones;
+        }
+
+
+        public List<TemporadaModel> ObtenerTemporada()
+        {
+            List<TemporadaModel> temp = new List<TemporadaModel>();
+            //se crea la conexion
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //se escribe la consulta
+                string sqlQuery = $"exec sp_OBTENERTEMPORADA";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    // Se abre y se ejecuta la consulta
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader temporadaReader = command.ExecuteReader();
+                    //Se hace lectura de lo que nos retorno la consulta
+                    while (temporadaReader.Read())
+                    {
+                        TemporadaModel var = new TemporadaModel();
+                        var.id = Int32.Parse(temporadaReader["ID_TEMPORADA"].ToString());
+                        var.fechaInicio =  temporadaReader["FECHA_INICIO"].ToString();
+                        var.fechaFin = temporadaReader["FECHA_FIN"].ToString();
+                        var.descuento = float.Parse(temporadaReader["COSTO"].ToString());
+
+                        temp.Add(var);
+                    } // while
+                      //Se cierra la conexion a la base de datos
+                    connection.Close();
+                }
+            }
+            return temp;
+        }
+
+        public TemporadaModel ObtenerTemporadaID()
+        {
+            TemporadaModel temp = new TemporadaModel();
+            //se crea la conexion
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //se escribe la consulta
+                string sqlQuery = $"exec sp_OBTENERTEMPORADA_ID";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    // Se abre y se ejecuta la consulta
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader temporadaReader = command.ExecuteReader();
+                    //Se hace lectura de lo que nos retorno la consulta
+                    while (temporadaReader.Read())
+                    {
+                        temp.id = Int32.Parse(temporadaReader["ID_TEMPORADA"].ToString());
+                        temp.fechaInicio = temporadaReader["FECHA_INICIO"].ToString();
+                        temp.fechaFin = temporadaReader["FECHA_FIN"].ToString();
+                        temp.descuento = float.Parse(temporadaReader["COSTO"].ToString());
+
+                    } // while
+                      //Se cierra la conexion a la base de datos
+                    connection.Close();
+                }
+            }
+            return temp;
+        }
+
+
+        public bool guardarTemporada(TemporadaModel temporada)
+        {
+            Console.WriteLine("DENMTRO DE GUARDAR");
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec sp_INSERTARTEMPORADA @param_TIPO='Alta', @param_FECHA_I='{temporada.fechaInicio}', @param_FECHA_F='{temporada.fechaFin}',  @param_COSTO='{temporada.descuento}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+            Console.WriteLine("SALIENDO DE GUARDAR");
+            return true;
+        }
+
+        public bool editarTemporada(TemporadaModel temporada)
+        {
+            Console.WriteLine("DENMTRO DE ACTUALIZAR" + temporada.id);
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec sp_ACTUALIZARTEMPORADA @param_ID='{temporada.id}', @param_FECHA_I='{temporada.fechaInicio}', @param_FECHA_F='{temporada.fechaFin}',  @param_COSTO='{temporada.descuento}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+            Console.WriteLine("SALIENDO DE ACTUALIZAR");
+            return true;
+        }
+
+        public bool eliminarTemporada(TemporadaModel temporada)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec sp_ELIMINARTEMPORADA  @param_ID='{temporada.id}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+            Console.WriteLine("SALIENDO DE ELIMINAR");
+            return true;
+        }
+
+
+        public bool guardarOferta(OfertaModel temp)
+        {
+            Console.WriteLine("DENMTRO DE GUARDAR OFERTA");
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec CrearOferta @param_ID_Oferta={0}, @param_Oferta='{temp.Oferta}', @param_Imagen='{temp.Imagen}',  @param_Fecha_Inicio='{temp.Fecha_Inicio}',  @param_Fecha_Fin='{temp.Fecha_Fin}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+            Console.WriteLine("SALIENDO DE GUARDAR");
+            return true;
+        }
+
+        public List<OfertaModel> ObtenerOfertas()
+        {
+            List<OfertaModel> temp = new List<OfertaModel>();
+            //se crea la conexion
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //se escribe la consulta
+                string sqlQuery = $"exec ObtenerOferta";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    // Se abre y se ejecuta la consulta
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader OfertaReader = command.ExecuteReader();
+                    //Se hace lectura de lo que nos retorno la consulta
+                    while (OfertaReader.Read())
+                    {
+                        OfertaModel var = new OfertaModel();
+                        var.ID_Oferta = Int32.Parse(OfertaReader["ID_OFERTA"].ToString());
+                        var.Oferta = Int32.Parse(OfertaReader["OFERTA"].ToString());
+                        var.Imagen = OfertaReader["IMAGEN"].ToString();
+                        var.Fecha_Inicio = OfertaReader["FECHA_INICIO"].ToString();
+                        var.Fecha_Fin = OfertaReader["FECHA_FIN"].ToString();
+
+                        temp.Add(var);
+                    } // while
+                      //Se cierra la conexion a la base de datos
+                    connection.Close();
+                }
+            }
+            return temp;
+        }
+
+        public bool eliminarOferta(OfertaModel temp)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec EliminarOferta  @param_ID_Oferta='{temp.ID_Oferta}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+            Console.WriteLine("SALIENDO DE ELIMINAR");
+            return true;
+        }
+
+        public bool editarOferta(OfertaModel temp)
+        {
+            Console.WriteLine("DENMTRO DE ACTUALIZAR" + temp.ID_Oferta);
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec ActualizarOferta @param_ID_Oferta='{temp.ID_Oferta}', @param_Oferta='{temp.Oferta}', @param_Imagen='{temp.Imagen}',  @param_Fecha_Inicio='{temp.Fecha_Inicio}', @param_Fecha_Fin='{temp.Fecha_Fin}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+            Console.WriteLine("SALIENDO DE ACTUALIZAR");
+            return true;
         }
 
     }
