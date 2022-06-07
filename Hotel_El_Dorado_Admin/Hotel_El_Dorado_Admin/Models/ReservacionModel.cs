@@ -11,5 +11,10 @@ namespace Hotel_El_Dorado_Admin.Models
         public int tipoHabitacion { get; set; }
         public int Costo_Total { get; set; }
         public int idHabitacion { get; set; }
+
+        public ReservacionModel()
+        {
+            Habitacion = new HabitacionModel();
+        }
     }
 }

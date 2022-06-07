@@ -29,5 +29,13 @@ namespace Hotel_El_Dorado_Admin.Controllers
             
             return Ok(ret);
         }
+        [Route("Activa")]
+        [HttpPost]
+        public IActionResult Activa(int tipo)
+        {
+            HabitacionBusiness haBusiness = new HabitacionBusiness(Configuration);
+            var ret = JsonSerializer.Serialize(haBusiness.activa(tipo));
+            return Ok(ret);
+        }
     }
 }

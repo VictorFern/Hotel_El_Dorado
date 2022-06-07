@@ -20,9 +20,22 @@ namespace Hotel_El_Dorado_Admin.Controllers
         {
             Configuration = configuration;
         }
+        public bool getLogin()
+        {
+            if (Cache.Instance.isLogged)
+            {
+                int valor = (int)HttpContext.Session.GetInt32("variableInt");
+                string nombre = HttpContext.Session.GetString("nombreAdmin");
+                ViewBag.nombre = nombre;
+                ViewBag.Session = valor;
 
+                return true;
+            }
+            return false;
+        }
         public IActionResult ConsultarDisponibilidad() 
         {
+            getLogin();
             return View();
         }
 
@@ -78,13 +91,61 @@ namespace Hotel_El_Dorado_Admin.Controllers
             return RedirectToAction("Login");
         }
 
-	    public IActionResult habitacionStandard()
+        public IActionResult habitacionStandard()
         {
+            HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+            List<HabitacionModel> listaHabitacion = new List<HabitacionModel>();
+            listaHabitacion = habitacionBusiness.obtenerTipoHabitacionStandard();
+            getLogin();
+            ViewBag.ListaHabitacion = listaHabitacion;
             return View();
         }
 
         public IActionResult verHabitacionStandard()
         {
+            HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+            List<HabitacionModel> listaHabitacion = new List<HabitacionModel>();
+            listaHabitacion = habitacionBusiness.obtenerStandard();
+            getLogin();
+            ViewBag.ListaHabitacion = listaHabitacion;
+            return View();
+        }
+        public IActionResult habitacionJunior()
+        {
+            HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+            List<HabitacionModel> listaHabitacion = new List<HabitacionModel>();
+            listaHabitacion = habitacionBusiness.obtenerTipoHabitacionJunnior();
+            getLogin();
+            ViewBag.ListaHabitacion = listaHabitacion;
+            return View();
+        }
+
+        public IActionResult verHabitacionJunior()
+        {
+            HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+            List<HabitacionModel> listaHabitacion = new List<HabitacionModel>();
+            listaHabitacion = habitacionBusiness.obtenerJunnior();
+            getLogin();
+            ViewBag.ListaHabitacion = listaHabitacion;
+            return View();
+        }
+        public IActionResult habitacionSuit()
+        {
+            HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+            List<HabitacionModel> listaHabitacion = new List<HabitacionModel>();
+            listaHabitacion = habitacionBusiness.obtenerTipoHabitacionSuit();
+            getLogin();
+            ViewBag.ListaHabitacion = listaHabitacion;
+            return View();
+        }
+
+        public IActionResult verHabitacionSuit()
+        {
+            HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+            List<HabitacionModel> listaHabitacion = new List<HabitacionModel>();
+            listaHabitacion = habitacionBusiness.obtenerSuit();
+            getLogin();
+            ViewBag.ListaHabitacion = listaHabitacion;
             return View();
         }
 
@@ -149,7 +210,7 @@ namespace Hotel_El_Dorado_Admin.Controllers
                 ocupado = false;
 
             }
-
+            getLogin();
             ViewBag.ListaEstadoDiario = listaEstadoDiario;
 
             return View();

@@ -18,5 +18,46 @@ namespace Hotel_El_Dorado_Admin.Business
             HabitacionData haData = new HabitacionData(Configuration);
             return haData.ConsultarDisponibilidad(fEntrada, fSalida, tipo);
         }
+        public List<HabitacionModel> obtenerTipoHabitacionStandard()
+        {
+            HabitacionData haData = new HabitacionData(Configuration);
+            return haData.obtenerTipoHabitacionStandard();
+        }
+
+        public List<HabitacionModel> obtenerTipoHabitacionJunnior()
+        {
+            HabitacionData haData = new HabitacionData(Configuration);
+            return haData.obtenerTipoHabitacionJunnior();
+        }
+
+        public List<HabitacionModel> obtenerTipoHabitacionSuit()
+        {
+            HabitacionData haData = new HabitacionData(Configuration);
+            return haData.obtenerTipoHabitacionSuit();
+        }
+
+        public List<HabitacionModel> obtenerStandard()
+        {
+            HabitacionData haData = new HabitacionData(Configuration);
+            return haData.obtenerStandard();
+        }
+
+        public List<HabitacionModel> obtenerJunnior()
+        {
+            HabitacionData haData = new HabitacionData(Configuration);
+            return haData.obtenerJunnior();
+        }
+
+        public List<HabitacionModel> obtenerSuit()
+        {
+            HabitacionData haData = new HabitacionData(Configuration);
+            return haData.obtenerSuit();
+        }
+
+        public bool activa(int tipo)
+        {
+            HabitacionData haData = new HabitacionData(Configuration);
+            return haData.activa(tipo);
+        }
     }
 }
