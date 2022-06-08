@@ -130,14 +130,31 @@ namespace Hotel_El_Dorado.Controllers
             HabitacionModel habitacion = habitacionController.ObtenerHabitacionesIDTipo(reservacionModel.tipoHabitacion);
 
             ViewBag.Imagen = habitacion.Imagen;
-            
 
             DateTime date_1 = new DateTime(Int32.Parse(fechaEntrada[0]), Int32.Parse(fechaEntrada[1]), Int32.Parse(fechaEntrada[2]));
             DateTime date_2 = new DateTime(Int32.Parse(fechaSalida[0]), Int32.Parse(fechaSalida[1]), Int32.Parse(fechaSalida[2]));
 
             TimeSpan Diff_dates = date_2.Subtract(date_1);
 
-            ViewBag.Costo = habitacion.Costo*Diff_dates.Days;
+            ReservacionBusiness reservacionBusiness = new ReservacionBusiness(Configuration);
+            double descuentoTemporada = 0.01 * reservacionBusiness.ObtenerDescuentoTemporada();
+
+            double descuentoOferta = 0.01 * reservacionBusiness.ObtenerDescuentoOferta(reservacionModel.Habitacion.ID_Habitacion);
+
+
+            int costoDias = habitacion.Costo * Diff_dates.Days;
+
+            double costoFinal = costoDias;
+
+            costoFinal -= costoFinal * descuentoTemporada;
+
+            costoFinal -= costoFinal * descuentoOferta;
+
+
+            ViewBag.CostoInicial = costoDias;
+            ViewBag.DescuentoTemporada = reservacionBusiness.ObtenerDescuentoTemporada();
+            ViewBag.DescuentoOferta = reservacionBusiness.ObtenerDescuentoOferta(reservacionModel.Habitacion.ID_Habitacion);
+            ViewBag.CostoFinal = Math.Round(costoFinal);
             ViewBag.Descripcion = habitacion.Descripcion;
 
 

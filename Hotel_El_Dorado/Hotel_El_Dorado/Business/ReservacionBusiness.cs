@@ -38,6 +38,21 @@ namespace Hotel_El_Dorado.Business
             return reservacionData.RealizarReservacion(reservacionModel);
         }
 
+        public int ObtenerDescuentoTemporada()
+        {
+
+            ReservacionData reservacionData = new ReservacionData(Configuration);
+
+            return reservacionData.ObtenerDescuentoTemporada();
+        }
+
+        public int ObtenerDescuentoOferta(int ID_Habitacion)
+        {
+
+            ReservacionData reservacionData = new ReservacionData(Configuration);
+
+            return reservacionData.ObtenerDescuentoOferta(ID_Habitacion);
+        }
 
     }
 }

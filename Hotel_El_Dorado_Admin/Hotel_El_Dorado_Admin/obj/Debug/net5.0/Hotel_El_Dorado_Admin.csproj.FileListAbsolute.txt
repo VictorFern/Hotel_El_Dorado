@@ -156,3 +156,14 @@ C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_E
 C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Hotel_El_Dorado_Admin.pdb
 C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Hotel_El_Dorado_Admin.genruntimeconfig.cache
 C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\ref\Hotel_El_Dorado_Admin.dll
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\ConsultarDisponibilidad.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\habitacionJunior.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\habitacionSuit.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\verHabitacionJunior.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\verHabitacionSuit.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Oferta\EditarOferta.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Oferta\InsertarOferta.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Oferta\VisualizarOferta.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\EditarTemporada.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\InsertarTemporada.cshtml.g.cs
+D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\VisualizarTemporada.cshtml.g.cs
