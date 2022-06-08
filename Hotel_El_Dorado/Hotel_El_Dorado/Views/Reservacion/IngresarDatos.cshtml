@@ -34,9 +34,9 @@
                              <input type="number" class="form-control" asp-for="Habitacion.ID_Habitacion" value="@ViewBag.ID_Habitacion" readonly hidden>
                         </div>
                         <div class="form-group lcosto">
-                            <label clas="control-label lcosto">Monto de su reservación: $@ViewBag.Costo</label>
+                            <label clas="control-label lcosto">Monto de su reservación: $@ViewBag.CostoInicial - @ViewBag.DescuentoTemporada% - @ViewBag.DescuentoOferta% = $@ViewBag.CostoFinal</label>
                             <div class="col-sm-2">
-                                <input type="number" class="form-control" asp-for="Costo_Total" value="@ViewBag.Costo" required readonly hidden>
+                                <input type="number" class="form-control" asp-for="Costo_Total" value="@ViewBag.CostoFinal" required readonly hidden>
                             </div>
                         </div>
                         <div class="form-group">

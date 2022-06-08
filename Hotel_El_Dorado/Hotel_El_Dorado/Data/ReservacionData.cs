@@ -200,5 +200,67 @@ namespace Hotel_El_Dorado.Data
 
         }
 
+        public int ObtenerDescuentoTemporada()
+        {
+
+            int descuentoTemporada = 0;
+            //se crea la conexion
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //se escribe la consulta
+                string sqlQuery = $"exec ObtenerDescuentoTemporada";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    // Se abre y se ejecuta la consulta
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader productoReader = command.ExecuteReader();
+                    //Se hace lectura de lo que nos retorno la consulta
+                    while (productoReader.Read())
+                    {
+                        descuentoTemporada = Int32.Parse(productoReader["DESCUENTO_TEMPORADA"].ToString());
+
+                    } // while
+                      //Se cierra la conexion a la base de datos
+                    connection.Close();
+                }
+            }
+
+            return descuentoTemporada;
+
+        }
+
+        public int ObtenerDescuentoOferta(int ID_Habitacion)
+        {
+
+            int descuentoOferta = 0;
+            //se crea la conexion
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //se escribe la consulta
+                string sqlQuery = $"exec ObtenerDescuentoOferta @param_ID_Habitacion={ID_Habitacion}";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    // Se abre y se ejecuta la consulta
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader productoReader = command.ExecuteReader();
+                    //Se hace lectura de lo que nos retorno la consulta
+                    while (productoReader.Read())
+                    {
+                        descuentoOferta = Int32.Parse(productoReader["DESCUENTO_OFERTA"].ToString());
+
+                    } // while
+                      //Se cierra la conexion a la base de datos
+                    connection.Close();
+                }
+            }
+
+            return descuentoOferta;
+
+        }
+
     }
 }
