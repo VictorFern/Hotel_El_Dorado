@@ -33,7 +33,7 @@ namespace Hotel_El_Dorado.Controllers
         public async Task<String> AgregarImagen(IList<IFormFile> files)
         {
             Imagen = "";
-            var uploads = Path.Combine(_iweb.WebRootPath, "Imagenes");
+            var uploads = Path.Combine(_iweb.WebRootPath, "img");
             string ruta = "";
             foreach (var doc in files)
             {
