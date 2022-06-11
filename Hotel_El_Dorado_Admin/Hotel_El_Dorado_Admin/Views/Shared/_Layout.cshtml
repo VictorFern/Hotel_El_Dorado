@@ -57,10 +57,17 @@
                            </div>
                             <a asp-controller="Administrador" asp-action="EstadoActualHabitacion" class="text-dark list-group-item list-group-item-action">Ver estado del hotel hoy</a>
                             <a asp-controller="Administrador" asp-action="ConsultarDisponibilidad" class="text-dark list-group-item list-group-item-action">Consultar disponibilidad de habitaciones</a>
-                            <a asp-controller="Temporada" asp-action="InsertarTemporada" class="list-group-item list-group-item-action">Insertar temporada</a>
-                            <a asp-controller="Temporada" asp-action="VisualizarTemporada" class="list-group-item list-group-item-action">Administrar temporada</a>
-                            <a asp-controller="Oferta" asp-action="InsertarOferta" class="list-group-item list-group-item-action">Insertar Oferta</a>
-                            <a asp-controller="Oferta" asp-action="VisualizarOferta" class="list-group-item list-group-item-action">Administrar Oferta</a>
+
+                            <a asp-controller="Administrador" class="text-dark list-group-item list-group-item-action" data-toggle="collapse" data-target="#administrarTemporada">Administrar Temporada</a>  
+                            <div class="collapse" id="administrarTemporada">
+                                <a asp-controller="Temporada" asp-action="InsertarTemporada" class="list-group-item list-group-item-action">Insertar temporada</a>
+                                <a asp-controller="Temporada" asp-action="VisualizarTemporada" class="list-group-item list-group-item-action">Administrar Temporada</a>
+                            </div>
+                            <a asp-controller="Administrador" class="text-dark list-group-item list-group-item-action" data-toggle="collapse" data-target="#administrarOferta">Administrar Oferta</a>
+                            <div class="collapse" id="administrarOferta">
+                                <a asp-controller="Oferta" asp-action="InsertarOferta" class="list-group-item list-group-item-action">Insertar Oferta</a>
+                                <a asp-controller="Oferta" asp-action="VisualizarOferta" class="list-group-item list-group-item-action">Administrar Oferta</a>
+                            </div>
                             <a class="text-dark list-group-item list-group-item-action">Publicidad</a>
                         </div>
                     </div>
