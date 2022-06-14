@@ -167,3 +167,9 @@ D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\
 D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\EditarTemporada.cshtml.g.cs
 D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\InsertarTemporada.cshtml.g.cs
 D:\Usuarios\Faigda\Documentos\Informática\Ingeniería\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\VisualizarTemporada.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Oferta\EditarOferta.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Oferta\InsertarOferta.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Oferta\VisualizarOferta.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\EditarTemporada.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\InsertarTemporada.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\VisualizarTemporada.cshtml.g.cs
