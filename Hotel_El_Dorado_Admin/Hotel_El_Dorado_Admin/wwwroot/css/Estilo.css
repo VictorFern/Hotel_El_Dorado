@@ -247,6 +247,18 @@ nav.navbar {
         padding: 20px;
     }
 
+@media only screen and (max-width:3000px) and (min-width: 1601px) {
+    .costoInputs {
+        position: relative;
+        bottom: 90px;
+    }
+
+    #labelCosto {
+        position: relative;
+        bottom: -90px;
+        left: -180px;
+    }
+}
 
 @media only screen and (max-width: 1600px) and (min-width: 1200px) {
 

@@ -21,7 +21,7 @@ function consultarDisponibilidad() {
             let html = '';
             if (data.length != 0) {
                 html =
-                    '<table class="table table-bordered table-responsive table-hover">' +
+                    '<table class="table table-bordered table-hover">' +
                     '<tr>' +
                     '<th>Número de habitación</th>' +
                     '<th>Tipo</th>' +
