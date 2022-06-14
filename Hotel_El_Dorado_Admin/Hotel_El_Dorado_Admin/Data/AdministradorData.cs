@@ -178,7 +178,7 @@ namespace Hotel_El_Dorado_Admin.Data
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
-                string consultaSQL = $"exec CrearOferta @param_ID_Oferta={0}, @param_Oferta='{temp.Oferta}', @param_Imagen='{temp.Imagen}',  @param_Fecha_Inicio='{temp.Fecha_Inicio}',  @param_Fecha_Fin='{temp.Fecha_Fin}'";
+                string consultaSQL = $"exec CrearOferta @param_ID_Oferta={0}, @param_Oferta='{temp.Oferta}', @param_Imagen='{temp.Imagen}',  @param_Fecha_Inicio='{temp.Fecha_Inicio}',  @param_Fecha_Fin='{temp.Fecha_Fin}', @param_Tipo_Habitacion='{temp.Tipo_Habitacion}'";
                 using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
                 {
                     command.CommandType = CommandType.Text;
@@ -215,7 +215,7 @@ namespace Hotel_El_Dorado_Admin.Data
                         var.Imagen = OfertaReader["IMAGEN"].ToString();
                         var.Fecha_Inicio = OfertaReader["FECHA_INICIO"].ToString();
                         var.Fecha_Fin = OfertaReader["FECHA_FIN"].ToString();
-
+                        var.Tipo_Habitacion = Int32.Parse(OfertaReader["TIPO_HABITACION"].ToString());
                         temp.Add(var);
                     } // while
                       //Se cierra la conexion a la base de datos
@@ -249,7 +249,7 @@ namespace Hotel_El_Dorado_Admin.Data
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
-                string consultaSQL = $"exec ActualizarOferta @param_ID_Oferta='{temp.ID_Oferta}', @param_Oferta='{temp.Oferta}', @param_Imagen='{temp.Imagen}',  @param_Fecha_Inicio='{temp.Fecha_Inicio}', @param_Fecha_Fin='{temp.Fecha_Fin}'";
+                string consultaSQL = $"exec ActualizarOferta @param_ID_Oferta='{temp.ID_Oferta}', @param_Oferta='{temp.Oferta}', @param_Imagen='{temp.Imagen}',  @param_Fecha_Inicio='{temp.Fecha_Inicio}', @param_Fecha_Fin='{temp.Fecha_Fin}', @param_Tipo_Habitacion='{temp.Tipo_Habitacion}'";
                 using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
                 {
                     command.CommandType = CommandType.Text;
