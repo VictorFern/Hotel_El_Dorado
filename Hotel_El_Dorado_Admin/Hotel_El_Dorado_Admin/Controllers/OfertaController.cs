@@ -6,12 +6,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Hotel_El_Dorado_Admin.Controllers
 {
     public class OfertaController : Controller
     {
         public IConfiguration Configuration { get; }
+        private static string Imagen = "";
+        private readonly IWebHostEnvironment _iweb;
+
         public OfertaController(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -33,6 +39,7 @@ namespace Hotel_El_Dorado_Admin.Controllers
         public IActionResult guardarOferta(OfertaModel temp)
         {
             AdministradorBusiness TemBussi = new AdministradorBusiness(Configuration);
+            Console.WriteLine(temp.Imagen);
             TemBussi.guardarOferta(temp);
             return RedirectToAction("VisualizarOferta");
         }
