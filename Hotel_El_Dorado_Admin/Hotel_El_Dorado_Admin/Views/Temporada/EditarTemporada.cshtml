@@ -17,11 +17,11 @@
                 <span asp-validation-for="id" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label class="col-form-label">Fecha de llegada:</label>
+                <label class="col-form-label">Fecha de comienzo:</label>
                 <input type="date" class="form-control form-control-sm" asp-for="fechaInicio" id="fechaInicio" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.ToString("yyyy-MM-dd")">
             </div>
             <div class="form-group">
-                <label class="col-form-label">Fecha de Salida:</label>
+                <label class="col-form-label">Fecha de final:</label>
                 <input type="date" class="form-control form-control-sm" asp-for="fechaFin" id="fechaFin" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")">
             </div>
             <div class="form-group">
