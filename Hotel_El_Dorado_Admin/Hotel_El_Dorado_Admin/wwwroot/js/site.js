@@ -17,9 +17,8 @@ function consultarDisponibilidad() {
         success: function (response) {
             let data = JSON.parse(response);
             
-            $('.divWrapper').empty();
+            $('#divWrapper').empty();
             let html = '';
-
             if (data.length != 0) {
                 html =
                     '<table class="table table-bordered table-responsive table-hover">' +
