@@ -31,12 +31,12 @@
               <div class="form-group col-sm-4">
                   <div class="form-group costoInputs">
                       <label class="control-label lbcostos" id="labelCosto">Subir nueva imagen</label>
-                        <input type="file" name="files" class="form-control" asp-for="Imagen" accept="image/png, .jpeg, .jpg, image/gif" id="imagen" name="imagen" value="@ViewBag.ListaHabitacion[0].Imagen">
+                        <input type="file" class="form-control form-control-sm"  asp-for="Imagen" id="Imagen" name="Imagen">
                   </div>
              </div>
              <div class="form-group col-sm-4 botonesInput">
                  <div class="form-group">
-                        <input type="submit" value="Aceptar" class="btn btn-primary" />
+                        <input asp-controller="Administrador" asp-action="ActualizarHabitacion" type="submit" value="Aceptar" class="btn btn-primary" />
                         <a asp-controller="Administrador" asp-action="habitacionJunior" class="btn btn-danger">Cancelar</a>
                     </div>
              </div>
