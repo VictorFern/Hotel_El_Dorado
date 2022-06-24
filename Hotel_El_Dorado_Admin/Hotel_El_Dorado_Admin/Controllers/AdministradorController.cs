@@ -91,6 +91,19 @@ namespace Hotel_El_Dorado_Admin.Controllers
             return RedirectToAction("Login");
         }
 
+        /**
+         * Método para actualizar los datos de las habitaciones
+         */
+        public IActionResult ActualizarHabitacion(HabitacionModel model)
+        {
+            /**
+             * Falta decidir a cual método redireccionar.
+             * Recuerda que al redireccionar se borra lo que
+             * está en ViewBag o ViewData. Por si los usas.
+             */
+            return RedirectToAction("");
+        }
+
         public IActionResult habitacionStandard()
         {
             HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
