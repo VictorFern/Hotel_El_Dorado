@@ -59,5 +59,18 @@ namespace Hotel_El_Dorado_Admin.Business
             HabitacionData haData = new HabitacionData(Configuration);
             return haData.activa(tipo);
         }
+
+        public void ActualizarHabitacionConImagen(HabitacionModel model)
+        {
+            HabitacionData haData = new HabitacionData(Configuration);
+            haData.ActualizarHabitacionConImagen(model);
+        }
+
+        public void ActualizarHabitacionSinImagen(HabitacionModel model)
+        {
+            HabitacionData haData = new HabitacionData(Configuration);
+            haData.ActualizarHabitacionSinImagen(model);
+        }
+
     }
 }

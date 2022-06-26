@@ -240,5 +240,38 @@ namespace Hotel_El_Dorado_Admin.Data
             }
             return true;
         }
+
+        public void ActualizarHabitacionConImagen(HabitacionModel model)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec ActualizarHabitacionConImagen @param_TIPO='{model.Tipo_Habitacion}', @param_DESCRIPCION='{model.Descripcion}', @param_IMAGEN='{model.Imagen}', @param_COSTO='{model.Costo}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+        }
+
+        public void ActualizarHabitacionSinImagen(HabitacionModel model)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec ActualizarHabitacionSinImagen @param_TIPO='{model.Tipo_Habitacion}', @param_DESCRIPCION='{model.Descripcion}', @param_COSTO='{model.Costo}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+        }
+
     }
 }
