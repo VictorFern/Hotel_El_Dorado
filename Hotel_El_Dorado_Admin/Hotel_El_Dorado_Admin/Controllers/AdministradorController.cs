@@ -91,17 +91,65 @@ namespace Hotel_El_Dorado_Admin.Controllers
             return RedirectToAction("Login");
         }
 
-        /**
-         * Método para actualizar los datos de las habitaciones
-         */
-        public IActionResult ActualizarHabitacion(HabitacionModel model)
+        public IActionResult ActualizarHabitacionStandard(HabitacionModel model, string descripcion)
         {
-            /**
-             * Falta decidir a cual método redireccionar.
-             * Recuerda que al redireccionar se borra lo que
-             * está en ViewBag o ViewData. Por si los usas.
-             */
-            return RedirectToAction("");
+
+            model.Descripcion = descripcion;
+            model.Tipo_Habitacion = 1;
+
+            if (model.Imagen != null)
+            {
+                HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+                habitacionBusiness.ActualizarHabitacionConImagen(model);
+            }
+            else
+            {
+                HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+                habitacionBusiness.ActualizarHabitacionSinImagen(model);
+            }
+
+            return RedirectToAction("verHabitacionStandard");
+        }
+
+        public IActionResult ActualizarHabitacionJunior(HabitacionModel model, string descripcion)
+        {
+
+            model.Descripcion = descripcion;
+            model.Tipo_Habitacion = 2;
+
+            if(model.Imagen != null)
+            {
+                HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+                habitacionBusiness.ActualizarHabitacionConImagen(model);
+            }
+            else
+            {
+                HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+                habitacionBusiness.ActualizarHabitacionSinImagen(model);
+            }
+            
+
+            return RedirectToAction("verHabitacionJunior");
+        }
+
+        public IActionResult ActualizarHabitacionSuit(HabitacionModel model, string descripcion)
+        {
+
+            model.Descripcion = descripcion;
+            model.Tipo_Habitacion = 3;
+
+            if (model.Imagen != null)
+            {
+                HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+                habitacionBusiness.ActualizarHabitacionConImagen(model);
+            }
+            else
+            {
+                HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
+                habitacionBusiness.ActualizarHabitacionSinImagen(model);
+            }
+
+            return RedirectToAction("verHabitacionSuit");
         }
 
         public IActionResult habitacionStandard()
