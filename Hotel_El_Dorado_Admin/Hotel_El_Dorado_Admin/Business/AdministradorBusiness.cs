@@ -102,6 +102,7 @@ namespace Hotel_El_Dorado_Admin.Business
 
         public void actualizarSN(HotelModel info)
         {
+
             AdministradorData administradorData = new AdministradorData(Configuration);
             administradorData.actualizarSN(info);
         }

@@ -356,6 +356,7 @@ namespace Hotel_El_Dorado_Admin.Data
             return hotel;
         }
 
+
         public void actualizarSN(HotelModel hotel)
         {
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];

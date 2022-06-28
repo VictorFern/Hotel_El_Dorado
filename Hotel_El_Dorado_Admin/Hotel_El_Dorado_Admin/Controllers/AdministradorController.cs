@@ -190,6 +190,7 @@ namespace Hotel_El_Dorado_Admin.Controllers
             ViewBag.ListaHabitacion = listaHabitacion;
             return View();
         }
+
         public IActionResult habitacionSuit()
         {
             HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
