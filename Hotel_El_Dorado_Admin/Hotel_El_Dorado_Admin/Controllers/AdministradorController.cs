@@ -276,6 +276,25 @@ namespace Hotel_El_Dorado_Admin.Controllers
 
             return View();
         }
+        public IActionResult EditarSobreNosotros()
+        {
+            AdministradorBusiness admin = new AdministradorBusiness(Configuration);
+            HotelModel hotel = new HotelModel();
+            hotel = admin.ObtenerSobreNosotros();
+            getLogin();
+            return View(hotel);
+
+        }
+
+        public IActionResult ActualizarSobreNosotros(HotelModel hotel)
+        {
+            Console.WriteLine(hotel.SobreNosotros);
+            AdministradorBusiness admin = new AdministradorBusiness(Configuration);
+            admin.actualizarSN(hotel);
+            getLogin();
+            return RedirectToAction("Index");
+
+        }
 
     }
 }
