@@ -190,6 +190,7 @@ namespace Hotel_El_Dorado_Admin.Controllers
             ViewBag.ListaHabitacion = listaHabitacion;
             return View();
         }
+
         public IActionResult habitacionSuit()
         {
             HabitacionBusiness habitacionBusiness = new HabitacionBusiness(Configuration);
@@ -275,6 +276,25 @@ namespace Hotel_El_Dorado_Admin.Controllers
             ViewBag.ListaEstadoDiario = listaEstadoDiario;
 
             return View();
+        }
+        public IActionResult EditarSobreNosotros()
+        {
+            AdministradorBusiness admin = new AdministradorBusiness(Configuration);
+            HotelModel hotel = new HotelModel();
+            hotel = admin.ObtenerSobreNosotros();
+            getLogin();
+            return View(hotel);
+
+        }
+
+        public IActionResult ActualizarSobreNosotros(HotelModel hotel)
+        {
+            Console.WriteLine(hotel.SobreNosotros);
+            AdministradorBusiness admin = new AdministradorBusiness(Configuration);
+            admin.actualizarSN(hotel);
+            getLogin();
+            return RedirectToAction("Index");
+
         }
 
     }
