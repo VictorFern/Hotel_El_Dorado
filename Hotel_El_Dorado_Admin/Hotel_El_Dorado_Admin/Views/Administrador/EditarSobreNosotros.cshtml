@@ -1,23 +1,29 @@
 ﻿@model Hotel_El_Dorado_Admin.Models.HotelModel
 
 @{
-    ViewData["Title"] = "EditarOferta";
+    ViewData["Title"] = "EditarSobreNosotros";
     Layout = "_Layout";
 }
 
-<h1>EditarOferta</h1>
-
+<div class="AdministrarHabitaciónTexto">
+    <h2 id="h2">Modificar Sobre Nosotros</h2>
+</div>
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="EditarOferta">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                    <textarea class="form-control textArea" rows="5" id="SobreNosotros" name="SobreNosotros" style="resize:none;">@Model.SobreNosotros</textarea>
+    <div class="container"><br />
+        <form class="form-horizontal">
+           
+             <div class="form-group">
+                      <textarea class="form-control textArea" rows="5" id="SobreNosotros" name="SobreNosotros" style="resize:none;">@Model.SobreNosotros</textarea>
               </div>
-            <div class="form-group">
-                <input asp-controller="Administrador" asp-action="ActualizarSobreNosotros" type="submit" value="Modificar" class="btn btn-primary" />
-            </div>
-        </form>
+              
+             
+             <div class="form-group col-sm-4 botonesInput">
+                 <div class="form-group">
+                        <input asp-controller="Administrador" asp-action="ActualizarSobreNosotros" type="submit" value="Aceptar" class="btn btn-primary" />
+                        <a asp-controller="Administrador" asp-action="habitacionJunior" class="btn btn-danger">Cancelar</a>
+                    </div>
+             </div>
+           </form>
     </div>
 </div>
 
