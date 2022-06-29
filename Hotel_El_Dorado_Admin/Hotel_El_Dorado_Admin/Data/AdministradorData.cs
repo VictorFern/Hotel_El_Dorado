@@ -333,5 +333,111 @@ namespace Hotel_El_Dorado_Admin.Data
             return true;
         }
 
+        public List<ReservacionModel> verListadoReservaciones()
+        {
+            List<ReservacionModel> temp = new List<ReservacionModel>();
+            //se crea la conexion
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //se escribe la consulta
+                string sqlQuery = $"exec sp_LISTA_RESERVACION";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    // Se abre y se ejecuta la consulta
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader listaReader = command.ExecuteReader();
+                    //Se hace lectura de lo que nos retorno la consulta
+                    while (listaReader.Read())
+                    {
+                        ClienteModel clienteModel = new ClienteModel();
+
+                        clienteModel.Nombre = listaReader["NOMBRE_CLIENTE"].ToString();
+                        clienteModel.Apellidos = listaReader["APELLIDOS_CLIENTE"].ToString();
+                        clienteModel.Email = listaReader["EMAIL"].ToString();
+                        clienteModel.Tarjeta = listaReader["TARJETA"].ToString();
+                        HabitacionModel habitacionModel = new HabitacionModel();
+                        habitacionModel.Tipo_HabitacionT = listaReader["TIPO"].ToString();
+                        ReservacionModel reservacionModel = new ReservacionModel();
+                        reservacionModel.Fecha_Reservacion = listaReader["FECHA_RESERVACION"].ToString();
+                        reservacionModel.ID_Reservacion = Int32.Parse(listaReader["ID_RESERVACION"].ToString());
+                        reservacionModel.Fecha_Entrada = listaReader["FECHA_ENTRADA"].ToString();
+                        reservacionModel.Fecha_Salida = listaReader["FECHA_SALIDA"].ToString();
+                        reservacionModel.Habitacion = habitacionModel;
+                        reservacionModel.Cliente = clienteModel;
+
+                        temp.Add(reservacionModel);
+
+                    }// while
+                     //Se cierra la conexion a la base de datos
+                    connection.Close();
+                }
+            }
+            return temp;
+        }
+
+        public List<ReservacionModel> verListadoReservacionId(int id)
+        {
+            List<ReservacionModel> temp = new List<ReservacionModel>();
+            //se crea la conexion
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //se escribe la consulta
+                string sqlQuery = $"exec sp_LISTA_RESERVACIONID @param_ID='{id}'";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    // Se abre y se ejecuta la consulta
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader listaReader = command.ExecuteReader();
+                    //Se hace lectura de lo que nos retorno la consulta
+                    while (listaReader.Read())
+                    {
+                        ClienteModel clienteModel = new ClienteModel();
+
+                        clienteModel.Nombre = listaReader["NOMBRE_CLIENTE"].ToString();
+                        clienteModel.Apellidos = listaReader["APELLIDOS_CLIENTE"].ToString();
+                        clienteModel.Email = listaReader["EMAIL"].ToString();
+                        clienteModel.Tarjeta = listaReader["TARJETA"].ToString();
+                        HabitacionModel habitacionModel = new HabitacionModel();
+                        habitacionModel.Tipo_HabitacionT = listaReader["TIPO"].ToString();
+                        ReservacionModel reservacionModel = new ReservacionModel();
+                        reservacionModel.Fecha_Reservacion = listaReader["FECHA_RESERVACION"].ToString();
+                        reservacionModel.ID_Reservacion = Int32.Parse(listaReader["ID_RESERVACION"].ToString());
+                        reservacionModel.Fecha_Entrada = listaReader["FECHA_ENTRADA"].ToString();
+                        reservacionModel.Fecha_Salida = listaReader["FECHA_SALIDA"].ToString();
+                        reservacionModel.Habitacion = habitacionModel;
+                        reservacionModel.Cliente = clienteModel;
+
+                        temp.Add(reservacionModel);
+
+                    }// while
+                     //Se cierra la conexion a la base de datos
+                    connection.Close();
+                }
+            }
+            return temp;
+        }
+
+        public bool eliminarReporteReservacionId(int id)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec sp_ELIMIANR_REPORTE_ID  @param_ID='{id}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+            Console.WriteLine("SALIENDO DE ELIMINAR");
+            return true;
+        }
+
     }
 }

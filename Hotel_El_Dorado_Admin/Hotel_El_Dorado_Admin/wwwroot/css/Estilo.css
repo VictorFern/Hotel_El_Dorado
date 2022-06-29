@@ -247,6 +247,42 @@ nav.navbar {
         padding: 20px;
     }
 
+.tablaLista {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #999;
+    text-align: left;
+    margin: 0 0 1em 0;
+    caption-side: top;
+}
+
+#tdtabla {
+    padding: 0.3em;
+}
+
+#tdtabla {
+    border-bottom: 1px solid #999;
+    width: 25%;
+}
+
+.botonesReporte {
+    margin-left: 95px;
+    display: inline-block;
+}
+
+.iconos {
+    border: solid;
+}
+
+    .iconos:hover {
+        background-color: cadetblue;
+    }
+
+.buttonReporte {
+    margin-left: 400px;
+    display: inline-block;
+}
+
 @media only screen and (max-width:3000px) and (min-width: 1601px) {
     .costoInputs {
         position: relative;
@@ -260,11 +296,21 @@ nav.navbar {
     }
 }
 
-@media only screen and (max-width: 1600px) and (min-width: 1200px) {
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
 
     .homeBody {
         margin-left: 40px;
     }
+
+
+    .tablaContainer{
+        margin-left:-20px;
+    }
+    #tdtabla {
+        margin-right: 25px;
+        padding: 0.001em;
+    }
+
 
     .logonav {
         height: 115px;
@@ -340,7 +386,10 @@ nav.navbar {
     main {
         min-width: 640px;
     }
-
+    .buttonReporte {
+        margin-left: 300px;
+        display: inline-block;
+    }
     .contenido {
         min-width: 640px;
     }
@@ -540,7 +589,10 @@ nav.navbar {
     main {
         min-width: 605px;
     }
-
+    .buttonReporte {
+        margin-left: 300px;
+        display: inline-block;
+    }
     .tabla {
         margin-left: 25px;
     }
@@ -734,7 +786,10 @@ nav.navbar {
     main {
         min-width: 570px;
     }
-
+    .buttonReporte {
+        margin-left: 280px;
+        display: inline-block;
+    }
     .tabla {
         margin-left: 30px;
     }
@@ -927,7 +982,13 @@ nav.navbar {
     .container, .tabla {
         width: 90%;
     }
-
+    #tdtabla {
+        margin-right: 25px;
+        padding: 0.001em;
+    }
+    .tablaContainer {
+        margin-left: -20px;
+    }
     .containerFooter {
         text-align: center;
     }
@@ -1104,6 +1165,12 @@ nav.navbar {
         width: 90%;
     }
 
+
+    .buttonReporte {
+        margin-left: 150px;
+        display: inline-block;
+    }
+
     .tabla {
     }
 
@@ -1271,6 +1338,11 @@ nav.navbar {
 @media only screen and (max-width: 340px) and (min-width: 5px) {
     .container, .tabla {
         width: 90%;
+    }
+
+    .buttonReporte {
+        margin-left: 120px;
+        display: inline-block;
     }
 
     .containerFooter {

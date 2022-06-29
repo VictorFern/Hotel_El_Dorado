@@ -8,8 +8,10 @@
     <script type="text/javascript" src="~/js/site.js"></script>
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/Estilo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/js/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -48,7 +50,7 @@
                                 <a class="text-dark list-group-item list-group-item-action">Facilidaddes</a>
                                 <a class="text-dark list-group-item list-group-item-action">Como Llegar</a>
                            </div>                          
-                            <a class="text-dark list-group-item list-group-item-action">Listado de reservaciones</a>
+                            <a asp-controller="Administrador" asp-action="verListadoReservacion" class="text-dark list-group-item list-group-item-action">Listado de reservaciones</a>
                             <a asp-controller="Administrador" class="text-dark list-group-item list-group-item-action" data-toggle="collapse" data-target="#habitaciones">Administrar habitaciones</a>    
                             <div class="collapse" id="habitaciones">
                                 <a asp-controller="Administrador" asp-action="habitacionStandard" class="text-dark list-group-item list-group-item-action">Standard</a>
