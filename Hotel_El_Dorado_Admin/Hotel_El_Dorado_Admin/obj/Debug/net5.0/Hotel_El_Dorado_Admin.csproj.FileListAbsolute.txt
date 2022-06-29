@@ -175,3 +175,4 @@ C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_E
 C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Temporada\VisualizarTemporada.cshtml.g.cs
 C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\verListadoReservacion.cshtml.g.cs
 C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\verReservacionId.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\EditarSobreNosotros.cshtml.g.cs

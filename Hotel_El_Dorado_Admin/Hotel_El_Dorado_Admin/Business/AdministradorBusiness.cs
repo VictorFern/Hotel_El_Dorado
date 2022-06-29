@@ -110,7 +110,7 @@ namespace Hotel_El_Dorado_Admin.Business
         {
             AdministradorData administradorData = new AdministradorData(Configuration);
             return administradorData.eliminarReporteReservacionId(id);
-
+        }
         public HotelModel ObtenerSobreNosotros()
         {
             AdministradorData administradorData = new AdministradorData(Configuration);
