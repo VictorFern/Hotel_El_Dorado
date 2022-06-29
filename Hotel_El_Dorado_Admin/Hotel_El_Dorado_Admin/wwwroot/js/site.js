@@ -63,3 +63,10 @@ function activa() {
     });
 
 }
+
+function print() {
+    var element = document.getElementById("reportePdf");
+    var pdf = 'reporte_idReservacion_' + document.getElementById("id").innerHTML + '_cliente_' + document.getElementById("cliente").innerHTML + '.pdf'
+    html2pdf().from(element).save(pdf);
+}
+

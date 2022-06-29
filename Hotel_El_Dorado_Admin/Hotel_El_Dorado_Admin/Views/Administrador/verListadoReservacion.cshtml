@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Estado Actual";
+    Layout = "_Layout";
+}
+<div class="sobreNosotrosTexto mb-3">
+    <h2 class="sobreNosotrosTitulo">Listado de Reservaciones</h2>
+</div>
+<div class="row tabla">
+    <div class="col-md-10 justify-content-center">
+        <div class="container tablaContainer" id="tablaReporte">
+            
+            <table class="table table-responsive-sm table-bordered table-hover table-condensed tablaLista" >
+                <thead>
+                    <tr>
+                        <th id="tdtabla" class="text-center">Fecha Reservacion</th>
+                        <th id="tdtabla" class="text-center">Id Reservacion</th>
+                        <th id="tdtabla" class="text-center">Nombre</th>
+                        <th id="tdtabla" class="text-center apellidos">Apellidos</th>
+                        <th id="tdtabla" class="text-center">Email</th>
+                        <th id="tdtabla" class="text-center">Tarjeta</th>
+                        <th id="tdtabla" class="text-center">Fecha Entrada</th>
+                        <th id="tdtabla" class="text-center">Fecha Salida</th>
+                        <th id="tdtabla" class="text-center">Tipo Habitacion</th>
+                        <th id="tdtabla" class="text-center">Ver</th>
+                        <th id="tdtabla" class="text-center">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (ReservacionModel lista in ViewBag.listaReservacion)
+                    {
+                            <tr>
+                                <td id="tdtabla" class="text-center">@lista.Fecha_Reservacion</td>
+                                <td id="tdtabla" class="text-center">@lista.ID_Reservacion</td>
+                                <td id="tdtabla" class="text-center" colspan="2">@lista.Cliente.Nombre @lista.Cliente.Apellidos</td>
+                               
+                                <td id="tdtabla" class="text-center">@lista.Cliente.Email</td>
+                                <td id="tdtabla" class="text-center">@lista.Cliente.Tarjeta</td>
+                                <td id="tdtabla" class="text-center">@lista.Fecha_Entrada</td>
+                                <td id="tdtabla" class="text-center">@lista.Fecha_Salida</td>
+                                <td id="tdtabla" class="text-center">@lista.Habitacion.Tipo_HabitacionT</td>
+                                <td id="tdtabla" class="text-center">
+                                    @Html.ActionLink("Ver", "verReservacionId", new { id = lista.ID_Reservacion })
+
+                                </td>
+                                <td id="tdtabla" class="text-center">
+                                    @Html.ActionLink("Eliminar", "elimianrReservacionId", new { id = lista.ID_Reservacion })
+
+                                </td>
+                           
+                            </tr>
+                    }
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>

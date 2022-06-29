@@ -94,6 +94,23 @@ namespace Hotel_El_Dorado_Admin.Business
             return administradorData.ObtenerReservaciones();
         }
 
+        public List<ReservacionModel> verListadoReservacion()
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.verListadoReservaciones();
+        }
+
+        public List<ReservacionModel> verListadoReservacionId(int id)
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.verListadoReservacionId(id);
+        }
+
+        public bool eliminarReporteReservacionId(int id)
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.eliminarReporteReservacionId(id);
+
         public HotelModel ObtenerSobreNosotros()
         {
             AdministradorData administradorData = new AdministradorData(Configuration);
@@ -105,6 +122,7 @@ namespace Hotel_El_Dorado_Admin.Business
 
             AdministradorData administradorData = new AdministradorData(Configuration);
             administradorData.actualizarSN(info);
+
         }
 
     }

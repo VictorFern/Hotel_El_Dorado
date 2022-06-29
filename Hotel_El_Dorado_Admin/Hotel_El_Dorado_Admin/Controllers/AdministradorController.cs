@@ -297,5 +297,35 @@ namespace Hotel_El_Dorado_Admin.Controllers
 
         }
 
+        public IActionResult verListadoReservacion()
+        {
+            AdministradorBusiness administradorBusiness = new AdministradorBusiness(Configuration);
+
+            List<ReservacionModel> lista = new List<ReservacionModel>();
+            lista = administradorBusiness.verListadoReservacion();
+            ViewBag.listaReservacion = lista;
+            getLogin();
+            return View();
+        }
+
+        public IActionResult verReservacionId(int id)
+        {
+            AdministradorBusiness administradorBusiness = new AdministradorBusiness(Configuration);
+
+            List<ReservacionModel> lista = new List<ReservacionModel>();
+            lista = administradorBusiness.verListadoReservacionId(id);
+            ViewBag.listaReservacion = lista;
+            getLogin();
+            return View();
+        }
+
+        public IActionResult elimianrReservacionId(int id)
+        {
+            AdministradorBusiness administradorBusiness = new AdministradorBusiness(Configuration);
+            administradorBusiness.eliminarReporteReservacionId(id);
+            getLogin();
+            return RedirectToAction("verListadoReservacion");
+        }
+
     }
 }
