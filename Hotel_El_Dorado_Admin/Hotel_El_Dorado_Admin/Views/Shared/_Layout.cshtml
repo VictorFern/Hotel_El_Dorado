@@ -15,7 +15,6 @@
 </head>
 <body>
     <header>
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-xl-8 logo">
                 <a asp-controller="Administrador" asp-action="Index" class="logoImagen"><img class="logoImagen" src="~/img/logos.png"></a>
@@ -46,7 +45,7 @@
                             <a asp-controller="Administrador" class="text-dark list-group-item list-group-item-action" data-toggle="collapse" data-target="#modificarPage">Modificar Páginas</a>
                            <div class="collapse" id="modificarPage">
                                 <a class="text-dark list-group-item list-group-item-action">Home</a>
-                                <a class="text-dark list-group-item list-group-item-action">Sobre Nosotros</a>
+                                 <a asp-controller="Administrador" asp-action="EditarSobreNosotros" class="text-dark list-group-item list-group-item-action">Sobre Nosotros</a>
                                 <a class="text-dark list-group-item list-group-item-action">Facilidaddes</a>
                                 <a class="text-dark list-group-item list-group-item-action">Como Llegar</a>
                            </div>                          

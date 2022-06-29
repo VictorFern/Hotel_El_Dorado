@@ -421,7 +421,7 @@ namespace Hotel_El_Dorado_Admin.Data
             return temp;
         }
 
-        public bool eliminarReporteReservacionId(int id)
+       public bool eliminarReporteReservacionId(int id)
         {
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             using (SqlConnection conexion = new SqlConnection(connectionString))
@@ -437,6 +437,47 @@ namespace Hotel_El_Dorado_Admin.Data
             }
             Console.WriteLine("SALIENDO DE ELIMINAR");
             return true;
+        }
+
+        public HotelModel ObtenerSobreNosotros()
+        {
+            HotelModel hotel = new HotelModel();
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sqlQuery = $"exec ObtenerSobreNosotros";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader productoReader = command.ExecuteReader();
+                    while (productoReader.Read())
+                    {
+                        hotel.SobreNosotros = productoReader["INFO_SOBRENOSOTROS"].ToString();
+                    }
+                    connection.Close();
+                }
+            }
+            Console.WriteLine(hotel.SobreNosotros+ " dkshvbvdsckcsdncdsc");
+            return hotel;
+        }
+
+
+        public void actualizarSN(HotelModel hotel)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec InsertarSobreNosotros @data='{hotel.SobreNosotros}'";
+                Console.WriteLine("consulta -> "+ consultaSQL);
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
         }
 
     }
