@@ -14,5 +14,7 @@
 
         public string SobreNosotros { get; set; }
 
+        public string imagen { get; set; }
+
     }
 }

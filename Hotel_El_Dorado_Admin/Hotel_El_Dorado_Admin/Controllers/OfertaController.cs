@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Http;
+using System.Net.Http.Headers;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
@@ -18,10 +19,57 @@ namespace Hotel_El_Dorado_Admin.Controllers
         public IConfiguration Configuration { get; }
         private static string Imagen = "";
         private readonly IWebHostEnvironment _iweb;
+        private readonly IHostingEnvironment _webhost;
 
-        public OfertaController(IConfiguration configuration)
+        public OfertaController(IConfiguration configuration, IHostingEnvironment webhost)
         {
             Configuration = configuration;
+            _webhost = webhost;
+        }
+
+        public string copiarImagen()
+        {
+            var newFileName = string.Empty;
+            var fileName = "";
+            if (HttpContext.Request.Form.Files != null)
+            {
+                fileName = string.Empty;
+                string PathDB = string.Empty;
+
+                var files = HttpContext.Request.Form.Files;
+
+                foreach (var file in files)
+                {
+                    if (file.Length > 0)
+                    {
+                        //Getting FileName
+                        fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+
+                        //Assigning Unique Filename (Guid)
+                        var myUniqueFileName = Path.GetFileNameWithoutExtension(fileName);
+
+                        //Getting file Extension
+                        var FileExtension = Path.GetExtension(fileName);
+
+                        // concating  FileName + FileExtension
+                        newFileName = myUniqueFileName + FileExtension;
+
+                        // Combines two strings into a path.
+                        fileName = Path.Combine(_webhost.WebRootPath, "img") + $@"\{newFileName}";
+
+                        // if you want to store path of folder in database
+                        PathDB = "img/" + newFileName;
+
+                        using (FileStream fs = System.IO.File.Create(fileName))
+                        {
+                            file.CopyTo(fs);
+                            fs.Flush();
+                        }
+                    }
+                }
+            }
+
+            return newFileName;
         }
         public bool getLogin()
         {
@@ -55,6 +103,7 @@ namespace Hotel_El_Dorado_Admin.Controllers
         {
             AdministradorBusiness TemBussi = new AdministradorBusiness(Configuration);
             Console.WriteLine(temp.Imagen);
+            temp.Imagen = copiarImagen();
             TemBussi.guardarOferta(temp);
             getLogin();
             return RedirectToAction("VisualizarOferta");
@@ -91,6 +140,7 @@ namespace Hotel_El_Dorado_Admin.Controllers
         public IActionResult ModificarOferta(OfertaModel temp)
         {
             AdministradorBusiness TemBussi = new AdministradorBusiness(Configuration);
+            temp.Imagen = copiarImagen();
             TemBussi.editarOferta(temp);
             getLogin();
             return RedirectToAction("VisualizarOferta");

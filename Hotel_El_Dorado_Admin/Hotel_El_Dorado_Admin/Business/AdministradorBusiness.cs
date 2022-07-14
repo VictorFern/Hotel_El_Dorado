@@ -125,5 +125,83 @@ namespace Hotel_El_Dorado_Admin.Business
 
         }
 
+        public HotelModel ObtenerHome()
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.ObtenerHome();
+        }
+
+        public void actualizarHome(HotelModel info)
+        {
+
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            Console.WriteLine(info.InfoHotel);
+            administradorData.actualizarHome(info);
+
+        }
+
+        public HotelModel ObtenerComoLlegar()
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.ObtenerComoLlegar();
+        }
+
+        public void actualizarComoLlegar(HotelModel info)
+        {
+
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            administradorData.actualizarComoLlegar(info);
+
+        }
+
+        public List<FacilidadModel> ObtenerFacilidad()
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.ObtenerFacilidad();
+        }
+
+        public FacilidadModel GetFacilidad(int id)
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.GetFacilidad(id);
+        }
+
+        public void actualizarFacilidad(FacilidadModel info)
+        {
+
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            administradorData.actualizarFacilidad(info);
+
+        }
+
+        public List<PublicidadModel> ObtenerPublicidad()
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.ObtenerPublicidad();
+        }
+
+        public bool guardarPublicidad(PublicidadModel temp)
+        {
+            AdministradorData adminData = new AdministradorData(Configuration);
+            return adminData.guardarPublicidad(temp);
+        }
+
+        public bool eliminarPublicidad(PublicidadModel temp)
+        {
+            AdministradorData adminData = new AdministradorData(Configuration);
+            return adminData.eliminarPublicidad(temp);
+        }
+
+        public PublicidadModel ObtenerPublicidadId(PublicidadModel publicidad)
+        {
+            AdministradorData administradorData = new AdministradorData(Configuration);
+            return administradorData.ObtenerPublicidadId(publicidad);
+        }
+
+        public bool ActualizarPublicidad(PublicidadModel temp)
+        {
+            AdministradorData adminData = new AdministradorData(Configuration);
+            return adminData.ActualizarPublicidad(temp);
+        }
     }
 }

@@ -243,6 +243,7 @@ namespace Hotel_El_Dorado_Admin.Data
 
         public void ActualizarHabitacionConImagen(HabitacionModel model)
         {
+
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {

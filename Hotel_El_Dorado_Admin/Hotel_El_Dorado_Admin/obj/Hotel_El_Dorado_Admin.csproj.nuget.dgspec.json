@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\victo\\OneDrive\\Escritorio\\U\\Ingenieria\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj": {}
+    "C:\\Users\\victo\\OneDrive\\Escritorio\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\victo\\OneDrive\\Escritorio\\U\\Ingenieria\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj": {
+    "C:\\Users\\victo\\OneDrive\\Escritorio\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\victo\\OneDrive\\Escritorio\\U\\Ingenieria\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj",
+        "projectUniqueName": "C:\\Users\\victo\\OneDrive\\Escritorio\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj",
         "projectName": "Hotel_El_Dorado_Admin",
-        "projectPath": "C:\\Users\\victo\\OneDrive\\Escritorio\\U\\Ingenieria\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj",
+        "projectPath": "C:\\Users\\victo\\OneDrive\\Escritorio\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin.csproj",
         "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\victo\\OneDrive\\Escritorio\\U\\Ingenieria\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\obj\\",
+        "outputPath": "C:\\Users\\victo\\OneDrive\\Escritorio\\Hotel_El_Dorado_Admin\\Hotel_El_Dorado_Admin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -3,5 +3,7 @@
     public class HomeModel
     {
         public string home { get; set; }
+        public string imagen { get; set; }
+        public string infoComoLlegar { get; set; }
     }
 }
