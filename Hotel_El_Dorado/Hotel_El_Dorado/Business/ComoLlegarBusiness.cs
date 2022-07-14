@@ -11,7 +11,7 @@ namespace Hotel_El_Dorado.Business
         {
             Configuration = configuration;
         } 
-        public ComoLlegarModel ObtenerHome()
+        public HomeModel ObtenerHome()
         {
             ComoLlegarData data = new ComoLlegarData(Configuration);
             return data.obtenerComoLlegar();

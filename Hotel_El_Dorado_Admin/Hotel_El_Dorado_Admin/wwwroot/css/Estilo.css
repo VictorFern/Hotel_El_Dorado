@@ -1193,6 +1193,10 @@ nav.navbar {
         width: 50px;
     }
 
+    .facilidadInput {
+        width: 100px;
+    }
+
     #lbCostos {
         position: relative;
         left: -15px;
@@ -1359,7 +1363,9 @@ nav.navbar {
         bottom: 20px;
         width: 50px;
     }
-
+    .facilidadInput {
+        width: 100px;
+    }
     #lbCostos {
         position: relative;
         left: -15px;

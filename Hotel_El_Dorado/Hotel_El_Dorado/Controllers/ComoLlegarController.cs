@@ -23,11 +23,10 @@ namespace Hotel_El_Dorado.Controllers
         public IActionResult Index()
         {
             ComoLlegarBusiness business = new ComoLlegarBusiness(Configuration);
-            ComoLlegarModel model = new ComoLlegarModel();
+            HomeModel model = new HomeModel();
             model = business.ObtenerHome();
 
-            ViewData["Título"] = model.Titulo;
-            ViewData["Descripcion"] = model.Descripcion;
+            ViewData["Descripcion"] = model.infoComoLlegar;
 
             PublicidadBusiness publicidadBusiness = new PublicidadBusiness(Configuration);
             List<PublicidadModel> listaPublicidad = new List<PublicidadModel>();

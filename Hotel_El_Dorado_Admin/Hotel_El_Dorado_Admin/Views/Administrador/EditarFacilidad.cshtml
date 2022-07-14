@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Editar Facilidad";
+    Layout = "_Layout";
+}
+<div class="sobreNosotrosTexto mb-3">
+    <h2 class="sobreNosotrosTitulo">Editar Facilidad</h2>
+</div>
+<div class="row tabla">
+    <div class="col-md-10 justify-content-center">
+        <div class="container tablaContainer" id="tablaReporte">
+            
+            <table class="table table-responsive-sm table-bordered table-hover table-condensed tablaLista" >
+                <thead>
+                    <tr>
+                        <th id="tdtabla" class="text-center">Id Facilidad</th>
+                        <th id="tdtabla" class="text-center">Nombre</th>
+                        <th id="tdtabla" class="text-center">Descripcion</th>
+                        <th id="tdtabla" class="text-center">Editar Facilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (FacilidadModel lista in ViewBag.listaFacilidad)
+                    {
+                            <tr>
+                                <td id="tdtabla" class="text-center">@lista.id</td>
+                                <td id="tdtabla" class="text-center">@lista.Nombre</td>
+                                <td id="tdtabla" class="text-center">@lista.Descripcion</td>
+                                <td id="tdtabla" class="text-center">
+                                    @Html.ActionLink("Actualizar", "verFacilidad", new { id = lista.id })
+                                </td>
+                            </tr>
+                    }
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>

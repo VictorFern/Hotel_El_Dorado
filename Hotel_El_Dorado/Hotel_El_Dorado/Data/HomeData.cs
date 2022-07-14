@@ -43,6 +43,7 @@ namespace Hotel_El_Dorado.Data
                     while (productoReader.Read())
                     {
                         home.home = productoReader["INFO_HOME"].ToString();
+                        home.imagen = productoReader["IMAGEN"].ToString();
                     } // while
                       //Se cierra la conexion a la base de datos
                     connection.Close();

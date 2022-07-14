@@ -9,7 +9,7 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="EditarOferta">
+        <form asp-action="EditarOferta" enctype="multipart/form-data" method="POST">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ID_Oferta" class="control-label"></label>

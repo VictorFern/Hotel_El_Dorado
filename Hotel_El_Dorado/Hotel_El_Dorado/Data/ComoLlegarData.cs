@@ -14,9 +14,9 @@ namespace Hotel_El_Dorado.Data
             Configuration = configuration;
         }
 
-        public ComoLlegarModel obtenerComoLlegar()
+        public HomeModel obtenerComoLlegar()
         {
-            ComoLlegarModel comoLlegarModel = new ComoLlegarModel();
+            HomeModel home = new HomeModel();
 
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -29,13 +29,13 @@ namespace Hotel_El_Dorado.Data
                     SqlDataReader productoReader = command.ExecuteReader();
                     while (productoReader.Read())
                     {
-                        comoLlegarModel.Titulo = productoReader["TITULO"].ToString();
-                        comoLlegarModel.Descripcion = productoReader["DESCRIPCION"].ToString();
+                        home.infoComoLlegar = productoReader["INFO_COMO_LLEGAR"].ToString();
+                        
                     }
                     connection.Close();
                 }
             }
-            return comoLlegarModel;
+            return home;
         }
     }
 }

@@ -1,0 +1,41 @@
+﻿@model Hotel_El_Dorado_Admin.Models.HotelModel
+@{
+    ViewData["Title"] = "EditarHome";
+    Layout = "_Layout";
+}
+<div class="AdministrarHabitaciónTexto">
+    <h2 id="h2">Modificar Home</h2>
+</div>
+<div class="row">
+    <div class="container"><br />
+        <form class="form-horizontal" enctype="multipart/form-data" method="POST">
+             <div class="form-group">
+                    <textarea class="form-control textArea"  rows="5" asp-for="InfoHotel" id="InfoHotel" name="InfoHotel" style="resize:none;">@Model.InfoHotel</textarea>
+              </div>
+              <div class="col-sm-4">
+                  <div class="GaleryContainer">
+                     <div class="container-img-big">
+                         <label class="control-label lbcostos" id="labelCosto">Imagen Actual</label>
+                         <img id="imgBig" class="img-responsive img-big" src="~/img/@Model.imagen"  alt="Chania">
+                         
+                     </div>
+                   </div>
+              </div>
+              <div class="form-group col-sm-4">
+                  <div class="form-group costoInputs">
+                      
+                        <input type="file" class="form-control form-control-sm"  asp-for="imagen" id="Imagen" name="imagen">
+                  </div>
+             </div>
+             <div class="form-group col-sm-4 botonesInput">
+                 <div class="form-group">
+                        <input asp-controller="Administrador" asp-action="actualizarHome" type="submit" value="Aceptar" class="btn btn-primary" />
+                        <a asp-controller="Administrador" asp-action="Index" class="btn btn-danger">Cancelar</a>
+                    </div>
+             </div>
+           </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

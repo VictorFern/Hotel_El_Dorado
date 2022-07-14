@@ -480,5 +480,266 @@ namespace Hotel_El_Dorado_Admin.Data
             }
         }
 
+        public HotelModel ObtenerComoLlegar()
+        {
+            HotelModel hotel = new HotelModel();
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sqlQuery = $"exec sp_GetInfoComoLlegar";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader productoReader = command.ExecuteReader();
+                    while (productoReader.Read())
+                    {
+                        hotel.ComoLlegar = productoReader["INFO_COMO_LLEGAR"].ToString();
+                    }
+                    connection.Close();
+                }
+            }
+           
+            return hotel;
+        }
+
+        public void actualizarComoLlegar(HotelModel hotel)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec sp_UPDATECOMOLLEGAR @param_COMOLLEGAR='{hotel.ComoLlegar}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+        }
+
+        public HotelModel ObtenerHome()
+        {
+            HotelModel hotel = new HotelModel();
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sqlQuery = $"exec sp_ObtenerHome";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader productoReader = command.ExecuteReader();
+                    while (productoReader.Read())
+                    {
+                        hotel.InfoHotel = productoReader["INFO_HOME"].ToString();
+                        hotel.imagen = productoReader["IMAGEN"].ToString();
+                    }
+                    connection.Close();
+                }
+            }
+
+            return hotel;
+        }
+
+        public void actualizarHome(HotelModel hotel)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            Console.WriteLine(hotel.InfoHotel);
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec sp_UPDATEHOME @param_INFO='{hotel.InfoHotel}', @param_IMAGEN = '{hotel.imagen}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+        }
+
+        public List<FacilidadModel> ObtenerFacilidad()
+        {
+            
+            List<FacilidadModel> temp = new List<FacilidadModel>();
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sqlQuery = $"exec sp_GETFACILIDADES";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader productoReader = command.ExecuteReader();
+                    while (productoReader.Read())
+                    {
+                        FacilidadModel facilidad = new FacilidadModel();
+                        facilidad.id = Int32.Parse(productoReader["ID_FACILIDAD"].ToString());
+                        facilidad.Nombre = productoReader["NOMBRE_FACILIDAD"].ToString();
+                        facilidad.Descripcion = productoReader["DESCRIPCION"].ToString();
+
+                        temp.Add(facilidad);
+                    }
+                    connection.Close();
+                }
+            }
+
+            return temp;
+        }
+
+        public FacilidadModel GetFacilidad(int id)
+        {
+            FacilidadModel facilidad = new FacilidadModel();
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sqlQuery = $"exec sp_GETFACILIDADESID @param_ID='{id}'";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader productoReader = command.ExecuteReader();
+                    while (productoReader.Read())
+                    {
+                        
+                        facilidad.id = Int32.Parse(productoReader["ID_FACILIDAD"].ToString());
+                        facilidad.Nombre = productoReader["NOMBRE_FACILIDAD"].ToString();
+                        facilidad.Descripcion = productoReader["DESCRIPCION"].ToString();
+                    }
+                    connection.Close();
+                }
+            }
+
+            return facilidad;
+        }
+
+        public void actualizarFacilidad(FacilidadModel facilidad)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec sp_UPDATEFACILIDAD @param_NOMBRE='{facilidad.Nombre}', @param_DESCRIPCION='{facilidad.Descripcion}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+        }
+
+        public List<PublicidadModel> ObtenerPublicidad()
+        {
+            List<PublicidadModel> temp = new List<PublicidadModel>();
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sqlQuery = $"exec ObtenerPublicidad";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader productoReader = command.ExecuteReader();
+                    while (productoReader.Read())
+                    {
+                        PublicidadModel publicidad = new PublicidadModel();
+                        publicidad.id = Int32.Parse(productoReader["ID_PUBLICIDAD"].ToString());
+                        publicidad.link = productoReader["LINK"].ToString();
+                        publicidad.Imagen = productoReader["IMAGEN"].ToString();
+
+                        temp.Add(publicidad);
+                    }
+                    connection.Close();
+                }
+            }
+
+            return temp;
+        }
+
+        public bool guardarPublicidad(PublicidadModel temp)
+        {
+            
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec CrearPublicidad @param_Link='{temp.link}', @param_Imagen='{temp.Imagen}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+
+            return true;
+        }
+
+        public bool eliminarPublicidad(PublicidadModel temp)
+        {
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec EliminarPublicidad  @param_ID_Publicidad='{temp.id}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+            Console.WriteLine("SALIENDO DE ELIMINAR");
+            return true;
+        }
+
+        public PublicidadModel ObtenerPublicidadId(PublicidadModel publicidad)
+        {
+            PublicidadModel publicidadModel = new PublicidadModel();
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sqlQuery = $"exec ObtenerPublicidadID @param_ID_Publicidad='{publicidad.id}'";
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    SqlDataReader productoReader = command.ExecuteReader();
+                    while (productoReader.Read())
+                    {
+
+                        publicidadModel.id = Int32.Parse(productoReader["ID_PUBLICIDAD"].ToString());
+                        publicidadModel.link = productoReader["LINK"].ToString();
+                        publicidadModel.Imagen = productoReader["IMAGEN"].ToString();
+                    }
+                    connection.Close();
+                }
+            }
+
+            return publicidadModel;
+        }
+
+        public bool ActualizarPublicidad(PublicidadModel temp)
+        {
+
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                string consultaSQL = $"exec ActualizarPublicidad @param_ID_Publicidad='{temp.id}', @param_Link='{temp.link}', @param_Imagen='{temp.Imagen}'";
+                using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
+                {
+                    command.CommandType = CommandType.Text;
+                    conexion.Open();
+                    command.ExecuteReader();
+                    conexion.Close();
+                }
+            }
+
+            return true;
+        }
+
     }
 }
