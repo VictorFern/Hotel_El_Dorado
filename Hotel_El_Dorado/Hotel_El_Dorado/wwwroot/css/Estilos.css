@@ -61,7 +61,11 @@ main {
     padding-top: 30px;
     margin-left: 10px;
 }
-
+.carousel-caption{
+    padding-bottom: 0px;
+    right: 5%;
+    left: -50%;
+}
 #contenedorReservacion {
     margin-left: 35px;
 }
@@ -162,9 +166,11 @@ nav.navbar {
     position: relative;
     display: inline-block;
     margin-top: 1rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
-
+.GaleryContainer {
+    max-width: auto;
+}
 .imgMin {
     margin-top: 1rem;
     margin-right: 1rem;
@@ -172,15 +178,16 @@ nav.navbar {
 
 .container-img-big {
     margin-left: 10px;
-    max-width: 205px;
+    max-width: 253px;
+    bottom: 147px;
     position: relative;
     display: inline-block;
     margin-bottom: 30px;
 }
 
 .img-big {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 @media (min-width: 1200px) {
@@ -314,8 +321,25 @@ nav.navbar {
         text-align: center;
         margin-left: 15px;
     }
+    .container-img-big {
+        max-width: 205px;
+        position: relative;
+        bottom: 10px;
+        left: 55px;
+        display: inline-block;
+    }
+    .carousel-caption {
+        padding-bottom: 20px;
+        right: 15%;
+        left: 15%;
+    }
 
     .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .imgCarusel2 {
         min-width: 100%;
         max-height: 285px;
     }
@@ -399,8 +423,23 @@ nav.navbar {
         text-align: center;
         margin-left: 15px;
     }
-
+    .container-img-big {
+        max-width: 205px;
+        position: relative;
+        bottom: 10px;
+        left: 55px;
+        display: inline-block;
+    }
+    .carousel-caption {
+        padding-bottom: 20px;
+        right: 15%;
+        left: 15%;
+    }
     .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+    .imgCarusel2 {
         min-width: 100%;
         max-height: 285px;
     }
@@ -485,6 +524,7 @@ nav.navbar {
     .container-img-big {
         max-width: 205px;
         position: relative;
+        bottom: 170px;
         display: inline-block;
     }
 
@@ -498,7 +538,18 @@ nav.navbar {
         margin-left: 0px;
     }
 
+    .carousel-caption {
+        padding-bottom: 20px;
+        right: 15%;
+        left: 15%;
+    }
+
     .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .imgCarusel2 {
         min-width: 100%;
         max-height: 285px;
     }
@@ -524,7 +575,11 @@ nav.navbar {
     .logo h2 {
         margin: 5px;
     }
-
+    .carousel-caption {
+        padding-bottom: 20px;
+        right: 15%;
+        left: 15%;
+    }
     .logo img {
         margin-left: 15px;
     }
@@ -580,9 +635,22 @@ nav.navbar {
         margin-left: 10px;
         width:85%;
     }
+    .GaleryContainer {
+        max-width: 500px;
+    }
+
+    .containerMin {
+        max-width: 600px;
+        position: relative;
+        display: inline-block;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
     .container-img-big {
         max-width: 205px;
         position: relative;
+        bottom: 10px;
+        left: 75px;
         display: inline-block;
     }
 
@@ -623,7 +691,11 @@ nav.navbar {
     .containerFooter {
         text-align: center;
     }
-
+    .carousel-caption {
+        padding-bottom: 20px;
+        right: 15%;
+        left: 15%;
+    }
     .logo h2 {
         margin: 2px;
     }
@@ -679,12 +751,29 @@ nav.navbar {
     .fechas {
         margin-left: 10px;
     }
-    .container-img-big {
-        max-width: 205px;
-        position: relative;
-        display: inline-block;
+
+    .GaleryContainer {
+        max-width: 600px;
     }
 
+    .containerMin {
+        max-width: 700px;
+        position: relative;
+        display: inline-block;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    .container-img-big {
+        max-width: 200px;
+        position: relative;
+        bottom: 10px;
+        left: 45px;
+        display: inline-block;
+    }
+    .imgMin{
+        width: 80px;
+        height: 80px;
+    }
     .img-big {
         max-width: 200px;
         max-height: 200px;
@@ -696,6 +785,11 @@ nav.navbar {
     }
 
     .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .imgCarusel2 {
         min-width: 100%;
         max-height: 285px;
     }

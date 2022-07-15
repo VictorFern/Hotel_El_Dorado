@@ -16,5 +16,7 @@ namespace Hotel_El_Dorado.Models
 
         public string Fecha_Fin { get; set; }
 
+        public string tipo { get; set; }
+
     }
 }

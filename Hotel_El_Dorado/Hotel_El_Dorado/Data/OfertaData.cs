@@ -61,7 +61,7 @@ namespace Hotel_El_Dorado.Data
                         oferta.Imagen = ofertaReader["Imagen"].ToString();
                         oferta.Fecha_Inicio = ofertaReader["Fecha_Inicio"].ToString();
                         oferta.Fecha_Fin = ofertaReader["Fecha_Fin"].ToString();
-
+                        oferta.tipo = ofertaReader["TIPO"].ToString();
                         listaOferta.Add(oferta);
                     } // while
                       //Se cierra la conexion a la base de datos

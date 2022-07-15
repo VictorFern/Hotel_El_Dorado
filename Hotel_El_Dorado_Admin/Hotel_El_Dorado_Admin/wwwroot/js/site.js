@@ -70,3 +70,9 @@ function print() {
     html2pdf().from(element).save(pdf);
 }
 
+function printTabla() {
+    var element = document.getElementById("tablaPDF");
+    var pdf = 'Estado_Actual_De_Las_Habitaciones.pdf'
+    html2pdf().from(element).save(pdf);
+}
+

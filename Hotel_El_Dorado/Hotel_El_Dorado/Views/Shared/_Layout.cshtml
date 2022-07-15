@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <script type="text/javascript" src="~/js/functions.js"></script>
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/Estilo.css" />
+    <link rel="stylesheet" href="~/css/Estilos.css" />
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
 </head>
@@ -31,19 +31,29 @@
                                 {
                                     @if (contador == 0)
                                     {
+                                        
                                         <div class="carousel-item active imgItem">
                                             <a href="">
                                                 <img src="../img/@temp.Imagen" class="img-fluid imgCarusel2" alt="@temp.Oferta" width="50" height="50">
                                             </a>
+                                            <div class="carousel-caption">
+                                                <h5 style="color: black;"> @temp.tipo </h5>
+                                            </div>
                                         </div>
+                                        
                                     }
                                     else
                                     {
+                                        
                                         <div class="carousel-item imgItem">
                                             <a href="">
                                                 <img src="../img/@temp.Imagen" class="img-fluid imgCarusel2" alt="@temp.Oferta" width="50" height="50">
                                             </a>
+                                            <div class="carousel-caption">
+                                                <h5 style="color: black;"> @temp.tipo </h5>
+                                            </div>
                                         </div>
+                                        
                                     }
                                     contador++;
                                 }

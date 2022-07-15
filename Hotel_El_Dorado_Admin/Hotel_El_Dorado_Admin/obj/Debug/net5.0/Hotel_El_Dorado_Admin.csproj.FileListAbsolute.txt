@@ -249,3 +249,10 @@ C:\Users\victo\OneDrive\Escritorio\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\o
 C:\Users\victo\OneDrive\Escritorio\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\verPublicidad.cshtml.g.cs
 C:\Users\victo\OneDrive\Escritorio\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\InsertarPublicidad.cshtml.g.cs
 C:\Users\victo\OneDrive\Escritorio\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\actualizarPublicidad.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\actualizarPublicidad.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\EditarComoLlegar.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\EditarFacilidad.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\EditarHome.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\InsertarPublicidad.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\verFacilidad.cshtml.g.cs
+C:\Users\victo\OneDrive\Escritorio\U\Ingenieria\Proyecto\Hotel_El_Dorado\Hotel_El_Dorado_Admin\Hotel_El_Dorado_Admin\obj\Debug\net5.0\Razor\Views\Administrador\verPublicidad.cshtml.g.cs
