@@ -48,6 +48,7 @@ namespace Hotel_El_Dorado.Data
                         tipoHabitacionModel.caracteristicas = productoReader["CARACTERISTICAS"].ToString();
                         tipoHabitacionModel.costo = int.Parse(productoReader["COSTO"].ToString());
                         tipoHabitacionModel.imagen = productoReader["IMAGEN"].ToString();
+                        tipoHabitacionModel.oferta = int.Parse(productoReader["OFERTA"].ToString());
                         lista.Add(tipoHabitacionModel);
                     } // while
                       //Se cierra la conexion a la base de datos

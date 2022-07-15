@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mb1i4FpSStEDcjuUrkLmKE73526PF7dTbxhopCTBe44gdo/yyoRI67T5KqeXjZW2eLq4LTG+6prOSEDkjQRjNg==",
+  "dgSpecHash": "VRTsVV/wgOTT4zylldHt54W8UpTBpQu4FOZymG/AtyiqJgvxTTkdp0p9BCBzgTr1EfAcHbWUzAvcu0MKoPrB+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\victo\\OneDrive\\Escritorio\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado.csproj",
+  "projectFilePath": "C:\\Users\\victo\\OneDrive\\Escritorio\\U\\Ingenieria\\Proyecto\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado\\Hotel_El_Dorado.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\victo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

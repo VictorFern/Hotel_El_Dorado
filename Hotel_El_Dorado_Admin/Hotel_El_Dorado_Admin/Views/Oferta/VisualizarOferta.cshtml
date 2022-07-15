@@ -52,8 +52,8 @@
                 @Html.DisplayFor(modelItem => item.Tipo_Habitacion)
             </td>
             <td>
-                @Html.ActionLink("Edit", "EditarOferta", new { item.ID_Oferta, item.Oferta, item.Imagen, item.Fecha_Inicio, item.Fecha_Fin, item.Tipo_Habitacion }) |
-                @Html.ActionLink("Delete", "EliminarOferta", new { item.ID_Oferta, item.Oferta, item.Imagen, item.Fecha_Inicio, item.Fecha_Fin, item.Tipo_Habitacion })
+                @Html.ActionLink("Editar", "EditarOferta", new { item.ID_Oferta, item.Oferta, item.Imagen, item.Fecha_Inicio, item.Fecha_Fin, item.Tipo_Habitacion }) |
+                @Html.ActionLink("Eliminar", "EliminarOferta", new { item.ID_Oferta, item.Oferta, item.Imagen, item.Fecha_Inicio, item.Fecha_Fin, item.Tipo_Habitacion })
             </td>
         </tr>
 }

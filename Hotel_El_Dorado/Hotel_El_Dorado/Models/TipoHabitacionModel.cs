@@ -7,6 +7,6 @@
         public string caracteristicas { get; set; }
         public int costo { get; set; }
         public string imagen { get; set; }
-
+        public int oferta { get; set; }
     }
 }

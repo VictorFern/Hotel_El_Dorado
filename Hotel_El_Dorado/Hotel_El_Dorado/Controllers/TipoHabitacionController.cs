@@ -28,6 +28,9 @@ namespace Hotel_El_Dorado.Controllers
             TipoHabitacionBusiness tipoHabitacionBusiness = new TipoHabitacionBusiness(Configuration);
             ViewBag.tipoHabitacion = tipoHabitacionBusiness.ObtenerTipohabitacion();
 
+            ReservacionBusiness reservacionBusiness = new ReservacionBusiness(Configuration);
+            ViewBag.DescuentoTemporada = reservacionBusiness.ObtenerDescuentoTemporada();
+
             PublicidadBusiness publicidadBusiness = new PublicidadBusiness(Configuration);
             List<PublicidadModel> listaPublicidad = new List<PublicidadModel>();
             listaPublicidad = publicidadBusiness.ObtenerPublicidad();
