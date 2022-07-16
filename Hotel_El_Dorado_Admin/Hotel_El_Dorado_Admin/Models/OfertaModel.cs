@@ -18,5 +18,7 @@ namespace Hotel_El_Dorado_Admin.Models
 
         public string Tipo_Habitacion { get; set; }
 
+        public int Tipo { get; set; }
+
     }
 }
