@@ -320,7 +320,7 @@ namespace Hotel_El_Dorado_Admin.Data
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
-                string consultaSQL = $"exec ActualizarOferta @param_ID_Oferta='{temp.ID_Oferta}', @param_Oferta='{temp.Oferta}', @param_Imagen='{temp.Imagen}',  @param_Fecha_Inicio='{temp.Fecha_Inicio}', @param_Fecha_Fin='{temp.Fecha_Fin}', @param_Tipo_Habitacion='{temp.Tipo_Habitacion}'";
+                string consultaSQL = $"exec ActualizarOferta @param_ID_Oferta='{temp.ID_Oferta}', @param_Oferta='{temp.Oferta}', @param_Imagen='{temp.Imagen}',  @param_Fecha_Inicio='{temp.Fecha_Inicio}', @param_Fecha_Fin='{temp.Fecha_Fin}', @param_Tipo_Habitacion='{temp.Tipo}'";
                 using (SqlCommand command = new SqlCommand(consultaSQL, conexion))
                 {
                     command.CommandType = CommandType.Text;

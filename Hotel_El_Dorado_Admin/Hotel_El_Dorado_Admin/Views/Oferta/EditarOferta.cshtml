@@ -34,9 +34,11 @@
                 <input type="date" class="form-control form-control-sm" asp-for="Fecha_Fin" id="Fecha_Fin" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")">
             </div>
             <div class="form-group">
-                <label asp-for="Tipo_Habitacion" class="control-label"></label>
-                <input asp-for="Tipo_Habitacion" class="form-control" />
-                <span asp-validation-for="Tipo_Habitacion" class="text-danger"></span>
+                <select asp-for="Tipo" name="Tipo">
+                    <option value="1">Estándar</option>
+                    <option value="2">Junior</option>
+                    <option value="3">Suite</option>
+                </select>
             </div>
             <div class="form-group">
                 <input asp-controller="Oferta" asp-action="ModificarOferta" type="submit" value="Modificar" class="btn btn-primary" />
@@ -47,5 +49,7 @@
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
 }
