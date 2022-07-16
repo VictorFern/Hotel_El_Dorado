@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Editar Publicidad";
+    Layout = "_Layout";
+}
+<div class="sobreNosotrosTexto mb-3">
+    <h2 class="sobreNosotrosTitulo">Editar Publicidad</h2>
+</div>
+<div class="row tabla">
+    <div class="col-md-10 justify-content-center">
+        <div class="container tablaContainer" id="tablaReporte">
+            
+            <table class="table table-responsive-sm table-bordered table-hover table-condensed tablaLista" >
+                <thead>
+                    <tr>
+                        <th id="tdtabla" class="text-center">Id Publicidad</th>
+                        <th id="tdtabla" class="text-center">Link</th>
+                        <th id="tdtabla" class="text-center">Imagen</th>
+                        <th id="tdtabla" class="text-center">Actualizar</th>
+                        <th id="tdtabla" class="text-center">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (PublicidadModel lista in ViewBag.listaPublicidad)
+                    {
+                            <tr>
+                                <td id="tdtabla" class="text-center">@lista.id</td>
+                                <td id="tdtabla" class="text-center"><a href="@lista.link" target="_blank">@lista.link</a></td>
+                                <td id="tdtabla" class="text-center"><img class="img-responsive" src="~/img/@lista.Imagen" width="100" height="100"></td>
+                                <td id="tdtabla" class="text-center">
+                                    @Html.ActionLink("Actualizar", "actualizarPublicidad", new { id = lista.id })
+                                </td>
+                                <td id="tdtabla" class="text-center">
+                                    @Html.ActionLink("Eliminar", "eliminarPublicidad", new { id = lista.id })
+                                </td>
+                            </tr>
+                    }
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>

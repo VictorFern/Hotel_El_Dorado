@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Tarifas";
+    Layout = "_Layout";
+}
+<div class="tarifasTexto">
+    <h2>Tarifas</h2>
+</div>
+<div class="row">
+    @if (ViewBag.DescuentoTemporada != null)
+    {
+        @foreach (TipoHabitacionModel temp in ViewBag.tipoHabitacion)
+        {
+            @if (temp.oferta == 0)
+            {
+                <div class="col-md-3">
+                    <div class="homeTarifas">
+                        <img class="img-responsive imgTarifas" src="~/img/@temp.imagen" alt="" width="200" height="200">
+                    </div>
+                </div>
+                <div class="col-md-8 justify-content-center">
+                    <div class="tarifasTexto">
+                        <p>@temp.tipo</p>
+                        <p>@temp.descripcion</p>
+                        <p>@temp.caracteristicas</p>
+                        <p>Precio: $@temp.costo</p>
+                        <p>Porcentaje por Temporada: @ViewBag.DescuentoTemporada%</p>
+                    </div>
+                    <br />
+                </div>
+            }
+            else
+            {
+                <div class="col-md-3">
+                    <div class="homeTarifas">
+                        <img class="img-responsive imgTarifas" src="~/img/@temp.imagen" alt="" width="200" height="200">
+                    </div>
+                </div>
+                <div class="col-md-8 justify-content-center">
+                    <div class="tarifasTexto">
+                        <p>@temp.tipo</p>
+                        <p>@temp.descripcion</p>
+                        <p>@temp.caracteristicas</p>
+                        <p>Precio: $@temp.costo</p>
+                        <p>Porcentaje por Temporada: @ViewBag.DescuentoTemporada%</p>
+                        <p>Porcentaje por Oferta: @temp.oferta%</p>
+                    </div>
+                    <br />
+                </div>
+            }
+
+        }
+
+    }
+    else
+    {
+        @foreach (TipoHabitacionModel temp in ViewBag.tipoHabitacion)
+        {
+            @if (temp.oferta == 0)
+            {
+                <div class="col-md-3">
+                    <div class="homeTarifas">
+                        <img class="img-responsive imgTarifas" src="~/img/@temp.imagen" alt="" width="200" height="200">
+                    </div>
+                </div>
+                <div class="col-md-8 justify-content-center">
+                    <div class="tarifasTexto">
+                        <p>@temp.tipo</p>
+                        <p>@temp.descripcion</p>
+                        <p>@temp.caracteristicas</p>
+                        <p>Precio: $@temp.costo</p>
+                        <p>Porcentaje por Temporada: @ViewBag.DescuentoTemporada%</p>
+                    </div>
+                    <br />
+                </div>
+            }
+            else
+            {
+                <div class="col-md-3">
+                    <div class="homeTarifas">
+                        <img class="img-responsive imgTarifas" src="~/img/@temp.imagen" alt="" width="200" height="200">
+                    </div>
+                </div>
+                <div class="col-md-8 justify-content-center">
+                    <div class="tarifasTexto">
+                        <p>@temp.tipo</p>
+                        <p>@temp.descripcion</p>
+                        <p>@temp.caracteristicas</p>
+                        <p>Precio: $@temp.costo</p>
+                        <p>Porcentaje por Temporada: @ViewBag.DescuentoTemporada%</p>
+                        <p>Porcentaje por Oferta: @temp.oferta%</p>
+                    </div>
+                    <br />
+                </div>
+            }
+
+        }
+    }
+
+</div>

@@ -1,0 +1,1504 @@
+﻿.list-group {
+    display: inline-block;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+.btnCerrarSeesion {
+    margin-left: 2rem;
+}
+
+.homeBody {
+    padding-top: 10px;
+    margin: 0px;
+}
+
+.fechas {
+    padding-top: 10px;
+    margin-left: 40px;
+}
+
+.homeFacilidad, .homeTarifas {
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.homeDatos {
+    padding-top: 5px;
+    margin-left: 40px;
+}
+
+.homeTexto p, .homeTexto h2, .homeFacilidad p, .homeFacilidad h2, tarifasTexto p, .tarifasTexto h2, .comoLlegarTexto p, .comoLlegarTexto h2, .contactenosTexto p, .contactenosTexto h2 {
+    margin-left: 120px;
+    white-space: pre-line;
+}
+
+.AdministrarHabitaciónTexto h2, .textoStandard span {
+    margin-left: 10px;
+    white-space: pre-line;
+    padding-top: 35px;
+}
+
+.sobreNosotrosTexto p, .sobreNosotrosTexto h2, .sobreNosotrosTexto h4 {
+    margin-left: 10px;
+}
+
+.homeTexto h2 {
+    padding-top: 15px;
+}
+
+.homeDatos h6 {
+    padding-top: 5px;
+}
+
+.form-check-input {
+    margin: auto;
+    margin-top: 5px;
+}
+
+.lbActiva {
+    margin-left: 20px;
+}
+
+.reservarTexto p {
+    padding-top: 30px;
+}
+
+.textArea {
+    resize: none;
+    margin-left: 10px;
+    border: solid;
+}
+
+#lbCostos {
+    position: relative;
+    left: 75px;
+}
+
+.costoInput {
+    margin-left: 120px;
+    position: relative;
+    bottom: 20px;
+}
+
+.costoInputs {
+    position: relative;
+    bottom: 140px;
+    left: 250px;
+    min-height: 15px;
+}
+
+.botonesInput {
+    position: relative;
+    float: right;
+    top: 25px;
+}
+
+.lcosto {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-left: 5px;
+    display: inline;
+}
+
+.botones {
+    margin-bottom: 10px;
+}
+
+.facilidadTexto h2, .tarifasTexto h2, .contactenosTexto h2, .reservarTexto h2 {
+    padding-top: 30px;
+    margin-left: 10px;
+}
+
+#contenedorReservacion {
+    margin-left: 35px;
+}
+
+.sobreNosotrosTexto h2, .sobreNosotrosTexto h4 {
+    padding-top: 30px;
+}
+
+.homeTexto p, .facilidadTexto p, tarifasTexto p, .comoLlegarTexto p, .contactenosTexto p {
+    padding-top: 1px;
+}
+
+.homeTexto p, .facilidadTexto p, tarifasTexto p, .comoLlegarTexto p, .contactenosTexto p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+    .logo img.logoImagen {
+        object-fit: fill;
+    }
+
+.imgItem img {
+    width: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+    .imgItem img.imgCarusel {
+        object-fit: fill;
+    }
+
+.logo h2 {
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+    text-align: right;
+    font: bold 20px Sans-Serif;
+}
+
+.headerTitulo {
+    align-content: space-between;
+    border: solid;
+}
+
+header {
+    width: 90%;
+    margin-left: 50px;
+    border-bottom: solid;
+}
+
+.footer {
+    width: 90%;
+    margin-left: 50px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contenido {
+    width: 100%;
+}
+
+.containerFooter {
+    text-align: right;
+    border-color: #000000;
+    border-top-style: solid;
+    border-top-width: medium;
+}
+
+
+.sidebar {
+    max-width: fit-content;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+nav.navbar {
+    background-color: white !important;
+}
+
+.publicidadLateral {
+    margin-left: 50px;
+}
+
+.containerMin {
+    max-width: 500px;
+    position: relative;
+    display: inline-block;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.imgMin {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.container-img-big {
+    max-width: 205px;
+}
+
+.img-big {
+    float: left;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#login .container #login-row #login-column .login-box {
+    margin-top: 80px;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom, #aec1c3, #a9b5b7, #bcc5c6, #cfd5d5);
+}
+
+    #login .container #login-row #login-column .login-box #login-form {
+        padding: 20px;
+    }
+
+.tablaLista {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #999;
+    text-align: left;
+    margin: 0 0 1em 0;
+    caption-side: top;
+}
+
+#tdtabla {
+    padding: 0.3em;
+}
+
+#tdtabla {
+    border-bottom: 1px solid #999;
+    width: 25%;
+}
+
+.botonesReporte {
+    margin-left: 95px;
+    display: inline-block;
+}
+
+.iconos {
+    border: solid;
+}
+
+    .iconos:hover {
+        background-color: cadetblue;
+    }
+
+.buttonReporte {
+    margin-left: 400px;
+    display: inline-block;
+}
+
+@media only screen and (max-width:3000px) and (min-width: 1601px) {
+    .costoInputs {
+        position: relative;
+        bottom: 90px;
+    }
+
+    #labelCosto {
+        position: relative;
+        bottom: -90px;
+        left: -180px;
+    }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+
+    .homeBody {
+        margin-left: 40px;
+    }
+
+
+    .tablaContainer{
+        margin-left:-20px;
+    }
+    #tdtabla {
+        margin-right: 25px;
+        padding: 0.001em;
+    }
+
+
+    .logonav {
+        height: 115px;
+    }
+
+    .menuContenido {
+        min-width: 20%;
+    }
+
+    .costoInputs {
+        height: 55px;
+    }
+
+    .botonesInput {
+        position: relative;
+        float: right;
+        top: 25px;
+    }
+
+    .homeFacilidad {
+        padding-top: 10px;
+        margin-left: 40px;
+    }
+
+        .homeTexto p, .homeTexto h2, .homeFacilidad p, .homeFacilidad h2, tarifasTexto p, .tarifasTexto h2, .comoLlegarTexto p, .comoLlegarTexto h2, .contactenosTexto p, .contactenosTexto h2 {
+            margin-left: 130px;
+            white-space: pre-line;
+        }
+
+    .sobreNosotrosTexto p, .sobreNosotrosTexto h2, .sobreNosotrosTexto h4, .comoLlegarTexto p, .contactenosTexto p, .reservarTexto p {
+        margin-left: 40px;
+    }
+
+    .homeTexto h2 {
+        padding-top: 15px;
+    }
+
+    .facilidadTexto h2, .tarifasTexto h2, .comoLlegarTexto h2, .contactenosTexto h2, .reservarTexto h2 {
+        padding-top: 30px;
+        margin-left: 40px;
+    }
+
+    .sobreNosotrosTexto h2, .sobreNosotrosTexto h4, .reservarTexto h4 {
+        padding-top: 30px;
+    }
+
+    .imgItem img {
+        width: 100px;
+        margin-top: 5px;
+        margin-bottom: 35px;
+    }
+
+    .container-img-big, .comoLlegarMapa {
+        margin-left: 40px;
+    }
+
+    .publicidadLateral {
+        min-width: 189px;
+        margin-left: 50px;
+    }
+}
+
+.imgCarusel {
+    min-width: 202px;
+    max-height: 200px;
+}
+
+.consultar {
+    margin-top: 36px;
+}
+/* Para 960px */
+@media only screen and (max-width: 980px) and (min-width: 821px) {
+    main {
+        min-width: 640px;
+    }
+    .buttonReporte {
+        margin-left: 300px;
+        display: inline-block;
+    }
+    .contenido {
+        min-width: 640px;
+    }
+
+    .tabla {
+        margin-left: 25px;
+    }
+
+    .inpuConsultar {
+        padding-left: 20px;
+    }
+
+    .costoInput {
+        margin-left: 120px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    .textArea {
+        margin-left: 50px;
+        width: 590px;
+    }
+
+    .lbcostos {
+        margin-left: 40px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: 75px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 90px;
+        left: 250px;
+        width: 380px;
+    }
+
+    .GaleryContainer {
+        position: relative;
+        bottom: 0px;
+        left: 40px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 55px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 20px;
+    }
+
+    .divConsultarDisponibilidad {
+        margin-left: 45px;
+    }
+
+    .divWrapper {
+        margin-left: 45px;
+    }
+
+    .container {
+        min-width: 570px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .logo h2 {
+        margin: 5px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .logonav {
+        height: 115px;
+    }
+
+    #navbarSupportedContent {
+        position: relative;
+        bottom: 70px;
+    }
+
+    .welcome {
+        margin-left: 490px;
+        text-align: center;
+    }
+
+    .btnCerrarSeesion {
+        margin-left: 590px;
+    }
+
+    .logo {
+        text-align: center;
+        right: 60px;
+    }
+
+    .AdministrarHabitaciónTexto h2, .textoStandard span, .tableStandard {
+        margin-left: 40px;
+        white-space: pre-line;
+        padding-top: 75px;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .sobreNosotrosTexto h4, .facilidadTexto h2, .tarifasTexto h2, .comoLlegarTexto h2, .contactenosTexto h2 {
+        margin-left: 90px;
+    }
+
+    .homeBody {
+        margin-left: 80px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto, tarifasTexto, .comoLlegarTexto, .contactenosTexto, .reservarTexto {
+        min-width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p, .tarifasTexto p, .comoLlegarTexto p, .contactenosTexto p, .reservarTexto p {
+            margin-top: 0;
+            margin-left: 90px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgFacilidad, .imgTarifas {
+        margin-left: 80px;
+    }
+
+    .fechas {
+        margin-left: 80px;
+    }
+
+    .publicidadLateral {
+        min-width: 180px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .comoLlegarMapa {
+        margin-bottom: 10px;
+        margin-left: 80px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+
+    #login .container #login-row #login-column .login-box {
+        margin-top: 120px;
+    }
+
+    #login-column, .login-box, #login-row {
+        min-width: 80%;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 820px) and (min-width: 769px) {
+    main {
+        min-width: 605px;
+    }
+    .buttonReporte {
+        margin-left: 300px;
+        display: inline-block;
+    }
+    .tabla {
+        margin-left: 25px;
+    }
+
+    .inpuConsultar {
+        padding-left: 20px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 10px;
+    }
+
+    .divConsultarDisponibilidad {
+        margin-left: 45px;
+    }
+
+    .divWrapper {
+        margin-left: 45px;
+    }
+
+    .costoInput {
+        margin-left: 120px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    .textArea {
+        margin-left: 50px;
+        width: 560px;
+    }
+
+    .lbcostos {
+        margin-left: 40px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: 75px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 90px;
+        left: 250px;
+        width: 350px;
+    }
+
+    .GaleryContainer {
+        position: relative;
+        bottom: 0px;
+        left: 40px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 55px;
+    }
+
+    .container {
+        min-width: 605px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .logo h2 {
+        margin: 5px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .logonav {
+        height: 115px;
+    }
+
+    #navbarSupportedContent {
+        position: relative;
+        bottom: 70px;
+    }
+
+    .welcome {
+        margin-left: 540px;
+        text-align: center;
+    }
+
+    .btnCerrarSeesion {
+        margin-left: 610px;
+    }
+
+    .logo {
+        text-align: center;
+        right: 55px;
+    }
+
+    .AdministrarHabitaciónTexto h2, .textoStandard span, .tableStandard {
+        margin-left: 40px;
+        white-space: pre-line;
+        padding-top: 75px;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .sobreNosotrosTexto h4, .facilidadTexto h2, .tarifasTexto h2, .comoLlegarTexto h2, .contactenosTexto h2 {
+        margin-left: 90px;
+    }
+
+    .homeBody {
+        margin-left: 80px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto, .tarifasTexto, .comoLlegarTexto, .contactenosTexto, .reservarTexto {
+        min-width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p, .tarifasTexto p, .comoLlegarTexto p, .contactenosTexto p, .reservarTexto p {
+            margin-top: 0;
+            margin-left: 90px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgFacilidad, .imgTarifas {
+        margin-left: 80px;
+    }
+
+    .fechas {
+        margin-left: 80px;
+    }
+
+    .publicidadLateral {
+        min-width: 180px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .comoLlegarMapa {
+        margin-bottom: 10px;
+        margin-left: 80px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+
+    #login .container #login-row #login-column .login-box {
+        margin-top: 120px;
+    }
+
+    #login-column, .login-box, #login-row {
+        min-width: 80%;
+        margin-right: 20px;
+    }
+}
+/* Para 800px */
+@media only screen and (max-width: 768px) and (min-width: 621px) {
+    main {
+        min-width: 570px;
+    }
+    .buttonReporte {
+        margin-left: 280px;
+        display: inline-block;
+    }
+    .tabla {
+        margin-left: 30px;
+    }
+
+    .inpuConsultar {
+        padding-left: 20px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 10px;
+    }
+
+    .divConsultarDisponibilidad {
+        margin-left: 50px;
+    }
+
+    .divWrapper {
+        margin-left: 50px;
+    }
+
+    .costoInput {
+        margin-left: 120px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    .textArea {
+        margin-left: 60px;
+        width: 490px;
+    }
+
+    .lbcosto {
+        margin-left: 50px;
+    }
+
+    .lbcostos {
+        margin-left: 50px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: 5px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 90px;
+        left: 260px;
+        width: 290px;
+    }
+
+    .GaleryContainer {
+        position: relative;
+        bottom: 0px;
+        left: 50px;
+    }
+
+    .container {
+        min-width: 570px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .logo h2 {
+        margin: 5px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .logonav {
+        height: 115px;
+    }
+
+    #navbarSupportedContent {
+        position: relative;
+        bottom: 70px;
+    }
+
+    .welcome {
+        margin-left: 500px;
+        text-align: center;
+    }
+
+    .btnCerrarSeesion {
+        margin-left: 560px;
+    }
+
+    .logo {
+        text-align: center;
+        right: 55px;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .sobreNosotrosTexto h4, .facilidadTexto h2, .tarifasTexto h2, .comoLlegarTexto h2, .contactenosTexto h2 {
+        margin-left: 90px;
+    }
+
+    .homeBody {
+        margin-left: 80px;
+    }
+
+    .AdministrarHabitaciónTexto h2, .textoStandard span, .tableStandard {
+        margin-left: 40px;
+        white-space: pre-line;
+        padding-top: 75px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto, .tarifasTexto, .comoLlegarTexto, .contactenosTexto, .reservarTexto {
+        min-width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p, .tarifasTexto p, .comoLlegarTexto p, .contactenosTexto p, .reservarTexto p {
+            margin-top: 0;
+            margin-left: 90px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgFacilidad, .imgTarifas {
+        margin-left: 80px;
+    }
+
+    .fechas {
+        margin-left: 80px;
+    }
+
+    .publicidadLateral {
+        min-width: 180px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .comoLlegarMapa {
+        margin-bottom: 10px;
+        margin-left: 80px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+
+    #login .container #login-row #login-column .login-box {
+        margin-top: 120px;
+    }
+
+    #login-column, .login-box, #login-row {
+        min-width: 80%;
+        margin-right: 20px;
+    }
+}
+
+/* Para 600px */
+@media only screen and (max-width: 620px) and (min-width: 501px) {
+    .container, .tabla {
+        width: 90%;
+    }
+    #tdtabla {
+        margin-right: 25px;
+        padding: 0.001em;
+    }
+    .tablaContainer {
+        margin-left: -20px;
+    }
+    .containerFooter {
+        text-align: center;
+    }
+
+    .inpuConsultar {
+        padding-left: 20px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 19px;
+    }
+
+    .divConsultarDisponibilidad {
+        margin-left: 50px;
+    }
+
+    .divWrapper {
+        margin-left: 50px;
+    }
+
+    .logo h2 {
+        margin: 5px;
+    }
+
+    .costoInput {
+        margin-left: 40px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: -15px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 80px;
+        left: 210px;
+        width: 280px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 85px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logonav {
+        height: 130px;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    #navbarSupportedContent {
+        position: relative;
+        bottom: 93px;
+    }
+
+    .welcome {
+        margin-left: 290px;
+        text-align: center;
+    }
+
+    .btnCerrarSeesion {
+        margin-left: 390px;
+    }
+
+    .logo {
+        text-align: center;
+        margin-right: 5px;
+    }
+
+    .AdministrarHabitaciónTexto h2 {
+        padding-top: 10px;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .sobreNosotrosTexto h4, .facilidadTexto h2, .tarifasTexto h2, .comoLlegarTexto h2, .contactenosTexto h2 {
+        margin-left: 12px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto, .tarifasTexto, .comoLlegarTexto, .contactenosTexto.reservarTexto {
+        width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p, .tarifasTexto p, .comoLlegarTexto p, .contactenosTexto p, .reservarTexto p {
+            margin-top: 0;
+            margin-left: 10px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgHome {
+        max-inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 2/1;
+        object-fit: contain;
+    }
+
+    #contenedorReservacion {
+        margin-left: 10px;
+        width: 85%;
+    }
+
+    .imgFacilidad, .imgTarifas {
+        margin-left: 10px;
+    }
+
+    .fechas {
+        margin-left: 10px;
+    }
+
+    .container-img-big {
+        max-width: 205px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .img-big {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .comoLlegarMapa {
+        margin-bottom: 10px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+
+    #login .container #login-row #login-column .login-box {
+        margin-top: 50px;
+    }
+
+    #login {
+        margin-right: 180px;
+    }
+}
+
+/* Para 480px */
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+
+    .container, .tabla {
+        width: 90%;
+    }
+
+
+    .buttonReporte {
+        margin-left: 150px;
+        display: inline-block;
+    }
+
+    .tabla {
+    }
+
+    .inpuConsultar {
+        padding-left: 5px;
+    }
+
+    .inpuConsultarA {
+        padding-left: 5px;
+    }
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .costoInput {
+        margin-left: 40px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    .facilidadInput {
+        width: 100px;
+    }
+
+    #lbCostos {
+        position: relative;
+        left: -15px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 0px;
+        left: -4px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 85px;
+    }
+
+    .logo h2 {
+        margin: 5px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+    }
+
+    .logonav {
+        height: 170px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    #navbarSupportedContent {
+        position: relative;
+        bottom: 150px;
+    }
+
+    .welcome {
+        margin-left: 250px;
+        text-align: center;
+    }
+
+    .btnCerrarSeesion {
+        margin-left: 250px;
+    }
+
+    .logo {
+        text-align: center;
+        margin-right: 5px;
+    }
+
+    .AdministrarHabitaciónTexto h2 {
+        padding-top: 10px;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .sobreNosotrosTexto h4, .facilidadTexto h2, .tarifasTexto h2, .comoLlegarTexto h2, .contactenosTexto h2 {
+        margin-left: 12px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto, .tarifasTexto, .comoLlegarTexto, .contactenosTexto, .reservarTexto {
+        width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p, .tarifasTexto p, .comoLlegarTexto p, .contactenosTexto p, .reservarTexto p {
+            margin-top: 0;
+            margin-left: 10px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgHome {
+        max-inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 2/1;
+        object-fit: contain;
+    }
+
+    .imgFacilidad, .imgTarifas {
+        margin-left: 10px;
+    }
+
+    .fechas {
+        margin-left: 10px;
+    }
+
+    #contenedorReservacion {
+        margin-left: 10px;
+        width: 85%;
+    }
+
+    .container-img-big {
+        max-width: 205px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .img-big {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .comoLlegarMapa {
+        margin-bottom: 10px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+
+    #login .container #login-row #login-column .login-box {
+        margin-top: 50px;
+    }
+
+    #login {
+        margin-right: 90px;
+    }
+}
+
+/* Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {
+    .container, .tabla {
+        width: 90%;
+    }
+
+    .buttonReporte {
+        margin-left: 120px;
+        display: inline-block;
+    }
+
+    .containerFooter {
+        text-align: center;
+    }
+
+    .logo h2 {
+        margin: 2px;
+    }
+
+    .costoInput {
+        margin-left: 40px;
+        position: relative;
+        bottom: 20px;
+        width: 50px;
+    }
+    .facilidadInput {
+        width: 100px;
+    }
+    #lbCostos {
+        position: relative;
+        left: -15px;
+    }
+
+    .costoInputs {
+        position: relative;
+        bottom: 0px;
+        left: -4px;
+    }
+
+    .botonesInput {
+        position: relative;
+        bottom: 0px;
+        left: 85px;
+    }
+
+    .logo img {
+        margin-left: 5px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoContent {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .logonav {
+        height: 160px;
+    }
+
+    #navbarSupportedContent {
+        position: relative;
+        bottom: 150px;
+    }
+
+    .welcome {
+        margin-left: 190px;
+        text-align: center;
+    }
+
+    .btnCerrarSeesion {
+        margin-left: 190px;
+    }
+
+    .logo {
+        text-align: center;
+        margin-right: 5px;
+    }
+
+    .AdministrarHabitaciónTexto h2 {
+        padding-top: 10px;
+    }
+
+    .homeTexto h2, .sobreNosotrosTexto h2, .sobreNosotrosTexto h4, .facilidadTexto h2, .tarifasTexto h2, .comoLlegarTexto h2, .contactenosTexto h2 {
+        margin-left: 12px;
+    }
+
+    .homeTexto, .sobreNosotrosTexto, .facilidadTexto, .tarifasTexto, .comoLlegarTexto, .contactenosTexto, .reservarTexto {
+        width: 100%;
+    }
+
+        .homeTexto p, .sobreNosotrosTexto p, .facilidadTexto p, .tarifasTexto p, .comoLlegarTexto p, .contactenosTexto p, .reservarTexto p {
+            margin-top: 0;
+            margin-left: 10px;
+            font-size: 2rem;
+            padding: 0.3rem;
+        }
+
+    .imgHome {
+        max-inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 2/1;
+        object-fit: contain;
+    }
+
+    .imgFacilidad, .imgTarifas {
+        margin-left: 10px;
+    }
+
+    .fechas {
+        margin-left: 10px;
+    }
+
+    .container-img-big {
+        max-width: 205px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .img-big {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .publicidadLateral {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .imgCarusel {
+        min-width: 100%;
+        max-height: 285px;
+    }
+
+    .comoLlegarMapa {
+        margin-bottom: 10px;
+    }
+
+    .sidebar {
+        min-width: 90%;
+        margin-left: 0px;
+    }
+
+    #contenedorReservacion {
+        margin-left: 10px;
+        width: 80%;
+    }
+
+    #login .container #login-row #login-column .login-box {
+        margin-top: 20px;
+    }
+
+    #login {
+        margin-right: 90px;
+    }
+}

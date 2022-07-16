@@ -1,0 +1,35 @@
+﻿@model Hotel_El_Dorado_Admin.Models.TemporadaModel
+
+@{
+    ViewData["Title"] = "InsertarTemporada";
+}
+
+<h1>Insertar Temporada</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InsertarTemporada" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="col-form-label">Fecha de comienzo:</label>
+                <input type="date" class="form-control form-control-sm" asp-for="fechaInicio" id="fechaInicio" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.ToString("yyyy-MM-dd")">
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-form-label">Fecha de final:</label>
+                <input type="date" class="form-control form-control-sm" asp-for="fechaFin" id="fechaFin" required href="javascript:;" onchange="verificarFecha(); return false;" min="@DateTime.Now.ToString("yyyy-MM-dd")">
+            </div>
+            <div class="form-group">
+                <label asp-for="descuento" class="control-label">Descuento</label>
+                <input asp-for="descuento" class="form-control" />
+                <span asp-validation-for="descuento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-controller="Temporada" asp-action="guardarTemporada" type="submit" value="Insertar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+

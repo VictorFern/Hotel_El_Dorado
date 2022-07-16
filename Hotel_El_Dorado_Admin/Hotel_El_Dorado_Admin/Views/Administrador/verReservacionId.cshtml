@@ -1,0 +1,38 @@
+﻿@model Hotel_El_Dorado_Admin.Models.ReservacionModel
+
+@{
+    ViewData["Title"] = "Informe de reservación";
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-10 justify-content-center">
+
+        <div class="sobreNosotrosTexto mb-3" id="reportePdf">
+            <h2 class="sobreNosotrosTitulo">Reporte de reservación</h2>
+            @foreach (ReservacionModel lista in ViewBag.listaReservacion)
+            {
+                    <p>Fecha de reservación: <b>@lista.Fecha_Reservacion</b></p>
+                    <br>
+                    <p>ID Reservación: <b id="id">@lista.ID_Reservacion</b></p>
+                    <br>
+                    <p>Cliente: <b id="cliente">@lista.Cliente.Nombre @lista.Cliente.Apellidos</b> </p>
+                    <br>
+                    <p>Email: <b>@lista.Cliente.Email</b> </p>
+                    <br>
+                    <p>Tarjeta: <b>@lista.Cliente.Tarjeta</b> </p>
+                    <br>
+                    <p>Fecha de Llegada: <b>@lista.Fecha_Entrada</b> </p>
+                    <br>
+                    <p>Fecha de Salida: <b>@lista.Fecha_Salida</b> </p>
+                    <br>
+                    <p>Tipo de habitación: <b>@lista.Habitacion.Tipo_HabitacionT</b> </p>
+            }
+                
+        </div>
+         <div class="botonesReporte">
+               @Html.ActionLink("", "elimianrReservacionId", new { id = ViewBag.listaReservacion[0].ID_Reservacion },new {@class="btn btn-light iconos bi bi-trash", @style="color:red; font-size:30px" })
+               <button onclick="print()" class="btn btn-light iconos"><i class="bi bi-printer" style="font-size:30px"></i></button>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿@model Hotel_El_Dorado_Admin.Models.AdministradorModel;
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutLogin";
+}
+<div id="login">
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div class="login-box col-md-12">
+                    <form id="login-form" class="form" asp-action="Login" asp-controller="Administrador" method="post">
+                        <h3 class="text-center">Login</h3>
+                        <div class="form-group">
+                            <label for="username">Usuario:</label><br>
+                            <input type="text" asp-for="nombre" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña:</label><br>
+                            <input type="password" asp-for="contrasenna" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" class="btn btn-info btn-md" value="Iniciar Sesión">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

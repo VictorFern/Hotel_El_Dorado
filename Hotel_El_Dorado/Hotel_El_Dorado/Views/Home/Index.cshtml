@@ -1,22 +1,18 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Hotel El Dorado";
+    Layout = "_Layout";
 }
 
-
-<body>
-    <div class="text-center">
-        <h1>Aquí va el contenido próximamente</h1>
+<div class="row">
+    <div class="col-md-3">
+        <div class="homeBody">
+            <img class="img-responsive imgHome" src="~/img/@ViewBag.Home.imagen" alt="Chania" width="366" height="280"> 
+        </div>
     </div>
-</body>
-
-@section LeftSidebar {
-    <div class="list-group col-lg-3 sidebar">
-        <a asp-controller="Home" asp-action="Index" class="list-group-item list-group-item-action">home</a>
-        <a href="#" class="list-group-item list-group-item-action">Sobre nosotros</a>
-        <a asp-controller="Facilidad" asp-action="Index" class="list-group-item list-group-item-action">Facilidades</a>
-        <a href="#" class="list-group-item list-group-item-action">¿Cómo llegar?</a>
-        <a href="#" class="list-group-item list-group-item-action">Tarifas</a>
-        <a href="#" class="list-group-item list-group-item-action">Reservar en línea</a>
-        <a href="#" class="list-group-item list-group-item-action">Contáctenos</a>
+    <div class="col-md-8 justify-content-center">
+         <div class="homeTexto">
+            <h2 class="homeTitulo">Bienvenido al Hotel El Dorado</h2>
+            <p>@ViewBag.Home.home</p>
+        </div>
     </div>
-}
+</div>

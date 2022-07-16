@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Hotel_El_Dorado_Admin.Models.OfertaModel>
+
+@{
+    ViewData["Title"] = "VisualizarOferta";
+}
+
+<h1>Visualizar Oferta</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_Oferta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oferta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_Inicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_Fin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_Habitacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_Oferta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Oferta)
+            </td>
+            <td>
+               <img class="img-responsive" src="~/img/@item.Imagen" width="100" height="100"> 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Inicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Fin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_Habitacion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarOferta", new { item.ID_Oferta, item.Oferta, item.Imagen, item.Fecha_Inicio, item.Fecha_Fin, item.Tipo_Habitacion }) |
+                @Html.ActionLink("Eliminar", "EliminarOferta", new { item.ID_Oferta, item.Oferta, item.Imagen, item.Fecha_Inicio, item.Fecha_Fin, item.Tipo_Habitacion })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

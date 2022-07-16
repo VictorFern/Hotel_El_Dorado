@@ -1,0 +1,18 @@
+﻿@model Hotel_El_Dorado_Admin.Models.HotelModel
+@{
+    ViewData["Title"] = "Hotel El Dorado";
+    Layout = "_Layout";
+}
+<div class="row">
+    <div class="col-md-3">
+        <div class="homeBody">
+            <img class="img-responsive imgHome" src="~/img/@Model.imagen" alt="Chania" width="366" height="280"> 
+        </div>
+    </div>
+    <div class="col-md-8 justify-content-center">
+         <div class="homeTexto">
+            <h2 class="homeTitulo">Bienvenido al Hotel El Dorado</h2>
+            <p>@Model.InfoHotel</p>
+        </div>
+    </div>
+</div>

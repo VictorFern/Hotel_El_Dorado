@@ -1,0 +1,70 @@
+﻿@model Hotel_El_Dorado.Models.ReservacionModel
+
+@{
+    ViewData["Title"] = "Ingresar datos";
+    Layout = "_Layout";
+}
+<div class="reservarTexto">
+   <h2>Reservar en linea</h2>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="homeDatos">
+            <h6>Habitación Disponible</h6>
+            <img class="img-responsive " src="~/img/@ViewBag.Imagen" alt="" width="200" height="200">
+        </div>
+    </div>
+    <div class="col-md-8 justify-content-center">
+       <div class="reservarTexto">
+           <p>@ViewBag.Descripcion</p>
+       </div>
+    </div>
+    <div id="contenedorReservacion" class="container-fluid">
+        <div class="row">
+            <div id="ingresar" class="col-md-8 ingresar">
+                <form asp-action="Index3" asp-controller="Reservacion" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" asp-for="Fecha_Entrada" value="@ViewBag.FechaEntrada" readonly hidden>
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" asp-for="Fecha_Salida" value="@ViewBag.FechaSalida" readonly hidden>
+                        </div>
+                        <div class="col-sm-8">
+                             <input type="number" class="form-control" asp-for="Habitacion.ID_Habitacion" value="@ViewBag.ID_Habitacion" readonly hidden>
+                        </div>
+                        <div class="form-group lcosto">
+                            <label clas="control-label lcosto">Monto de su reservación: $@ViewBag.CostoInicial - @ViewBag.DescuentoTemporada% - @ViewBag.DescuentoOferta% = $@ViewBag.CostoFinal</label>
+                            <div class="col-sm-2">
+                                <input type="number" class="form-control" asp-for="Costo_Total" value="@ViewBag.CostoFinal" required readonly hidden>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                             <input type="number" class="form-control form-control-sm" asp-for="Habitacion.ID_Habitacion" id="idHabitacion" value="" readonly hidden>
+                        </div>
+                        <div class="form-group">
+                             <input type="number" class="form-control form-control-sm" asp-for="Cliente.Cedula" id="cedula" placeholder="Cédula" required>
+                        </div>
+                        <div class="form-group">
+                             <input type="text" class="form-control form-control-sm" asp-for="Cliente.Nombre" id="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                             <input type="text" class="form-control form-control-sm" asp-for="Cliente.Apellidos" id="apellidos" placeholder="Apellidos" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" asp-for="Cliente.Email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                           <input type="number" class="form-control form-control-sm" asp-for="Cliente.Tarjeta" id="tarjeta" placeholder="Tarjeta" required>
+                        </div>
+                        <div class="form-group botones">
+                            <button type="submit" class="btn btn-primary mt-2  float-left">Siguiente</button>
+                        </div>
+                        <div class="form-group cancelar">
+                             <button type="button" class="btn btn-primary mt-2 float-right" style="margin-bottom:10px" href="javascript:;" onclick="cancelarReservacion(); return false;">Cancelar</button>
+                        </div>
+                 </form>
+            </div>
+        </div>
+    </div> 
+</div>
