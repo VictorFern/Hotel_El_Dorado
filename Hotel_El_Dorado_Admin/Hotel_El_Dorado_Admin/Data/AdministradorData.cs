@@ -286,7 +286,7 @@ namespace Hotel_El_Dorado_Admin.Data
                         var.Imagen = OfertaReader["IMAGEN"].ToString();
                         var.Fecha_Inicio = OfertaReader["FECHA_INICIO"].ToString();
                         var.Fecha_Fin = OfertaReader["FECHA_FIN"].ToString();
-                        var.Tipo_Habitacion = Int32.Parse(OfertaReader["TIPO_HABITACION"].ToString());
+                        var.Tipo_Habitacion = OfertaReader["TIPO_HABITACION"].ToString();
                         temp.Add(var);
                     } // while
                       //Se cierra la conexion a la base de datos
